@@ -1,14 +1,4 @@
-import { useEffect, useState } from 'react';
-
-interface Health {
-  status: string;
-  cpu: { percent: number };
-  memory: { percent: number; used_mb: number; total_mb: number };
-  gpu?: { percent: number; vram_used_mb: number; vram_total_mb: number; name: string };
-  database_status: string;
-  cameras: { online: number; total: number; inference_fps: number; stale: string[] };
-  anpr: { queue_depth: number };
-}
+import type { DetailedHealth } from '../types';
 
 function barClass(value: number): string {
   if (value >= 90) return 'critical';
@@ -16,21 +6,7 @@ function barClass(value: number): string {
   return 'ok';
 }
 
-export function SystemHealthPanel({ apiBase }: { apiBase: string }) {
-  const [health, setHealth] = useState<Health | null>(null);
-
-  useEffect(() => {
-    const load = async () => {
-      try {
-        const response = await fetch(`${apiBase}/api/system/health/detailed`, { credentials: 'include' });
-        if (response.ok) setHealth(await response.json());
-      } catch { /* silent */ }
-    };
-    void load();
-    const timer = window.setInterval(() => void load(), 5000);
-    return () => window.clearInterval(timer);
-  }, [apiBase]);
-
+export function SystemHealthPanel({ health }: { health: DetailedHealth | null }) {
   if (!health) {
     return (
       <div className="health-section">
@@ -42,10 +18,12 @@ export function SystemHealthPanel({ apiBase }: { apiBase: string }) {
   }
 
   const statusClass = health.status === 'HEALTHY' ? 'ok' : health.status === 'DEGRADED' ? 'warning' : 'error';
-  const ramPercent = health.memory.percent;
-  const cpuPercent = health.cpu.percent;
+  const ramPercent = health.memory?.percent ?? 0;
+  const cpuPercent = health.cpu?.percent ?? 0;
   const gpuPercent = health.gpu?.percent ?? 0;
-  const vramPercent = health.gpu ? Math.round((health.gpu.vram_used_mb / health.gpu.vram_total_mb) * 100) : 0;
+  const vramPercent = health.gpu?.memory_used_mb != null && health.gpu?.memory_total_mb != null
+    ? Math.round((health.gpu.memory_used_mb / health.gpu.memory_total_mb) * 100) 
+    : 0;
 
   const staleText = health.cameras.stale.length
     ? `AI results stale: ${health.cameras.stale.join(', ')}`
@@ -125,12 +103,49 @@ export function SystemHealthPanel({ apiBase }: { apiBase: string }) {
         </div>
         <div className="health-detail">
           <span className="health-detail-label">ANPR Queue</span>
-          <span className="health-detail-value">{health.anpr.queue_depth}</span>
+          <span className="health-detail-value">{health.anpr?.queue_depth ?? 0}</span>
         </div>
         <div className="health-detail">
           <span className="health-detail-label">Database</span>
           <span className="health-detail-value">{health.database_status}</span>
         </div>
+
+        {health.ground_ai && (
+          <div className="health-detail" style={{ gridColumn: '1 / -1' }}>
+            <span className="health-detail-label">Ground AI (v2.0)</span>
+            <span className="health-detail-value" style={{ fontSize: 'var(--text-xs)' }}>
+              [{health.ground_ai.status}] {health.ground_ai.fps} FPS · Persons: {health.ground_ai.persons} · Vehicles: {health.ground_ai.vehicles}
+            </span>
+          </div>
+        )}
+
+        {health.air_ai && (
+          <div className="health-detail" style={{ gridColumn: '1 / -1' }}>
+            <span className="health-detail-label">Airborne AI (v1.1)</span>
+            <span className="health-detail-value" style={{ fontSize: 'var(--text-xs)' }}>
+              [{health.air_ai.status}] {health.air_ai.fps} FPS · Drones: {health.air_ai.drones} · Aircraft: {health.air_ai.aircraft}
+            </span>
+          </div>
+        )}
+
+        {health.security_item_ai && (
+          <div className="health-detail" style={{ gridColumn: '1 / -1' }}>
+            <span className="health-detail-label">Security Item AI ({health.security_item_ai.version})</span>
+            <span className="health-detail-value" style={{ fontSize: 'var(--text-xs)' }}>
+              [{health.security_item_ai.status}] {health.security_item_ai.fps} FPS · Firearms: {health.security_item_ai.firearms} · Model: {health.security_item_ai.model}
+            </span>
+          </div>
+        )}
+
+        {health.virtual_fence && (
+          <div className="health-detail" style={{ gridColumn: '1 / -1' }}>
+            <span className="health-detail-label">Virtual Fence</span>
+            <span className="health-detail-value" style={{ fontSize: 'var(--text-xs)' }}>
+              Ground Zones: {health.virtual_fence.ground_zones} · Air Zones: {health.virtual_fence.air_zones} · Tripwires: {health.virtual_fence.tripwires}
+            </span>
+          </div>
+        )}
+
         {health.gpu && (
           <div className="health-detail" style={{ gridColumn: '1 / -1' }}>
             <span className="health-detail-label">GPU</span>

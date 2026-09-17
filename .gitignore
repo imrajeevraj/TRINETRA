@@ -93,10 +93,35 @@ weights/
 checkpoints/
 models/*
 !models/README.md
+!models/model_registry.yaml
+!models/current/
+!models/current/.gitkeep
+!models/archive/
+!models/archive/.gitkeep
+models/current/*
+!models/current/.gitkeep
+models/archive/*
+!models/archive/.gitkeep
 
 # --------------------------------------------------------------------
-# Training Runs, TensorBoard Events, Experiments & Logs
+# Training Runs, Workspace, Backups & Datasets
 # --------------------------------------------------------------------
+data/training/*
+!data/training/README.md
+data/external/
+data/raw/
+data/normalized/
+data/quarantine/
+data/backups/
+data/deployment_packages/
+data/reports/**/*.jpg
+data/reports/**/*.png
+data/reports/**/*.jpeg
+data/reports/visual_errors/
+data/reports/ground_v2_exp002_errors/
+data/reports/model_error_analysis/
+data/reports/*.jpg
+data/reports/*.png
 output/
 runs/
 lightning_logs/

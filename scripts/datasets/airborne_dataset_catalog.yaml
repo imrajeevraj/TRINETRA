@@ -1,0 +1,65 @@
+# ==============================================================================
+# IBVAP — Airborne Model v1 Dataset Catalog
+# Tracks drone, aircraft, and aerial hard-negative (birds, clouds) datasets
+# ==============================================================================
+
+version: "1.0"
+catalog_date: "2026-09-01"
+
+datasets:
+  - id: "airborne_001"
+    name: "Drone Object Detection (Multi-Rotor UAVs)"
+    source: "kaggle"
+    owner: "sshikamaru"
+    dataset: "drone-yolo-detection"
+    purpose: "drone"
+    classes: ["drone"]
+    annotation_format: "yolo"
+    priority: 1
+    enabled: true
+    expected_image_count: 1300
+    destination_dir: "data/raw/airborne/drones"
+    notes: "Multi-rotor quadcopters and surveillance drones against sky, clouds, and urban horizons."
+
+  - id: "airborne_002"
+    name: "Fixed-Wing UAV & Aircraft Dataset"
+    source: "kaggle"
+    owner: "nyahmet"
+    dataset: "fixed-wing-uav-dataset"
+    purpose: "aircraft"
+    classes: ["aircraft"]
+    annotation_format: "yolo"
+    priority: 1
+    enabled: true
+    expected_image_count: 400
+    destination_dir: "data/raw/airborne/fixed_wing"
+    notes: "Fixed-wing unmanned aerial vehicles and light reconnaissance aircraft in flight."
+
+  - id: "airborne_003"
+    name: "Birds vs Drone Negative Calibration Dataset"
+    source: "kaggle"
+    owner: "harshwalia"
+    dataset: "birds-vs-drone-dataset"
+    purpose: "hard_negative"
+    classes: ["bird"]
+    annotation_format: "image_folders"
+    priority: 1
+    enabled: true
+    expected_image_count: 500
+    destination_dir: "data/raw/airborne/birds_negatives"
+    notes: "Flocks of birds, single birds in flight, and sky backgrounds to eliminate bird->drone false alarms."
+
+  - id: "airborne_004"
+    name: "Clouds and Atmospheric Sky Clutter Dataset"
+    source: "kaggle"
+    owner: "andy8744"
+    dataset: "clouds-gan-dataset"
+    purpose: "hard_negative"
+    classes: ["cloud", "sky"]
+    annotation_format: "image_folders"
+    priority: 1
+    enabled: true
+    expected_image_count: 500
+    destination_dir: "data/raw/airborne/clouds_negatives"
+    notes: "Cumulus, stratus, and cirrus clouds with atmospheric glare to eliminate cloud->drone edge false positives."
+

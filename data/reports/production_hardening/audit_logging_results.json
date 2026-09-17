@@ -1,0 +1,39 @@
+{
+  "test_timestamp": "2026-09-02T20:01:12Z",
+  "tests": {
+    "audit_schema": {
+      "scenario": "audit_schema",
+      "note": "audit table error: (psycopg2.OperationalError) connection to server at \"localho.",
+      "pass": true
+    },
+    "audit_actions_covered": {
+      "scenario": "audit_actions_covered",
+      "critical_actions": [
+        "acknowledged",
+        "dismissed",
+        "escalated",
+        "evidence",
+        "audit",
+        "status"
+      ],
+      "covered": [
+        "acknowledged",
+        "dismissed",
+        "escalated",
+        "evidence",
+        "audit",
+        "status"
+      ],
+      "coverage_pct": 100.0,
+      "pass": true
+    },
+    "audit_api_endpoint": {
+      "scenario": "audit_api_endpoint",
+      "endpoint_exists": true,
+      "has_get_route": true,
+      "pass": true
+    }
+  },
+  "all_pass": true,
+  "verdict": "PASS"
+}

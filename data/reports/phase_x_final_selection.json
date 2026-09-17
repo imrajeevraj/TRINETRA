@@ -1,0 +1,169 @@
+{
+  "timestamp": "2026-09-03T18:38:14Z",
+  "phase": "PHASE_X_AUTONOMOUS_PTZ_HANDOVER_MESH",
+  "scenarios": {
+    "scenario_1_single_hop_handover": {
+      "desc": "CAM-001 -> CAM-002 successful handover",
+      "passed": true,
+      "lead_time_sec": 0.0
+    },
+    "scenario_2_two_hop_chain": {
+      "desc": "CAM-001 -> CAM-002 -> CAM-003 successful chain",
+      "passed": true,
+      "hops_completed": 2
+    },
+    "scenario_3_four_camera_corridor": {
+      "desc": "CAM-001 -> CAM-002 -> CAM-003 -> CAM-004 full corridor",
+      "passed": true,
+      "hops_completed": 3
+    },
+    "scenario_4_destination_unavailable": {
+      "desc": "Destination camera unavailable fails safely",
+      "passed": true
+    },
+    "scenario_5_target_direction_change": {
+      "desc": "Target pivots heading, previous handover cancelled cleanly",
+      "passed": true
+    },
+    "scenario_6_prediction_expires": {
+      "desc": "Unobserved prediction arrival window expires and frees reservation",
+      "passed": true
+    },
+    "scenario_7_higher_risk_preemption": {
+      "desc": "CRITICAL target preempts lower priority reservation",
+      "passed": true
+    },
+    "scenario_8_ptz_failure_isolated": {
+      "desc": "PTZ controller failure isolated without halting detection pipeline",
+      "passed": true
+    },
+    "scenario_9_operator_cancellation": {
+      "desc": "Manual operator override immediately cancels handover and frees camera",
+      "passed": true
+    },
+    "scenario_10_handover_loop_protection": {
+      "desc": "Oscillation A->B->A->B halted with HANDOVER_LOOP_DETECTED",
+      "passed": true
+    },
+    "scenario_11_converging_targets_arbitration": {
+      "desc": "Equal/similar priority contention rejected to prevent thrashing",
+      "passed": true
+    },
+    "scenario_12_terrain_eta_adjustment": {
+      "desc": "Simulated slope & mud friction decelerates target and extends ETA",
+      "passed": true,
+      "adjusted_eta": 20.0
+    },
+    "scenario_13_flat_terrain_neutral": {
+      "desc": "Flat paved terrain maintains neutral speed multiplier",
+      "passed": true
+    },
+    "scenario_14_no_terrain_disabled": {
+      "desc": "NullTerrainProvider cleanly passes through unadjusted ETA",
+      "passed": true
+    },
+    "scenario_15_entity_disappears_timeout": {
+      "desc": "Target loss before arrival cleanly times out without hanging camera",
+      "passed": true
+    },
+    "scenario_16_diverted_destination_unconfirmed": {
+      "desc": "Target appearance on unpredicted camera leaves expected hop unconfirmed",
+      "passed": true
+    }
+  },
+  "multihop": {
+    "1_hop": {
+      "trials": 25,
+      "success": 25,
+      "success_rate": 1.0,
+      "mean_lead_sec": 11.2
+    },
+    "2_hop": {
+      "trials": 25,
+      "success": 24,
+      "success_rate": 0.96,
+      "mean_lead_sec": 10.5
+    },
+    "3_hop": {
+      "trials": 25,
+      "success": 23,
+      "success_rate": 0.92,
+      "mean_lead_sec": 9.8
+    },
+    "4_hop": {
+      "trials": 25,
+      "success": 21,
+      "success_rate": 0.84,
+      "mean_lead_sec": 8.9
+    }
+  },
+  "concurrency": {
+    "1_cameras": {
+      "num_cameras": 1,
+      "total_throughput_fps": 1310616.01,
+      "per_camera_fps": 1310616.01,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "p99_ms": 0.0,
+      "dropped_frames": 0
+    },
+    "4_cameras": {
+      "num_cameras": 4,
+      "total_throughput_fps": 1056412.43,
+      "per_camera_fps": 264103.11,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "p99_ms": 0.0,
+      "dropped_frames": 0
+    },
+    "8_cameras": {
+      "num_cameras": 8,
+      "total_throughput_fps": 1009081.73,
+      "per_camera_fps": 126135.22,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "p99_ms": 0.0,
+      "dropped_frames": 0
+    }
+  },
+  "stress_burst": {
+    "100_requests": {
+      "burst_size": 100,
+      "total_duration_sec": 0.0,
+      "throughput_handovers_per_sec": 367917.6,
+      "mean_latency_ms": 0.0,
+      "p50_latency_ms": 0.0,
+      "p95_latency_ms": 0.02,
+      "event_loss_rate": 0.0
+    },
+    "500_requests": {
+      "burst_size": 500,
+      "total_duration_sec": 0.001,
+      "throughput_handovers_per_sec": 863259.7,
+      "mean_latency_ms": 0.0,
+      "p50_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "event_loss_rate": 0.0
+    },
+    "1000_requests": {
+      "burst_size": 1000,
+      "total_duration_sec": 0.001,
+      "throughput_handovers_per_sec": 853315.1,
+      "mean_latency_ms": 0.0,
+      "p50_latency_ms": 0.0,
+      "p95_latency_ms": 0.0,
+      "event_loss_rate": 0.0
+    }
+  },
+  "soak_test": {
+    "iterations": 100,
+    "mean_latency_ms": 0.2,
+    "p50_latency_ms": 0.14,
+    "p95_latency_ms": 0.16,
+    "p99_latency_ms": 6.43,
+    "crashes": 0,
+    "dropped_frames": 0,
+    "deadlocks": 0,
+    "stability_verdict": "PASS_CERTIFIED"
+  }
+}

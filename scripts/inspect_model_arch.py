@@ -6,7 +6,11 @@ sys.stdout.reconfigure(line_buffering=True)
 
 from ultralytics import YOLO
 
-for name in ["border_threat_yolo.pt", "yolo11n.pt", "yolov8n.pt"]:
+for name in [
+    "yolo11n.pt",
+    "models/current/ibvap_detector.pt",
+    "models/candidates/yolo26/ground/best.pt",
+]:
     if not os.path.exists(name): continue
     m = YOLO(name)
     params = sum(p.numel() for p in m.model.parameters())

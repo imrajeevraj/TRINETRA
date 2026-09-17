@@ -1,0 +1,188 @@
+{
+  "timestamp": "2026-09-03T18:15:40Z",
+  "phase": "PHASE_IX_PREDICTIVE_THREAT_INTELLIGENCE",
+  "scenarios": {
+    "scenario_1_straight_line_pedestrian": {
+      "desc": "Straight-line pedestrian moves southward CAM-001 -> CAM-002",
+      "predicted_camera": "CAM-002",
+      "confidence": 0.82,
+      "passed": true
+    },
+    "scenario_2_restricted_zone_risk": {
+      "desc": "Trajectory approaches restricted boundary zone",
+      "current_risk": 25,
+      "predicted_risk": 55,
+      "passed": true
+    },
+    "scenario_3_direction_change": {
+      "desc": "Target pivots heading toward East",
+      "heading_degrees": 0.0,
+      "cardinal": "EAST",
+      "passed": true
+    },
+    "scenario_4_high_speed_vehicle": {
+      "desc": "Fast vehicle compresses transit window to next camera",
+      "typical_eta_sec": 6.0,
+      "passed": true
+    },
+    "scenario_5_multi_hypothesis_branching": {
+      "desc": "Multiple outgoing candidate cameras ranked by confidence",
+      "primary": "CAM-001",
+      "alternatives_count": 1,
+      "passed": true
+    },
+    "scenario_6_stale_prediction_expiration": {
+      "desc": "Unobserved predictions expire when arrival window lapses",
+      "expired_count": 3,
+      "passed": true
+    },
+    "scenario_7_loitering_unknown_exit": {
+      "desc": "Stationary/loitering target returns UNKNOWN exit vector safely",
+      "exit_direction": "UNKNOWN",
+      "passed": true
+    },
+    "scenario_8_ptz_precue_lead_time": {
+      "desc": "PTZ settles into READY state with positive lead time",
+      "lead_time_sec": 11.0,
+      "passed": true
+    },
+    "scenario_9_forecast_hit_outcome": {
+      "desc": "Actual observation on predicted camera evaluated as HIT",
+      "outcome": "HIT",
+      "eta_error_sec": 8.0,
+      "passed": true
+    },
+    "scenario_10_weapon_correlated_threat": {
+      "desc": "Firearm correlation escalates predicted risk to CRITICAL (>85)",
+      "predicted_risk": 100,
+      "passed": true
+    }
+  },
+  "concurrency": {
+    "1_cameras": {
+      "num_cameras": 1,
+      "total_throughput_fps": 16756.03,
+      "per_camera_fps": 16756.03,
+      "p50_ms": 0.04,
+      "p95_ms": 0.17,
+      "p99_ms": 0.2,
+      "dropped_frames": 0,
+      "queue_depth": 0
+    },
+    "4_cameras": {
+      "num_cameras": 4,
+      "total_throughput_fps": 22615.48,
+      "per_camera_fps": 5653.87,
+      "p50_ms": 0.04,
+      "p95_ms": 0.1,
+      "p99_ms": 0.21,
+      "dropped_frames": 0,
+      "queue_depth": 0
+    },
+    "8_cameras": {
+      "num_cameras": 8,
+      "total_throughput_fps": 24574.55,
+      "per_camera_fps": 3071.82,
+      "p50_ms": 0.03,
+      "p95_ms": 0.08,
+      "p99_ms": 0.1,
+      "dropped_frames": 0,
+      "queue_depth": 0
+    }
+  },
+  "stress_burst": {
+    "100_entities": {
+      "entity_count": 100,
+      "total_duration_sec": 0.016,
+      "throughput_predictions_per_sec": 6400.7,
+      "mean_latency_ms": 0.16,
+      "p50_latency_ms": 0.06,
+      "p95_latency_ms": 0.17,
+      "p99_latency_ms": 0.38,
+      "event_loss_rate": 0.0
+    },
+    "500_entities": {
+      "entity_count": 500,
+      "total_duration_sec": 0.117,
+      "throughput_predictions_per_sec": 4271.2,
+      "mean_latency_ms": 0.23,
+      "p50_latency_ms": 0.16,
+      "p95_latency_ms": 0.42,
+      "p99_latency_ms": 1.34,
+      "event_loss_rate": 0.0
+    },
+    "1000_entities": {
+      "entity_count": 1000,
+      "total_duration_sec": 0.266,
+      "throughput_predictions_per_sec": 3761.2,
+      "mean_latency_ms": 0.26,
+      "p50_latency_ms": 0.25,
+      "p95_latency_ms": 0.44,
+      "p99_latency_ms": 1.25,
+      "event_loss_rate": 0.0
+    }
+  },
+  "ptz_precue": {
+    "trials_count": 10,
+    "mean_lead_time_sec": 11.0,
+    "min_lead_time_sec": 11.0,
+    "max_lead_time_sec": 11.0,
+    "pre_cue_success_rate": 1.0,
+    "unnecessary_movement_rate": 0.0
+  },
+  "soak_test": {
+    "iterations": 100,
+    "mean_latency_ms": 0.47,
+    "p50_latency_ms": 0.36,
+    "p95_latency_ms": 0.89,
+    "p99_latency_ms": 1.43,
+    "crashes": 0,
+    "dropped_frames": 0,
+    "deadlocks": 0,
+    "stability_verdict": "PASS_CERTIFIED"
+  },
+  "forecast_accuracy_metrics": {
+    "total_evaluations": 21,
+    "top1_accuracy": 1.0,
+    "top3_accuracy": 1.0,
+    "eta_mae_sec": 3.62,
+    "eta_median_error_sec": 2.0,
+    "eta_p95_error_sec": 6.0,
+    "outcomes": {
+      "HIT": 21,
+      "PARTIAL_HIT": 0,
+      "MISS": 0,
+      "EXPIRED": 0
+    }
+  },
+  "confidence_calibration_table": [
+    {
+      "bucket": "0.00-0.50",
+      "predictions_count": 0,
+      "hits": 0,
+      "partial_hits": 0,
+      "empirical_success_rate": 0.0
+    },
+    {
+      "bucket": "0.50-0.70",
+      "predictions_count": 20,
+      "hits": 20,
+      "partial_hits": 0,
+      "empirical_success_rate": 1.0
+    },
+    {
+      "bucket": "0.70-0.85",
+      "predictions_count": 1,
+      "hits": 1,
+      "partial_hits": 0,
+      "empirical_success_rate": 1.0
+    },
+    {
+      "bucket": "0.85-1.00",
+      "predictions_count": 0,
+      "hits": 0,
+      "partial_hits": 0,
+      "empirical_success_rate": 0.0
+    }
+  ]
+}

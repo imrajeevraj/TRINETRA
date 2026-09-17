@@ -1,0 +1,66 @@
+{
+  "test_timestamp": "2026-09-02T20:00:46Z",
+  "fence_line_y": 500,
+  "tests": {
+    "person": {
+      "entity": "person",
+      "domain": "GROUND",
+      "camera_id": "CAM-S-001",
+      "trajectory_len": 10,
+      "total_events": 0,
+      "cooldown_applied": true,
+      "no_duplication": true,
+      "pass": true
+    },
+    "vehicle": {
+      "entity": "vehicle",
+      "domain": "GROUND",
+      "camera_id": "CAM-S-002",
+      "trajectory_len": 10,
+      "total_events": 0,
+      "cooldown_applied": true,
+      "no_duplication": true,
+      "pass": true
+    },
+    "drone": {
+      "entity": "drone",
+      "domain": "AIR",
+      "camera_id": "CAM-S-003",
+      "trajectory_len": 10,
+      "total_events": 0,
+      "cooldown_applied": true,
+      "no_duplication": true,
+      "pass": true
+    },
+    "aircraft": {
+      "entity": "aircraft",
+      "domain": "AIR",
+      "camera_id": "CAM-S-004",
+      "trajectory_len": 10,
+      "total_events": 0,
+      "cooldown_applied": true,
+      "no_duplication": true,
+      "pass": true
+    },
+    "firearm": {
+      "entity": "firearm",
+      "domain": "SECURITY_ITEM",
+      "camera_id": "CAM-S-005",
+      "trajectory_len": 10,
+      "total_events": 3,
+      "cooldown_applied": true,
+      "no_duplication": true,
+      "pass": true
+    },
+    "simultaneous_domains": {
+      "scenario": "simultaneous_5_domains",
+      "entities_submitted": 5,
+      "events_generated": 2,
+      "all_traceable": true,
+      "domains_isolated": true,
+      "pass": true
+    }
+  },
+  "all_pass": true,
+  "verdict": "PASS"
+}

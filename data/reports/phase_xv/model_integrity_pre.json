@@ -1,0 +1,17 @@
+[
+    {
+        "Path":  "models/current/ibvap_detector.pt",
+        "SHA256":  "7DBF36027768194F61C6EBBC000E1421374624558168F8A9896F727B296277B0",
+        "Timestamp":  "2026-09-04T23:24:31.7632438+05:30"
+    },
+    {
+        "Path":  "models/production/airborne/ibvap_airborne_v2_production.pt",
+        "SHA256":  "5229632C3D7A12A279A45032D558FB4712BF9DB43667828D30367D2354106384",
+        "Timestamp":  "2026-09-04T23:24:31.7704356+05:30"
+    },
+    {
+        "Path":  "models/production/security_item/ibvap_security_item_v2_1_production.pt",
+        "SHA256":  "72464C778DE57270800146AB5ADF2AB683FFEAC55338C89231EE3A83E7F6E1DA",
+        "Timestamp":  "2026-09-04T23:24:31.7771127+05:30"
+    }
+]

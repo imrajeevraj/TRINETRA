@@ -1,0 +1,15 @@
+{
+  "raw_airborne_dir": "C:\\Users\\rajee\\Downloads\\SIH 2026\\IBVAP\\data\\raw\\airborne",
+  "total_images": 5396,
+  "total_label_files": 4564,
+  "valid_images": 5394,
+  "corrupted_images": 2,
+  "total_valid_boxes": 3920,
+  "invalid_boxes": 0,
+  "zero_area_boxes": 0,
+  "out_of_bound_boxes": 0,
+  "class_distribution": {
+    "0": 3920
+  },
+  "status": "WARNINGS_NOTED"
+}

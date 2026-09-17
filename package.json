@@ -2,7 +2,7 @@
   "name": "ibvap",
   "version": "1.0.0",
   "private": true,
-  "description": "IBVAP - Intelligent Border Video Analytics Platform",
+  "description": "TRINETRA — Threat Recognition, Intelligent Networked Eyes & Tracking for Real-time Analysis",
   "type": "module",
   "scripts": {
     "start": "node scripts/ensure-docker.js && concurrently -k -n \"BACKEND,FRONTEND\" -c \"blue.bold,cyan.bold\" \"npm run start:backend\" \"npm run start:frontend\"",

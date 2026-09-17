@@ -1,0 +1,57 @@
+{
+  "scenario_1_straight_line_pedestrian": {
+    "desc": "Straight-line pedestrian moves southward CAM-001 -> CAM-002",
+    "predicted_camera": "CAM-002",
+    "confidence": 0.82,
+    "passed": true
+  },
+  "scenario_2_restricted_zone_risk": {
+    "desc": "Trajectory approaches restricted boundary zone",
+    "current_risk": 25,
+    "predicted_risk": 55,
+    "passed": true
+  },
+  "scenario_3_direction_change": {
+    "desc": "Target pivots heading toward East",
+    "heading_degrees": 0.0,
+    "cardinal": "EAST",
+    "passed": true
+  },
+  "scenario_4_high_speed_vehicle": {
+    "desc": "Fast vehicle compresses transit window to next camera",
+    "typical_eta_sec": 6.0,
+    "passed": true
+  },
+  "scenario_5_multi_hypothesis_branching": {
+    "desc": "Multiple outgoing candidate cameras ranked by confidence",
+    "primary": "CAM-001",
+    "alternatives_count": 1,
+    "passed": true
+  },
+  "scenario_6_stale_prediction_expiration": {
+    "desc": "Unobserved predictions expire when arrival window lapses",
+    "expired_count": 3,
+    "passed": true
+  },
+  "scenario_7_loitering_unknown_exit": {
+    "desc": "Stationary/loitering target returns UNKNOWN exit vector safely",
+    "exit_direction": "UNKNOWN",
+    "passed": true
+  },
+  "scenario_8_ptz_precue_lead_time": {
+    "desc": "PTZ settles into READY state with positive lead time",
+    "lead_time_sec": 11.0,
+    "passed": true
+  },
+  "scenario_9_forecast_hit_outcome": {
+    "desc": "Actual observation on predicted camera evaluated as HIT",
+    "outcome": "HIT",
+    "eta_error_sec": 8.0,
+    "passed": true
+  },
+  "scenario_10_weapon_correlated_threat": {
+    "desc": "Firearm correlation escalates predicted risk to CRITICAL (>85)",
+    "predicted_risk": 100,
+    "passed": true
+  }
+}

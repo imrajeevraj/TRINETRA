@@ -1,0 +1,11 @@
+{
+  "iterations": 100,
+  "mean_latency_ms": 0.2,
+  "p50_latency_ms": 0.14,
+  "p95_latency_ms": 0.16,
+  "p99_latency_ms": 6.43,
+  "crashes": 0,
+  "dropped_frames": 0,
+  "deadlocks": 0,
+  "stability_verdict": "PASS_CERTIFIED"
+}

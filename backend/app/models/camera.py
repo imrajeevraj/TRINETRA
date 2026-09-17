@@ -2,6 +2,7 @@ from sqlalchemy import Column, String, Integer, Boolean, DateTime
 from datetime import datetime
 from backend.app.core.database import Base
 
+
 class Camera(Base):
     __tablename__ = "cameras"
 
@@ -12,5 +13,5 @@ class Camera(Base):
     resolution = Column(String, nullable=True)
     fps = Column(Integer, default=30)
     is_active = Column(Boolean, default=True)
-    status = Column(String, default="OFFLINE") # ONLINE, OFFLINE, DEGRADED, NO_SIGNAL
+    status = Column(String, default="OFFLINE")  # ONLINE, OFFLINE, DEGRADED, NO_SIGNAL
     last_seen = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)

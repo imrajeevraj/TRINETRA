@@ -3,12 +3,13 @@ import cv2
 import time
 import threading
 import logging
+import numpy as np
 from urllib.parse import urlparse
-from typing import Dict, Optional, List, Any, Generator
+from typing import Dict, Optional, Generator
 from sqlalchemy.orm import Session
 from datetime import datetime
 
-from backend.app.core.config import get_cameras_config, settings
+from backend.app.core.config import get_cameras_config
 from backend.app.core.database import SessionLocal
 from backend.app.models.camera import Camera
 from backend.app.services.detection_service import detection_service
@@ -17,6 +18,7 @@ from backend.app.services.ai_scheduler import ai_scheduler
 from backend.app.services.evidence_service import evidence_service
 
 logger = logging.getLogger("CameraManager")
+
 
 class CameraStreamThread(threading.Thread):
     """
@@ -27,7 +29,8 @@ class CameraStreamThread(threading.Thread):
     - Generates real-time display predictions at 30 FPS for buttery-smooth bounding box motion.
     - Uses on-demand JPEG encoding to avoid wasting CPU cycles when no client is streaming.
     """
-    def __init__(self, camera_id: str, name: str, source: str, target_fps: int = 30):
+
+    def __init__(self, camera_id: str, name: str, source: str, target_fps: int = 15):
         super().__init__()
         self.camera_id = camera_id
         self.name = name
@@ -35,25 +38,25 @@ class CameraStreamThread(threading.Thread):
         self.target_fps = target_fps
         self.daemon = True
         self.stop_event = threading.Event()
-        
+
         self.running = False
         self.raw_frame: Optional[np.ndarray] = None
         self.frame_lock = threading.Lock()
-        
+
         # Display cache
         self._cached_jpeg: Optional[bytes] = None
         self._cached_jpeg_time: float = 0.0
-        
+
         # Telemetry
         self.fps = 0.0
         self.resolution = "0x0"
         self.status = "OFFLINE"
         self.frame_count = 0
         self.last_update = time.time()
-        
+
         self.abs_source = self._validate_source(source)
-        # Register in AI scheduler with 8.0 FPS target
-        ai_scheduler.register_camera(camera_id, target_ai_fps=8.0)
+        # Register in AI scheduler with 1.0 FPS target to maintain responsive CPU and prevent OOM
+        ai_scheduler.register_camera(camera_id, target_ai_fps=1.0)
 
     @staticmethod
     def _validate_source(source: str):
@@ -71,7 +74,9 @@ class CameraStreamThread(threading.Thread):
                 raise ValueError("RTSP source must include a hostname")
             return source
 
-        root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../data/videos"))
+        root = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), "../../../data/videos")
+        )
         candidate = os.path.abspath(source)
         try:
             within_root = os.path.commonpath([root, candidate]) == root
@@ -86,7 +91,7 @@ class CameraStreamThread(threading.Thread):
         self.status = "OFFLINE"
         self.update_db_status()
         retry_delay = 3.0
-        
+
         while self.running and not self.stop_event.is_set():
             logger.info(f"[{self.camera_id}] Connecting to source: {self.source}")
             cap = cv2.VideoCapture(self.abs_source)
@@ -96,29 +101,33 @@ class CameraStreamThread(threading.Thread):
                 self.update_db_status()
                 self.stop_event.wait(retry_delay)
                 continue
-            
+
             width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
             height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
             video_fps = cap.get(cv2.CAP_PROP_FPS)
             if video_fps <= 0 or video_fps > 60:
                 video_fps = self.target_fps
-            
+
             self.resolution = f"{width}x{height}"
             self.status = "ONLINE"
             self.update_db_status()
-            logger.info(f"[{self.camera_id}] Stream online: {self.resolution} @ {video_fps:.1f} FPS")
+            logger.info(
+                f"[{self.camera_id}] Stream online: {self.resolution} @ {video_fps:.1f} FPS"
+            )
 
             frame_duration = 1.0 / video_fps
             start_time = time.time()
             self.frame_count = 0
-            
+
             while self.running and not self.stop_event.is_set() and cap.isOpened():
                 loop_start = time.perf_counter()
                 ret, frame = cap.read()
-                
+
                 if not ret:
                     # Video loop logic for local test files
-                    if not isinstance(self.abs_source, int) and not str(self.abs_source).startswith("rtsp://"):
+                    if not isinstance(self.abs_source, int) and not str(
+                        self.abs_source
+                    ).startswith("rtsp://"):
                         cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
                         tracking_service.reset_camera(self.camera_id)
                         continue
@@ -128,16 +137,22 @@ class CameraStreamThread(threading.Thread):
                         break
 
                 t_capture = (time.perf_counter() - loop_start) * 1000.0
-                
+
+                # Cap resolution to 960x540 to prevent memory pressure on CPU and Windows heap
+                if frame is not None:
+                    h, w = frame.shape[:2]
+                    if w > 960 or h > 540:
+                        frame = cv2.resize(frame, (960, 540), interpolation=cv2.INTER_AREA)
+
                 with self.frame_lock:
                     self.raw_frame = frame
-                
+
                 # Hand off frame to rolling evidence buffer (lightweight sampled)
                 evidence_service.record_frame(self.camera_id, frame)
-                
+
                 # Asynchronously submit latest frame to AI Scheduler (zero blocking)
                 ai_scheduler.submit_frame(self.camera_id, frame, t_capture)
-                
+
                 # Advance tracker state on display frame for smooth 30 FPS visualization
                 tracker = tracking_service.get_tracker(self.camera_id)
                 tracker.predict_tracks()
@@ -167,28 +182,33 @@ class CameraStreamThread(threading.Thread):
         self.status = "OFFLINE"
         self.update_db_status()
 
-    def get_annotated_jpeg(self, quality: int = 65, max_width: int = 1280) -> Optional[bytes]:
+    def get_annotated_jpeg(
+        self, quality: int = 65, max_width: int = 960
+    ) -> Optional[bytes]:
         """
         Generate annotated tactical JPEG on demand with cached rate-limiting.
         Avoids encoding when no client is actively requesting the stream.
         """
         now = time.time()
-        # Serve from cache if requested within 25ms (max 40 FPS encode rate)
-        if self._cached_jpeg and (now - self._cached_jpeg_time) < 0.025:
+        # Serve from cache if requested within 40ms (max 25 FPS encode rate to protect memory)
+        if self._cached_jpeg and (now - self._cached_jpeg_time) < 0.040:
             return self._cached_jpeg
 
         with self.frame_lock:
             if self.raw_frame is None:
                 return None
-            frame = self.raw_frame.copy()
+            try:
+                frame = self.raw_frame.copy()
+            except (MemoryError, Exception):
+                return self._cached_jpeg
 
         # Render zones and virtual fences
         frame = detection_service.draw_zones(frame, self.camera_id)
-        
+
         # Get active smoothed tracks
         tracker = tracking_service.get_tracker(self.camera_id)
         current_tracks = tracker.get_current_tracks()
-        
+
         # Draw bounding boxes
         if current_tracks:
             frame = detection_service.draw_detections(frame, current_tracks)
@@ -198,16 +218,27 @@ class CameraStreamThread(threading.Thread):
         metrics = ai_scheduler.get_metrics(self.camera_id)
         ai_fps = metrics.get("detector_fps", 0.0)
         hud_text = f"{self.camera_id} | {timestamp_str} | STREAM: {self.fps:.1f} FPS | AI: {ai_fps:.1f} FPS"
-        
-        cv2.putText(frame, hud_text, (16, 32), cv2.FONT_HERSHEY_SIMPLEX, 0.55, (0, 210, 235), 1, cv2.LINE_AA)
+
+        cv2.putText(
+            frame,
+            hud_text,
+            (16, 32),
+            cv2.FONT_HERSHEY_SIMPLEX,
+            0.55,
+            (0, 210, 235),
+            1,
+            cv2.LINE_AA,
+        )
 
         # Scale down if needed for fast network transfer
         h, w = frame.shape[:2]
         if w > max_width:
             scale = max_width / float(w)
-            frame = cv2.resize(frame, (max_width, int(h * scale)), interpolation=cv2.INTER_LINEAR)
+            frame = cv2.resize(
+                frame, (max_width, int(h * scale)), interpolation=cv2.INTER_LINEAR
+            )
 
-        _, buffer = cv2.imencode('.jpg', frame, [cv2.IMWRITE_JPEG_QUALITY, quality])
+        _, buffer = cv2.imencode(".jpg", frame, [cv2.IMWRITE_JPEG_QUALITY, quality])
         jpeg_bytes = buffer.tobytes()
         self._cached_jpeg = jpeg_bytes
         self._cached_jpeg_time = now
@@ -236,8 +267,12 @@ class CameraStreamThread(threading.Thread):
 
 class CameraManager:
     """Singleton Camera Manager controlling ingestion across all surveillance feeds."""
+
     _instance = None
     _lock = threading.Lock()
+
+    # R-04: Maximum concurrent MJPEG stream clients across all cameras.
+    MAX_CONCURRENT_STREAMS: int = 32
 
     def __new__(cls, *args, **kwargs):
         with cls._lock:
@@ -250,6 +285,8 @@ class CameraManager:
         if self.initialized:
             return
         self.streams: Dict[str, CameraStreamThread] = {}
+        self._active_stream_clients: int = 0
+        self._stream_clients_lock = threading.Lock()
         self.initialized = True
 
     def initialize_cameras_in_db(self):
@@ -267,7 +304,7 @@ class CameraManager:
                         resolution=conf["resolution"],
                         fps=conf["fps"],
                         is_active=conf["is_active"],
-                        status="OFFLINE"
+                        status="OFFLINE",
                     )
                     db.add(camera)
                 else:
@@ -289,21 +326,21 @@ class CameraManager:
         ai_scheduler.start()
         self.initialize_cameras_in_db()
         cameras_conf = get_cameras_config()
-        
+
         for conf in cameras_conf:
             if not conf.get("is_active", True):
                 continue
-            
+
             camera_id = conf["id"]
             if camera_id in self.streams:
                 continue
-                
+
             try:
                 stream = CameraStreamThread(
                     camera_id=camera_id,
                     name=conf["name"],
                     source=conf["source"],
-                    target_fps=conf.get("fps", 30)
+                    target_fps=conf.get("fps", 30),
                 )
             except Exception as exc:
                 logger.error(f"[{camera_id}] Camera configuration rejected: {exc}")
@@ -321,14 +358,51 @@ class CameraManager:
             stream.join(timeout=5)
         self.streams.clear()
 
-    def generate_mjpeg_stream(self, camera_id: str) -> Generator[bytes, None, None]:
-        """Generate smooth multipart MJPEG stream for client browser consumption."""
-        while True:
-            frame_bytes = self.get_jpeg_frame(camera_id)
-            if frame_bytes is not None:
-                yield (b'--frame\r\n'
-                       b'Content-Type: image/jpeg\r\n\r\n' + frame_bytes + b'\r\n')
-            time.sleep(0.033)  # ~30 FPS
+    def generate_mjpeg_stream(
+        self, camera_id: str, idle_timeout: float = 30.0
+    ) -> Generator[bytes, None, None]:
+        """Generate smooth multipart MJPEG stream for client browser consumption.
+
+        R-04: Enforces an idle timeout (default 30 s) so a stalled client
+        does not hold a generator thread forever.  Also respects a global
+        MAX_CONCURRENT_STREAMS cap to prevent resource exhaustion.
+        """
+        with self._stream_clients_lock:
+            if self._active_stream_clients >= self.MAX_CONCURRENT_STREAMS:
+                logger.warning(
+                    "R-04: MAX_CONCURRENT_STREAMS (%d) reached; rejecting new stream for %s",
+                    self.MAX_CONCURRENT_STREAMS,
+                    camera_id,
+                )
+                return
+            self._active_stream_clients += 1
+
+        idle_since = time.time()
+        try:
+            while True:
+                try:
+                    frame_bytes = self.get_jpeg_frame(camera_id)
+                except Exception:
+                    frame_bytes = None
+
+                if frame_bytes is not None:
+                    idle_since = time.time()  # reset idle clock on every live frame
+                    yield (
+                        b"--frame\r\n"
+                        b"Content-Type: image/jpeg\r\n\r\n" + frame_bytes + b"\r\n"
+                    )
+                else:
+                    if time.time() - idle_since > idle_timeout:
+                        logger.info(
+                            "R-04: MJPEG stream for %s idle for %.0fs — closing.",
+                            camera_id,
+                            idle_timeout,
+                        )
+                        break
+                time.sleep(0.040)  # ~25 FPS pace for optimal bandwidth & low memory
+        finally:
+            with self._stream_clients_lock:
+                self._active_stream_clients = max(0, self._active_stream_clients - 1)
 
     def get_jpeg_frame(self, camera_id: str) -> Optional[bytes]:
         stream = self.streams.get(camera_id)
@@ -375,5 +449,6 @@ class CameraManager:
             "inference_latency_ms": 0.0,
             "ai_result_age_seconds": None,
         }
+
 
 camera_manager = CameraManager()

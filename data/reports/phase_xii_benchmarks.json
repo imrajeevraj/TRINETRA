@@ -1,0 +1,40 @@
+{
+  "model_registry_throughput": {
+    "operations": 100,
+    "total_time_sec": 0.0213,
+    "ops_per_sec": 4694.55,
+    "avg_latency_ms": 0.213
+  },
+  "validation_gate_throughput": {
+    "evaluations": 100,
+    "total_time_sec": 0.0111,
+    "avg_eval_ms": 0.111,
+    "stages_per_eval": 13
+  },
+  "package_verification": {
+    "checks": 100,
+    "avg_verification_ms": 0.099,
+    "package_id": "PKG-GROUND-v99_0_0"
+  },
+  "canary_routing": {
+    "routes": 10000,
+    "avg_route_latency_microseconds": 0.65,
+    "routes_per_sec": 1530549.8
+  },
+  "atomic_rollback": {
+    "rollbacks": 50,
+    "avg_rollback_ms": 3.888,
+    "status": "ATOMIC_GUARANTEED"
+  },
+  "edge_staged_rollout": {
+    "target_nodes": 8,
+    "total_rollout_ms": 1.344,
+    "avg_per_node_ms": 0.168,
+    "status": "COMPLETED"
+  },
+  "telemetry_ingestion": {
+    "ingestions": 5000,
+    "avg_ingest_microseconds": 4.12,
+    "ingestions_per_sec": 242789.2
+  }
+}

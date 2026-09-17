@@ -1,6 +1,4 @@
 import logging
-import cv2
-import os
 import threading
 import numpy as np
 from typing import List, Dict, Any
@@ -9,29 +7,33 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 
 from backend.app.core.database import SessionLocal
-from backend.app.models.event import SecurityEvent, FaceEvent
+from backend.app.models.event import SecurityEvent
 from backend.app.services.risk_engine import risk_engine
 from backend.app.services.alert_dispatch import alert_dispatch
-from backend.app.services.evidence_service import evidence_service
 from backend.app.services.reid_service import reid_service
 
 try:
     from insightface.app import FaceAnalysis
+
     INSIGHTFACE_AVAILABLE = True
 except ImportError:
     INSIGHTFACE_AVAILABLE = False
 
 logger = logging.getLogger("FaceService")
 
+
 class FaceService:
     """
     Asynchronous Face Recognition & Watchlist Matching Service.
     Lazy-initializes InsightFace ONNX models in background thread pool.
     """
+
     def __init__(self):
         self.face_app = None
         self._init_lock = threading.Lock()
-        self.executor = ThreadPoolExecutor(max_workers=2, thread_name_prefix="Face-Worker")
+        self.executor = ThreadPoolExecutor(
+            max_workers=2, thread_name_prefix="Face-Worker"
+        )
         self.recent_alerts = {}
         self.ALERT_COOLDOWN = 15.0  # seconds
 
@@ -40,7 +42,9 @@ class FaceService:
             with self._init_lock:
                 if self.face_app is None:
                     try:
-                        app = FaceAnalysis(name='buffalo_l', root='app/data/insightface')
+                        app = FaceAnalysis(
+                            name="buffalo_l", root="app/data/insightface"
+                        )
                         try:
                             app.prepare(ctx_id=0, det_size=(320, 320))
                         except Exception:
@@ -55,7 +59,9 @@ class FaceService:
         if camera_id in self.recent_alerts:
             self.recent_alerts[camera_id] = {}
 
-    def process_detections(self, camera_id: str, detections: List[Dict[str, Any]], frame: np.ndarray):
+    def process_detections(
+        self, camera_id: str, detections: List[Dict[str, Any]], frame: np.ndarray
+    ):
         """Asynchronously dispatch person crops for background face recognition."""
         if not INSIGHTFACE_AVAILABLE or frame is None:
             return
@@ -77,7 +83,7 @@ class FaceService:
         for det in detections:
             if det.get("class") != "person":
                 continue
-                
+
             track_id = det.get("track_id")
             if track_id:
                 last_alert = self.recent_alerts[camera_id].get(track_id, 0)
@@ -137,7 +143,7 @@ class FaceService:
                     "x": int(bx),
                     "y": int(by),
                     "confidence": float(face.det_score),
-                    "timestamp": datetime.utcnow()
+                    "timestamp": datetime.utcnow(),
                 }
 
                 if person_name:
@@ -158,5 +164,6 @@ class FaceService:
                     db.close()
         except Exception as exc:
             logger.debug(f"Async face analysis error: {exc}")
+
 
 face_service = FaceService()

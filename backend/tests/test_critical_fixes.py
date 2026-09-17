@@ -116,6 +116,6 @@ def test_system_health_route_has_single_api_prefix():
     """The UI requests /api/system; router composition must match it exactly."""
     from backend.app.main import app
 
-    paths = {route.path for route in app.routes if hasattr(route, "path")}
+    paths = set(app.openapi().get("paths", {}).keys())
     assert "/api/system/health/detailed" in paths
     assert "/api/api/system/health/detailed" not in paths

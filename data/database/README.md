@@ -1,4 +1,5 @@
 # IBVAP — Database Storage & Schema Migration Guidelines
+# TRINETRA — Database Storage & Schema Migration Guidelines
 
 ## 1. Intentional Repository Exclusion
 Runtime SQLite databases (`*.db`, `*.sqlite`, `*.sqlite3`), transaction logs (`*-wal`, `*-shm`), and PostgreSQL dump backups are **intentionally excluded from Git tracking**.
@@ -11,6 +12,7 @@ Runtime SQLite databases (`*.db`, `*.sqlite`, `*.sqlite3`), transaction logs (`*
 ## 2. Schema Management & Migrations
 
 All IBVAP database tables, relations, and vector indices are managed through **Alembic** migrations located in:
+All TRINETRA database tables, relations, and vector indices are managed through **Alembic** migrations located in:
 ```
 backend/alembic/versions/
 ├── e41c1a99996a_initial_schema.py        # Core tables: cameras, events, users, rules

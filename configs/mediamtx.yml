@@ -1,0 +1,53 @@
+# ==============================================================================
+# IBVAP — MediaMTX Production Configuration (I-03 Hardening)
+# Multi-protocol video streaming server with authentication & encryption
+# ==============================================================================
+
+# Global configuration
+logLevel: info
+logDestinations: [stdout]
+
+# Metrics
+metrics: yes
+metricsAddress: :9998
+
+# API server for programmatic stream control
+api: yes
+apiAddress: :9997
+
+# RTSP Server
+rtsp: yes
+rtspDisable: no
+protocols: [tcp]
+encryption: "no" # Set to "strict" when TLS certificates are mounted
+rtspAddress: :8554
+
+# WebRTC Server for ultra-low latency browser playback
+webrtc: yes
+webrtcDisable: no
+webrtcAddress: :8889
+webrtcLocalUDPAddress: :8189
+webrtcHandshakeTimeout: 10s
+
+# HLS Server
+hls: yes
+hlsDisable: no
+hlsAddress: :8888
+hlsSegmentCount: 3
+hlsSegmentDuration: 1s
+
+# Path Configuration & Authentication Rules (I-03)
+# Prevent unauthorized camera injection or rogue stream eavesdropping
+paths:
+  # Base template for all border cameras
+  all:
+    # Read authentication (operators / clients)
+    readUser: $MEDIAMTX_READ_USER
+    readPass: $MEDIAMTX_READ_PASS
+
+    # Publish authentication (RTSP encoders / edge devices)
+    publishUser: $MEDIAMTX_PUBLISH_USER
+    publishPass: $MEDIAMTX_PUBLISH_PASS
+
+    # Max readers per stream
+    maxReaders: 16

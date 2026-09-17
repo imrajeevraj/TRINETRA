@@ -1,0 +1,24 @@
+{
+  "dataset_path": "C:\\Users\\rajee\\Downloads\\SIH 2026\\IBVAP\\data\\external\\kaggle\\kiit_mita",
+  "total_images": 1700,
+  "total_label_files": 1700,
+  "valid_images": 1700,
+  "corrupted_images": 0,
+  "unpaired_images": 0,
+  "unpaired_labels": 0,
+  "empty_label_files": 0,
+  "total_valid_boxes": 4586,
+  "invalid_boxes": 0,
+  "zero_area_boxes": 0,
+  "out_of_bound_boxes": 0,
+  "class_distribution": {
+    "0": 304,
+    "5": 835,
+    "6": 1176,
+    "4": 1151,
+    "3": 386,
+    "1": 447,
+    "2": 287
+  },
+  "status": "PASS"
+}

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   IBVAP Command Center — Design Tokens
+   TRINETRA Command Center — Design Tokens
    Centralized visual constants for the entire application.
    ========================================================================== */
 
@@ -34,7 +34,7 @@
   --border-accent:    rgba(0, 210, 235, 0.4);
   --border-critical:  rgba(239, 68, 68, 0.4);
 
-  /* ── IBVAP Accent (restrained cyan/teal) ────────────────────── */
+  /* ── TRINETRA Accent (restrained cyan/teal) ────────────────────── */
   --accent:           #00D2EB;
   --accent-dim:       rgba(0, 210, 235, 0.15);
   --accent-hover:     #00BFD6;

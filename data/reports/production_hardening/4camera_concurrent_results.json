@@ -1,0 +1,114 @@
+{
+  "test_timestamp": "2026-09-01T18:03:39Z",
+  "note": "Latency = full three-model serial inference. Production uses concurrent threads.",
+  "runs": {
+    "1_camera": {
+      "num_cameras": 1,
+      "frames_per_camera": 30,
+      "total_frames": 30,
+      "wall_time_sec": 5.51,
+      "capture_fps": 30.0,
+      "display_fps": 5.4,
+      "aggregate_fps": 5.4,
+      "per_camera_fps": 5.4,
+      "ground_ai_fps": 11.8,
+      "air_ai_fps": 62.2,
+      "item_ai_fps": 13.2,
+      "latency_ms": {
+        "total_p50": 94.72,
+        "total_p95": 168.05,
+        "ground_p50": 13.92,
+        "air_p50": 13.33,
+        "item_p50": 66.82
+      },
+      "dropped_frames": 0,
+      "queue_depth_max": 1,
+      "result_age_ms": 176.8,
+      "resources_before": {
+        "cpu_pct": 18.6,
+        "ram_pct": 81.2,
+        "ram_used_mb": 13058.0,
+        "vram_mb": 40.0
+      },
+      "resources_after": {
+        "cpu_pct": 29.6,
+        "ram_pct": 84.6,
+        "ram_used_mb": 13615.0,
+        "vram_mb": 96.0
+      },
+      "gate_pass": false
+    },
+    "2_cameras": {
+      "num_cameras": 2,
+      "frames_per_camera": 30,
+      "total_frames": 60,
+      "wall_time_sec": 6.65,
+      "capture_fps": 30.0,
+      "display_fps": 9.0,
+      "aggregate_fps": 9.0,
+      "per_camera_fps": 4.5,
+      "ground_ai_fps": 55.3,
+      "air_ai_fps": 59.5,
+      "item_ai_fps": 14.5,
+      "latency_ms": {
+        "total_p50": 103.62,
+        "total_p95": 115.26,
+        "ground_p50": 18.28,
+        "air_p50": 16.96,
+        "item_p50": 67.45
+      },
+      "dropped_frames": 0,
+      "queue_depth_max": 1,
+      "result_age_ms": 104.1,
+      "resources_before": {
+        "cpu_pct": 15.0,
+        "ram_pct": 84.1,
+        "ram_used_mb": 13537.0,
+        "vram_mb": 96.0
+      },
+      "resources_after": {
+        "cpu_pct": 30.6,
+        "ram_pct": 85.9,
+        "ram_used_mb": 13827.0,
+        "vram_mb": 96.0
+      },
+      "gate_pass": false
+    },
+    "4_cameras": {
+      "num_cameras": 4,
+      "frames_per_camera": 30,
+      "total_frames": 120,
+      "wall_time_sec": 13.98,
+      "capture_fps": 30.0,
+      "display_fps": 8.6,
+      "aggregate_fps": 8.6,
+      "per_camera_fps": 2.1,
+      "ground_ai_fps": 41.8,
+      "air_ai_fps": 43.9,
+      "item_ai_fps": 15.9,
+      "latency_ms": {
+        "total_p50": 108.49,
+        "total_p95": 120.7,
+        "ground_p50": 23.73,
+        "air_p50": 22.53,
+        "item_p50": 62.06
+      },
+      "dropped_frames": 0,
+      "queue_depth_max": 1,
+      "result_age_ms": 109.7,
+      "resources_before": {
+        "cpu_pct": 26.3,
+        "ram_pct": 85.0,
+        "ram_used_mb": 13681.0,
+        "vram_mb": 96.0
+      },
+      "resources_after": {
+        "cpu_pct": 22.4,
+        "ram_pct": 87.2,
+        "ram_used_mb": 14033.0,
+        "vram_mb": 96.0
+      },
+      "gate_pass": false
+    }
+  }
+}

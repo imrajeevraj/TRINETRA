@@ -1,0 +1,850 @@
+# ==============================================================================
+# IBVAP — Official Model Registry
+# Tracks production models, base architectures, checksums, and lifecycle states
+# ==============================================================================
+#
+# YOLO26 MIGRATION STATUS: EXPERIMENTAL (Phase 0 — Preservation Complete)
+# YOLO11 baselines frozen. YOLO26 candidates being trained.
+# DO NOT promote YOLO26 entries until all gates pass.
+# ==============================================================================
+
+version: "2.1"
+active_model_id: "ibvap-ground-v2"
+active_airborne_model_id: "ibvap-airborne-v1"
+active_security_item_model_id: "ibvap-security-item-v2.1-exp001"
+migration_phase: "EVALUATION_COMPLETE_YOLO11_RETAINED"
+migration_verdict: "REJECT_YOLO26_RETAIN_YOLO11"
+migration_completed_at: "2026-09-02T18:05:03Z"
+
+models:
+  - id: "ibvap-ground-v2"
+    name: "IBVAP Ground Model v2.0 (Production Active)"
+    path: "models/current/ibvap_detector.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "production"
+    sha256: "7DBF36027768194F61C6EBBC000E1421374624558168F8A9896F727B296277B0"
+    classes:
+      0: "person"
+      1: "vehicle"
+    dataset_version: "ground_v2_exp002"
+    training_experiment: "ibvap_ground_v2_exp002b"
+    promoted_at: "2026-09-01T15:16:00Z"
+    target_device: "cuda"
+    image_size: 768
+    metrics:
+      frozen_benchmark: "IBVAP-GT-v1.0"
+      person_precision: 0.6449
+      person_recall: 0.7458
+      person_f1: 0.6917
+      person_map50: 0.4810
+      vehicle_precision: 0.9697
+      vehicle_recall: 0.8649
+      vehicle_f1: 0.9143
+      vehicle_map50: 0.8387
+      inference_p50_ms: 10.59
+      inference_p95_ms: 16.18
+      ai_fps: 84.4
+
+  - id: "ibvap-detector-v1"
+    name: "IBVAP Baseline Neural Detector (COCO Pretrained)"
+    path: "models/archive/ibvap_detector_v1_legacy.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "rollback"
+    sha256: "0EBBC80D4A7680D14987A577CD21342B65ECFD94632BD9A8DA63AE6417644EE1"
+    classes:
+      0: "person"
+      1: "vehicle"
+    dataset_version: "COCO-Pretrained (Normalized)"
+    trained_at: "2026-08-30T10:00:00Z"
+    target_device: "cuda"
+    metrics:
+      frozen_benchmark: "IBVAP-GT-v1.0"
+      person_precision: 0.9989
+      person_recall: 0.9989
+      person_f1: 0.9989
+      person_map50: 0.9978
+      vehicle_precision: 1.0000
+      vehicle_recall: 1.0000
+      vehicle_f1: 1.0000
+      vehicle_map50: 1.0000
+      inference_p50_ms: 10.46
+      inference_p95_ms: 15.26
+      ai_fps: 87.4
+
+  - id: "ibvap-candidate-yolo11n-v1"
+    name: "IBVAP Candidate Detector Run 1 (5-epoch)"
+    path: "data/training/runs/ibvap_yolo11n_v1/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "archived"
+    sha256: "CA7A375FD3E96FDE25FE43A31531F92B40950011F086213A07BC9DCBF71FDCDC"
+    classes:
+      0: "person"
+      1: "vehicle"
+    dataset_version: "IBVAP-TRAIN-v1.0"
+    trained_at: "2026-09-01T12:35:45Z"
+    target_device: "cuda"
+    gate_check: "rejected_for_production_active"
+    metrics:
+      frozen_benchmark: "IBVAP-GT-v1.0"
+      person_precision: 0.0000
+      person_recall: 0.0000
+      person_f1: 0.0000
+      person_map50: 0.0000
+      vehicle_precision: 0.0000
+      vehicle_recall: 0.0000
+      vehicle_f1: 0.0000
+      vehicle_map50: 0.0000
+      inference_p50_ms: 10.02
+      inference_p95_ms: 15.72
+      ai_fps: 90.5
+
+  - id: "ibvap-candidate-yolo11n-50ep"
+    name: "IBVAP Fine-Tuned Candidate Run 2 (50-epoch)"
+    path: "data/training/runs/ibvap_yolo11n_v1-2/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "6DDE33808EAF15BF3EA9FB1C2209285D3F0C3552D3C4E3086ECF8736862A6EA8"
+    classes:
+      0: "person"
+      1: "vehicle"
+    dataset_version: "IBVAP-TRAIN-v1.0"
+    trained_at: "2026-09-01T13:16:51Z"
+    target_device: "cuda"
+    gate_check: "ready_for_review"
+    metrics:
+      frozen_benchmark: "IBVAP-GT-v1.0"
+      person_precision: 0.6309
+      person_recall: 0.7248
+      person_f1: 0.6746
+      person_map50: 0.4573
+      vehicle_precision: 0.9600
+      vehicle_recall: 0.8649
+      vehicle_f1: 0.9100
+      vehicle_map50: 0.8303
+      inference_p50_ms: 13.61
+      inference_p95_ms: 21.09
+      ai_fps: 65.2
+
+  - id: "ibvap-ground-v2-exp001"
+    name: "IBVAP Ground Model v2 (Experiment 001 - Kaggle Ingested)"
+    path: "data/training/runs/ibvap_ground_v2/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "A1FB4219873A68FF32A12B596269FED13584AA03F1ACD82FF4347BF83FD0DB3C"
+    classes:
+      0: "person"
+      1: "vehicle"
+    dataset_version: "ground_v2"
+    trained_at: "2026-09-01T14:30:32Z"
+    target_device: "cuda"
+    gate_check: "evaluation_complete"
+    metrics:
+      frozen_benchmark: "IBVAP-GT-v1.0"
+      person_precision: 0.6127
+      person_recall: 0.7059
+      person_f1: 0.6560
+      person_map50: 0.4325
+      vehicle_precision: 0.9600
+      vehicle_recall: 0.8649
+      vehicle_f1: 0.9100
+      vehicle_map50: 0.8303
+      inference_p50_ms: 22.70
+      inference_p95_ms: 25.44
+      ai_fps: 42.0
+
+  - id: "ibvap-ground-v2-exp002a"
+    name: "IBVAP Ground Model v2 (Experiment 002-A - Small Object Augmentation)"
+    path: "data/training/runs/ibvap_ground_v2_exp002a/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "950361525F44BAAE03AB9887CF62EA190CAF1F1467947D7313E9564A59DF1E34"
+    classes:
+      0: "person"
+      1: "vehicle"
+    dataset_version: "ground_v2_exp002"
+    trained_at: "2026-09-01T14:55:10Z"
+    target_device: "cuda"
+    gate_check: "evaluation_complete"
+    metrics:
+      frozen_benchmark: "IBVAP-GT-v1.0"
+      person_precision: 0.6318
+      person_recall: 0.7181
+      person_f1: 0.6722
+      person_map50: 0.4537
+      vehicle_precision: 0.9792
+      vehicle_recall: 0.8468
+      vehicle_f1: 0.9082
+      vehicle_map50: 0.8292
+      inference_p50_ms: 20.43
+      inference_p95_ms: 26.38
+      ai_fps: 49.1
+
+  - id: "ibvap-ground-v2-exp002b"
+    name: "IBVAP Ground Model v2 (Experiment 002-B - 768px High-Resolution Leader)"
+    path: "data/training/runs/ibvap_ground_v2_exp002b/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "7DBF36027768194F61C6EBBC000E1421374624558168F8A9896F727B296277B0"
+    classes:
+      0: "person"
+      1: "vehicle"
+    dataset_version: "ground_v2_exp002"
+    trained_at: "2026-09-01T15:11:09Z"
+    target_device: "cuda"
+    gate_check: "passed_all_gates_promotable"
+    metrics:
+      frozen_benchmark: "IBVAP-GT-v1.0"
+      person_precision: 0.6449
+      person_recall: 0.7458
+      person_f1: 0.6917
+      person_map50: 0.4810
+      vehicle_precision: 0.9697
+      vehicle_recall: 0.8649
+      vehicle_f1: 0.9143
+      vehicle_map50: 0.8387
+      inference_p50_ms: 10.59
+      inference_p95_ms: 16.18
+      ai_fps: 84.4
+
+  - id: "ibvap-airborne-v1"
+    name: "IBVAP Airborne Model v1 (Drone & Aircraft Baseline Detector)"
+    path: "data/training/runs/ibvap_airborne_v1_exp001/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "E1009633325E463B1C0D45D6578522A1A2026AE27B854591A83461043928C914"
+    classes:
+      0: "drone"
+      1: "aircraft"
+    dataset_version: "airborne_v1"
+    trained_at: "2026-09-01T15:41:20Z"
+    target_device: "cuda"
+    metrics:
+      validation_split: "airborne_v1_val"
+      drone_precision: 0.7554
+      drone_recall: 0.9100
+      drone_f1: 0.8255
+      drone_map50: 0.6874
+      aircraft_precision: 0.6376
+      aircraft_recall: 0.9223
+      aircraft_f1: 0.7540
+      aircraft_map50: 0.5881
+      inference_p50_ms: 9.30
+      inference_p95_ms: 13.50
+      ai_fps: 97.8
+
+  - id: "ibvap-security-item-v1"
+    name: "IBVAP Security Item Detector v1.0 (Firearm Candidate)"
+    path: "data/training/runs/ibvap_security_item_v1_exp001/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "7011A3D8130D5BCBA9C6BFF6ED57506AAC1AA2F75303873514056B57839329B5"
+    classes:
+      0: "firearm"
+    dataset_version: "security_item_v1"
+    trained_at: "2026-09-01T21:40:30Z"
+    target_device: "cuda"
+    operating_confidence: 0.35
+    metrics:
+      independent_benchmark: "IBVAP-GT-ITEM-v1.0"
+      firearm_precision: 0.6306
+      firearm_recall: 0.6024
+      firearm_f1: 0.6162
+      firearm_map50: 0.5144
+      inference_p50_ms: 18.58
+      inference_p95_ms: 57.95
+      ai_fps: 53.8
+
+  - id: "ibvap-security-item-v2-exp001"
+    name: "IBVAP Security Item Detector v2 Candidate (Surveillance Small-Object Tuned)"
+    path: "data/training/runs/ibvap_security_item_v2_exp001/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "C1B3198153C487A5AD494AD4F5D8CF0D96DA25D332E2D51846D60E8133696E61"
+    classes:
+      0: "firearm"
+    dataset_version: "security_item_v2"
+    trained_at: "2026-09-01T22:06:39Z"
+    target_device: "cuda"
+    operating_confidence: 0.35
+    metrics:
+      independent_benchmark: "IBVAP-GT-ITEM-v2.0"
+      firearm_precision: 0.6653
+      firearm_recall: 0.6721
+      firearm_f1: 0.6687
+      firearm_map50: 0.6566
+      small_object_recall: 0.7429
+      occluded_recall: 0.6667
+      low_light_recall: 0.9091
+      inference_p50_ms: 18.65
+      inference_p95_ms: 58.12
+      ai_fps: 53.6
+    promotion_status: "RETAINED_AS_VALIDATED_CANDIDATE"
+    promotion_notes: "Achieved mAP50=65.66% exceeding 65% gate; Precision=66.53% (target 75%) and Recall=67.21% (target 80%) remain below production gates. Preserved as high-value candidate."
+
+  - id: "ibvap-security-item-v2.1-exp001"
+    name: "IBVAP Security Item Detector v2.1 Candidate (Error-Driven Firearm Optimized)"
+    path: "data/training/runs/ibvap_security_item_v2_1_exp001/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "72464C778DE57270800146AB5ADF2AB683FFEAC55338C89231EE3A83E7F6E1DA"
+    classes:
+      0: "firearm"
+    dataset_version: "security_item_v2_1"
+    trained_at: "2026-09-01T22:40:52Z"
+    target_device: "cuda"
+    operating_confidence: 0.35
+    metrics:
+      independent_benchmark: "IBVAP-GT-ITEM-v2.0"
+      firearm_precision: 0.8361
+      firearm_recall: 0.8361
+      firearm_f1: 0.8361
+      firearm_map50: 0.8579
+      firearm_map50_95: 0.3447
+      small_object_recall: 0.8571
+      occluded_recall: 0.8667
+      low_light_recall: 0.8333
+      inference_p50_ms: 11.99
+      inference_p95_ms: 53.75
+      ai_fps: 64.4
+    promotion_status: "PROMOTED_TO_VALIDATED"
+    promotion_notes: "Passed all production criteria: Precision=83.61% (>=75%), Recall=83.61% (>=80%), F1=83.61% (>=77%), mAP50=85.79% (>=65%), FPS=64.4 (>=30). Three-model pipeline operational at 30.5 FPS with zero regression on Ground/Air."
+
+
+  - id: "ibvap-ground-v3-exp001"
+    name: "IBVAP Ground Model v3 Candidate (640px Baseline)"
+    path: "data/training/runs/ibvap_ground_v3_exp001/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "F0B9DCFD39A31DC6A0D235956492EB56032DF7FDCA04EC6CCD971A934D8A87BE"
+    classes:
+      0: "person"
+      1: "vehicle"
+    dataset_version: "ground_v3"
+    training_experiment: "ibvap_ground_v3_exp001"
+    image_size: 640
+    target_device: "cuda"
+    metrics:
+      frozen_benchmark: "IBVAP-GT-v1.0"
+      person_precision: 0.7138
+      person_recall: 0.4706
+      person_f1: 0.5672
+      person_map50: 0.3359
+      vehicle_precision: 0.9700
+      vehicle_recall: 0.8739
+      vehicle_f1: 0.9194
+      vehicle_map50: 0.8477
+      inference_p50_ms: 22.29
+      inference_p95_ms: 28.51
+      ai_fps: 44.9
+
+  - id: "ibvap-ground-v3-exp002"
+    name: "IBVAP Ground Model v3 Candidate (768px Small-Object Leader)"
+    path: "data/training/runs/ibvap_ground_v3_exp002/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "56E3DF2F0E970A344D3460FFAF1F67D38759C366A629D918F4D102A487BE15CC"
+    classes:
+      0: "person"
+      1: "vehicle"
+    dataset_version: "ground_v3"
+    training_experiment: "ibvap_ground_v3_exp002"
+    image_size: 768
+    target_device: "cuda"
+    metrics:
+      frozen_benchmark: "IBVAP-GT-v1.0"
+      person_precision: 0.6217
+      person_recall: 0.6238
+      person_f1: 0.6227
+      person_map50: 0.3878
+      vehicle_precision: 0.9688
+      vehicle_recall: 0.8378
+      vehicle_f1: 0.8986
+      vehicle_map50: 0.8117
+      inference_p50_ms: 21.08
+      inference_p95_ms: 29.34
+      ai_fps: 47.4
+    promotion_status: "RETAINED_AS_CANDIDATE_NO_REGRESSION_GATE_ACTIVE"
+    promotion_notes: "Person recall (62.38%) regressed vs production baseline (74.58%). Retained as high-value candidate; production baseline ibvap-ground-v2 preserved."
+
+  - id: "ibvap-airborne-v2-exp001"
+    name: "IBVAP Airborne Model v2 Candidate (640px Baseline)"
+    path: "data/training/runs/ibvap_airborne_v2_exp001/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "B97C619AB53978D067BCC24957F013CCCAE3D74A9E4A7FE80066412104325EED"
+    classes:
+      0: "drone"
+      1: "aircraft"
+    dataset_version: "airborne_v2"
+    training_experiment: "ibvap_airborne_v2_exp001"
+    image_size: 640
+    target_device: "cuda"
+    metrics:
+      validation_split: "airborne_v1_1_val"
+      aircraft_precision: 0.8673
+      aircraft_recall: 0.9608
+      aircraft_f1: 0.9116
+      aircraft_map50: 0.8332
+      inference_p50_ms: 20.78
+      inference_p95_ms: 25.42
+      ai_fps: 48.1
+
+  - id: "ibvap-airborne-v2-exp002"
+    name: "IBVAP Airborne Model v2.0 Production (640px Hard-Negative Calibrated Leader)"
+    path: "models/production/airborne/ibvap_airborne_v2_production.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "promoted_to_production"
+    active_production: true
+    sha256: "5229632C3D7A12A279A45032D558FB4712BF9DB43667828D30367D2354106384"
+    classes:
+      0: "drone"
+      1: "aircraft"
+    dataset_version: "airborne_v2"
+    training_experiment: "ibvap_airborne_v2_exp002"
+    image_size: 640
+    target_device: "cuda"
+    metrics:
+      validation_split: "airborne_v1_1_val"
+      aircraft_precision: 0.8347
+      aircraft_recall: 0.9902
+      aircraft_f1: 0.9058
+      aircraft_map50: 0.8265
+      drone_false_positives: 1
+      inference_p50_ms: 9.64
+      inference_p95_ms: 14.56
+      ai_fps: 96.15
+    promotion_status: "PROMOTED_TO_PRODUCTION"
+    promotion_notes: "Demonstrated 99.02% aircraft recall (+3.92% over v1 baseline 95.10%), 80% reduction in false alarms (1 FP vs 5 FP), and 96.15 FPS on RTX 3050 GPU. Passed all smoke tests, benchmark evaluations, and regression tests."
+
+  - id: "ibvap-ground-v4-exp001"
+    name: "IBVAP Ground Model v4 Candidate (640px Baseline)"
+    path: "data/training/runs/ibvap_ground_v4_exp001/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "E25BA2D7D8A3288CB5C2A4F6A8F61967C54B8405A78CC4F9034467226CC17B12"
+    classes:
+      0: "person"
+      1: "vehicle"
+    dataset_version: "ground_v4"
+    training_experiment: "ibvap_ground_v4_exp001"
+    image_size: 640
+    target_device: "cuda"
+    metrics:
+      frozen_benchmark: "IBVAP-GT-v1.0"
+      person_precision: 0.9120
+      person_recall: 0.1265
+      person_f1: 0.2222
+      person_map50: 0.1154
+      vehicle_precision: 1.0000
+      vehicle_recall: 0.6757
+      vehicle_f1: 0.8065
+      vehicle_map50: 0.6757
+      inference_p50_ms: 19.15
+      inference_p95_ms: 22.75
+      ai_fps: 52.2
+    promotion_status: "REJECTED_FOR_PRODUCTION_GATE_FAILED"
+
+  - id: "ibvap-ground-v4-exp002"
+    name: "IBVAP Ground Model v4 Candidate (768px High-Res)"
+    path: "data/training/runs/ibvap_ground_v4_exp002/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "F533DB568EE0D0705B7118A21ADE8F290D8F34D7681223EEFA347A2DEFA89899"
+    classes:
+      0: "person"
+      1: "vehicle"
+    dataset_version: "ground_v4"
+    training_experiment: "ibvap_ground_v4_exp002"
+    image_size: 768
+    target_device: "cuda"
+    metrics:
+      frozen_benchmark: "IBVAP-GT-v1.0"
+      person_precision: 0.9643
+      person_recall: 0.0599
+      person_f1: 0.1129
+      person_map50: 0.0578
+      vehicle_precision: 1.0000
+      vehicle_recall: 0.6396
+      vehicle_f1: 0.7802
+      vehicle_map50: 0.6396
+      inference_p50_ms: 20.92
+      inference_p95_ms: 28.25
+      ai_fps: 47.8
+    promotion_status: "REJECTED_FOR_PRODUCTION_GATE_FAILED"
+
+  - id: "ibvap-ground-v4-exp003"
+    name: "IBVAP Ground Model v4 Candidate (768px Hyper-Precision)"
+    path: "data/training/runs/ibvap_ground_v4_exp003/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "B9A9609231B7D151B3C31155F7494813887C64E3E720B17D9D1CDE576731917C"
+    classes:
+      0: "person"
+      1: "vehicle"
+    dataset_version: "ground_v4"
+    training_experiment: "ibvap_ground_v4_exp003"
+    image_size: 768
+    target_device: "cuda"
+    metrics:
+      frozen_benchmark: "IBVAP-GT-v1.0"
+      person_precision: 0.9643
+      person_recall: 0.0599
+      person_f1: 0.1129
+      person_map50: 0.0578
+      vehicle_precision: 0.9868
+      vehicle_recall: 0.6757
+      vehicle_f1: 0.8021
+      vehicle_map50: 0.6668
+      inference_p50_ms: 22.14
+      inference_p95_ms: 31.16
+      ai_fps: 45.2
+    promotion_status: "REJECTED_FOR_PRODUCTION_GATE_FAILED"
+    promotion_notes: "Extreme precision achieved (96.43% precision, 99.5% reduction in false alarms), but high hard-negative ratio depressed recall. Baseline ibvap-ground-v2 preserved in production."
+
+  - id: "ibvap-ground-v5-exp001"
+    name: "IBVAP Ground Model v5 Candidate (640px Baseline)"
+    path: "data/training/runs/ibvap_ground_v5_exp001/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "5D03FA988F3D9CEFA094F8B41721D15D90324E65BD957E63A4AC9A323F0CA8F7"
+    classes:
+      0: "person"
+      1: "vehicle"
+    dataset_version: "ground_v5"
+    training_experiment: "ibvap_ground_v5_exp001"
+    image_size: 640
+    target_device: "cuda"
+    metrics:
+      frozen_benchmark: "IBVAP-GT-v1.0"
+      person_precision: 0.8712
+      person_recall: 0.1276
+      person_f1: 0.2227
+      vehicle_precision: 0.9886
+      vehicle_recall: 0.7838
+      vehicle_f1: 0.8744
+      inference_p50_ms: 20.92
+      inference_p95_ms: 26.85
+      ai_fps: 47.8
+    promotion_status: "REJECTED_FOR_PRODUCTION_GATE_FAILED"
+
+  - id: "ibvap-ground-v5-exp002"
+    name: "IBVAP Ground Model v5 Candidate (768px High-Res)"
+    path: "data/training/runs/ibvap_ground_v5_exp002/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "915B6FB7A1FD0E709EAAB6F3C3947682E52D9C25CCFD186A627DEFA28E8625C1"
+    classes:
+      0: "person"
+      1: "vehicle"
+    dataset_version: "ground_v5"
+    training_experiment: "ibvap_ground_v5_exp002"
+    image_size: 768
+    target_device: "cuda"
+    metrics:
+      frozen_benchmark: "IBVAP-GT-v1.0"
+      person_precision: 0.9058
+      person_recall: 0.1387
+      person_f1: 0.2406
+      vehicle_precision: 0.9767
+      vehicle_recall: 0.7568
+      vehicle_f1: 0.8528
+      inference_p50_ms: 21.22
+      inference_p95_ms: 26.35
+      ai_fps: 47.1
+    promotion_status: "REJECTED_FOR_PRODUCTION_GATE_FAILED"
+
+  - id: "ibvap-ground-v5-exp003"
+    name: "IBVAP Ground Model v5 Candidate (768px Small-Object Tuned)"
+    path: "data/training/runs/ibvap_ground_v5_exp003/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "354B813B50CCE711648473537FB97D4EE8C21447962838024B1725AB2C567053"
+    classes:
+      0: "person"
+      1: "vehicle"
+    dataset_version: "ground_v5"
+    training_experiment: "ibvap_ground_v5_exp003"
+    image_size: 768
+    target_device: "cuda"
+    metrics:
+      frozen_benchmark: "IBVAP-GT-v1.0"
+      person_precision: 0.9180
+      person_recall: 0.1243
+      person_f1: 0.2190
+      vehicle_precision: 0.8989
+      vehicle_recall: 0.7207
+      vehicle_f1: 0.8000
+      inference_p50_ms: 20.40
+      inference_p95_ms: 24.28
+      ai_fps: 49.0
+    promotion_status: "REJECTED_FOR_PRODUCTION_GATE_FAILED"
+    promotion_notes: "Precision reached 91.80% (97.3% false alarm suppression), but recall regressed below production baseline. Baseline ibvap-ground-v2 preserved."
+
+  - id: "ibvap-security-item-v3-exp001"
+    name: "IBVAP Security Item Model v3 Candidate (640px Baseline)"
+    path: "data/training/runs/ibvap_security_item_v3_exp001/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "9A4D3C61223B897DF91B3EA2C689FB8824648C920029BB70216D711AA7A279AB"
+    classes:
+      0: "firearm"
+    dataset_version: "security_item_v3"
+    training_experiment: "ibvap_security_item_v3_exp001"
+    image_size: 640
+    target_device: "cuda"
+    metrics:
+      independent_benchmark: "IBVAP-GT-ITEM-v2.0"
+      firearm_precision: 0.8235
+      firearm_recall: 0.4590
+      firearm_f1: 0.5895
+      firearm_map50: 0.5805
+      inference_p50_ms: 10.35
+      inference_p95_ms: 48.64
+      ai_fps: 96.6
+    promotion_status: "REJECTED_FOR_PRODUCTION_GATE_FAILED"
+
+  - id: "ibvap-security-item-v3-exp002"
+    name: "IBVAP Security Item Model v3 Candidate (768px High-Res)"
+    path: "data/training/runs/ibvap_security_item_v3_exp002/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "067A2991363EF1DA7776AFD8830356F35E977BC29B0F7400A5DC0B9A83FF7FFE"
+    classes:
+      0: "firearm"
+    dataset_version: "security_item_v3"
+    training_experiment: "ibvap_security_item_v3_exp002"
+    image_size: 768
+    target_device: "cuda"
+    metrics:
+      independent_benchmark: "IBVAP-GT-ITEM-v2.0"
+      firearm_precision: 0.7647
+      firearm_recall: 0.6393
+      firearm_f1: 0.6964
+      firearm_map50: 0.5671
+      inference_p50_ms: 12.03
+      inference_p95_ms: 50.90
+      ai_fps: 83.1
+    promotion_status: "REJECTED_FOR_PRODUCTION_GATE_FAILED"
+
+  - id: "ibvap-security-item-v3-exp003"
+    name: "IBVAP Security Item Model v3 Candidate (640px Small-Object Tuned)"
+    path: "data/training/runs/ibvap_security_item_v3_exp003/weights/best.pt"
+    base_model: "YOLO11n"
+    framework: "Ultralytics YOLO"
+    status: "candidate"
+    sha256: "447AD2B6ED7E4DD1F41DAF23940CF899FF64E38FAA6F25921E468C5C8DC118CB"
+    classes:
+      0: "firearm"
+    dataset_version: "security_item_v3"
+    training_experiment: "ibvap_security_item_v3_exp003"
+    image_size: 640
+    target_device: "cuda"
+    metrics:
+      independent_benchmark: "IBVAP-GT-ITEM-v2.0"
+      firearm_precision: 0.7500
+      firearm_recall: 0.5410
+      firearm_f1: 0.6286
+      firearm_map50: 0.5193
+      inference_p50_ms: 10.29
+      inference_p95_ms: 15.63
+      ai_fps: 97.2
+    promotion_status: "REJECTED_FOR_PRODUCTION_GATE_FAILED"
+    promotion_notes: "Recall and mAP50 regressed compared to active production baseline ibvap_security_item_v2_1_production.pt. Production model preserved."
+
+  - id: "rfdetr-s-legacy"
+    name: "RF-DETR Small Transformer Head"
+    path: "models/archive/rfdetr_small.pth"
+    base_model: "RF-DETR-Small"
+    framework: "PyTorch Transformer"
+    status: "retired"
+    sha256: "N/A"
+    reason_for_retirement: "Incompatible with real-time C4ISR multi-camera pipeline; replaced by YOLO11n"
+
+# ==============================================================================
+# YOLO26 CANDIDATE ENTRIES — DO NOT PROMOTE UNTIL ALL GATES PASS
+# Experiment IDs: IBVAP-GROUND-Y26-001 / IBVAP-AIR-Y26-001 / IBVAP-ITEM-Y26-001
+# ==============================================================================
+
+  - id: "ibvap-ground-v3-yolo26n-exp001"
+    name: "IBVAP Ground Model v3.0 Candidate (YOLO26n)"
+    detector_domain: "GROUND"
+    architecture: "YOLO26n"
+    variant: "nano"
+    version: "3.0.0-exp001"
+    status: "REJECTED_ROLLED_BACK"
+    checkpoint_path: "models/candidates/yolo26/ground/best.pt"
+    sha256: "83EA58623A735842BBA54403D8AF093F37730CC9B6BBA28AF52E3BE0E028C03A"
+    classes:
+      0: "person"
+      1: "vehicle"
+    input_size: 768
+    confidence_threshold: 0.25
+    training_dataset: "ground_v2_exp002"
+    training_dataset_version: "ground_v2_exp002"
+    validation_dataset: "ground_v2_exp002/images/val"
+    benchmark_version: "IBVAP-GT-v1.0"
+    experiment_id: "IBVAP-GROUND-Y26-001"
+    base_checkpoint: "yolo26n.pt"
+    rollback_target: "ibvap-ground-v2"
+    created_at: "2026-09-02T15:47:00Z"
+    promoted_at: null
+    evaluation_decision: "REJECT"
+    rejection_reason: "mAP50 0.6242 failed to exceed YOLO11 production baseline 0.6599 (-0.0357 delta)"
+    promotion_gates:
+      accuracy: "FAILED"
+      performance: "FAILED"
+      integration: "PASSED"
+      tracking: "PASSED"
+      event: "PASSED"
+      resource: "PASSED"
+    training_config:
+      epochs: 40
+      batch_size: 16
+      image_size: 768
+      optimizer: "AdamW"
+      lr0: 0.002
+      lrf: 0.0001
+      cos_lr: true
+      seed: 42
+      augmentation:
+        scale: 0.1
+        mosaic: 0.2
+        fliplr: 0.5
+        hsv_h: 0.015
+        hsv_s: 0.4
+        hsv_v: 0.4
+    metrics:
+      official_map50: 0.6242
+      official_map50_95: 0.4135
+      baseline_map50: 0.6599
+      delta_map50: -0.0357
+
+  - id: "ibvap-airborne-v2-yolo26n-exp001"
+    name: "IBVAP Airborne Model v2.0 Candidate (YOLO26n)"
+    detector_domain: "AIR"
+    architecture: "YOLO26n"
+    variant: "nano"
+    version: "2.0.0-exp001"
+    status: "REJECTED_ROLLED_BACK"
+    checkpoint_path: "models/candidates/yolo26/airborne/best.pt"
+    sha256: "03D5E7621E2BA81C33F8D882B76A735D9A91E11198D4F03D555CBA2DDBF14985"
+    classes:
+      0: "drone"
+      1: "aircraft"
+    input_size: 640
+    confidence_threshold: 0.40
+    training_dataset: "airborne_v1_1"
+    training_dataset_version: "airborne_v1_1"
+    validation_dataset: "airborne_v1_1/images/val"
+    benchmark_version: "airborne_v1_val"
+    experiment_id: "IBVAP-AIR-Y26-001"
+    base_checkpoint: "yolo26n.pt"
+    rollback_target: "ibvap-airborne-v1"
+    created_at: "2026-09-02T15:47:00Z"
+    promoted_at: null
+    evaluation_decision: "REJECT"
+    rejection_reason: "Marginal accuracy gain (+0.0006 mAP) severely offset by 5.4x latency degradation (50.7ms vs 9.3ms baseline)"
+    promotion_gates:
+      accuracy: "PASSED_MARGINAL"
+      performance: "FAILED"
+      integration: "PASSED"
+      tracking: "PASSED"
+      event: "PASSED"
+      resource: "PASSED"
+    training_config:
+      epochs: 30
+      batch_size: 16
+      image_size: 640
+      optimizer: "AdamW"
+      lr0: 0.002
+      cos_lr: true
+      seed: 42
+      augmentation:
+        scale: 0.1
+        mosaic: 0.2
+        close_mosaic: 8
+    metrics:
+      official_map50: 0.7846
+      official_map50_95: 0.5529
+      baseline_map50: 0.7840
+      delta_map50: +0.0006
+      p50_latency_ms: 50.7
+      baseline_p50_latency_ms: 9.3
+
+  - id: "ibvap-security-item-v3-yolo26n-exp001"
+    name: "IBVAP Security Item Detector v3.0 Candidate (YOLO26n)"
+    detector_domain: "SECURITY_ITEM"
+    architecture: "YOLO26n"
+    variant: "nano"
+    version: "3.0.0-exp001"
+    status: "REJECTED_ROLLED_BACK"
+    checkpoint_path: "models/candidates/yolo26/security_item/best.pt"
+    sha256: "11ADFD8E3D3F580540BCBB8A86C5A658B9CA975013FF1307348E030B7EAE51F3"
+    classes:
+      0: "firearm"
+    input_size: 640
+    confidence_threshold: 0.35
+    training_dataset: "security_item_v2_1"
+    training_dataset_version: "security_item_v2_1"
+    validation_dataset: "security_item_v2/images/test"
+    benchmark_version: "IBVAP-GT-ITEM-v2.0"
+    experiment_id: "IBVAP-ITEM-Y26-001"
+    base_checkpoint: "yolo26n.pt"
+    rollback_target: "ibvap-security-item-v2.1-exp001"
+    created_at: "2026-09-02T15:47:00Z"
+    promoted_at: null
+    critical_limitation: "REAL-FIREARM-VIDEO VALIDATION NOT AVAILABLE. Must be preserved in all documentation."
+    evaluation_decision: "REJECT"
+    rejection_reason: "mAP50 0.3054 severely degraded compared to YOLO11 production baseline 0.8579 (-0.5525 delta)"
+    promotion_gates:
+      accuracy: "FAILED"
+      performance: "FAILED"
+      integration: "PASSED"
+      tracking: "PASSED"
+      event: "PASSED"
+      resource: "PASSED"
+      hard_negative: "PASSED"
+      real_video: "NOT_AVAILABLE"
+    training_config:
+      epochs: 10
+      batch_size: 16
+      image_size: 640
+      optimizer: "AdamW"
+      lr0: 0.0005
+      lrf: 0.01
+      seed: 42
+      freeze: 0
+      augmentation:
+        mosaic: 0.5
+        mixup: 0.10
+        scale: 0.35
+        fliplr: 0.5
+    metrics:
+      official_map50: 0.3054
+      official_map50_95: 0.1465
+      baseline_map50: 0.8579
+      delta_map50: -0.5525
+

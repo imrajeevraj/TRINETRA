@@ -1,0 +1,32 @@
+{
+  "100_entities": {
+    "entity_count": 100,
+    "total_duration_sec": 0.016,
+    "throughput_predictions_per_sec": 6400.7,
+    "mean_latency_ms": 0.16,
+    "p50_latency_ms": 0.06,
+    "p95_latency_ms": 0.17,
+    "p99_latency_ms": 0.38,
+    "event_loss_rate": 0.0
+  },
+  "500_entities": {
+    "entity_count": 500,
+    "total_duration_sec": 0.117,
+    "throughput_predictions_per_sec": 4271.2,
+    "mean_latency_ms": 0.23,
+    "p50_latency_ms": 0.16,
+    "p95_latency_ms": 0.42,
+    "p99_latency_ms": 1.34,
+    "event_loss_rate": 0.0
+  },
+  "1000_entities": {
+    "entity_count": 1000,
+    "total_duration_sec": 0.266,
+    "throughput_predictions_per_sec": 3761.2,
+    "mean_latency_ms": 0.26,
+    "p50_latency_ms": 0.25,
+    "p95_latency_ms": 0.44,
+    "p99_latency_ms": 1.25,
+    "event_loss_rate": 0.0
+  }
+}

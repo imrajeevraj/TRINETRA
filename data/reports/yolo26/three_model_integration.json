@@ -1,0 +1,81 @@
+{
+  "experiment_id": "IBVAP-THREE-MODEL-Y26-001",
+  "benchmark_date": "2026-09-02T18:02:12Z",
+  "models": {
+    "ground": "models\\candidates\\yolo26\\ground\\best.pt",
+    "airborne": "models\\candidates\\yolo26\\airborne\\best.pt",
+    "security_item": "models\\candidates\\yolo26\\security_item\\best.pt"
+  },
+  "architecture": "YOLO26n \u00d7 3",
+  "device": "cuda:0",
+  "frames_per_cam": 50,
+  "three_model_throughput_1cam_fps": 4.28,
+  "three_model_throughput_2cam_aggregate_fps": 11.89,
+  "three_model_throughput_4cam_aggregate_fps": 25.09,
+  "three_model_p50_latency_ms": 233.47,
+  "three_model_p95_latency_ms": 694.81,
+  "yolo11_baseline_fps_1cam": 28.4,
+  "delta_fps_1cam": -24.12,
+  "detailed_results": [
+    {
+      "active_models": [
+        "ground",
+        "airborne",
+        "security_item"
+      ],
+      "num_cameras": 1,
+      "frames": 50,
+      "aggregate_fps": 4.28,
+      "per_camera_fps": 4.28,
+      "p50_latency_ms": 233.47,
+      "p95_latency_ms": 694.81,
+      "p99_latency_ms": 903.69,
+      "mean_latency_ms": 297.106,
+      "std_latency_ms": 176.155,
+      "vram_allocated_mb": 59.59,
+      "cpu_util_pct": 49.66,
+      "ram_rss_mb": 806.84
+    },
+    {
+      "active_models": [
+        "ground",
+        "airborne",
+        "security_item"
+      ],
+      "num_cameras": 2,
+      "frames_per_cam": 50,
+      "total_frames": 100,
+      "aggregate_fps": 11.89,
+      "per_camera_fps": 5.95,
+      "p50_latency_ms": 168.192,
+      "p95_latency_ms": 518.134,
+      "p99_latency_ms": 666.733,
+      "vram_allocated_mb": 59.59,
+      "cpu_util_pct": 46.14,
+      "ram_rss_mb": 807.46
+    },
+    {
+      "active_models": [
+        "ground",
+        "airborne",
+        "security_item"
+      ],
+      "num_cameras": 4,
+      "frames_per_cam": 50,
+      "total_frames": 200,
+      "aggregate_fps": 25.09,
+      "per_camera_fps": 6.27,
+      "p50_latency_ms": 159.44,
+      "p95_latency_ms": 469.141,
+      "p99_latency_ms": 628.529,
+      "vram_allocated_mb": 59.59,
+      "cpu_util_pct": 49.62,
+      "ram_rss_mb": 807.86
+    }
+  ],
+  "gate_check": {
+    "target_fps": 28.0,
+    "achieved_fps": 4.28,
+    "passed": false
+  }
+}

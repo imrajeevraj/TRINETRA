@@ -1,0 +1,38 @@
+[
+  {
+    "event_time": "2026-09-02T18:06:03Z",
+    "dry_run": false,
+    "results": {
+      "ground": {
+        "domain": "ground",
+        "status": "SUCCESS",
+        "rollback_to": "ibvap-ground-v2",
+        "rollback_to_version": "v2.0",
+        "restored_from": "models\\production\\ground\\ibvap_ground_v2_production.pt",
+        "restored_to": "models\\current\\ibvap_detector.pt",
+        "sha256": "7DBF36027768194F61C6EBBC000E1421374624558168F8A9896F727B296277B0",
+        "timestamp": "2026-09-02T18:06:03Z"
+      },
+      "airborne": {
+        "domain": "airborne",
+        "status": "SUCCESS",
+        "rollback_to": "ibvap-airborne-v1",
+        "rollback_to_version": "v1.1",
+        "restored_from": "models\\production\\airborne\\ibvap_airborne_v1_production.pt",
+        "restored_to": "data\\training\\runs\\ibvap_airborne_v1_exp001\\weights\\best.pt",
+        "sha256": "E1009633325E463B1C0D45D6578522A1A2026AE27B854591A83461043928C914",
+        "timestamp": "2026-09-02T18:06:03Z"
+      },
+      "security_item": {
+        "domain": "security_item",
+        "status": "SUCCESS",
+        "rollback_to": "ibvap-security-item-v2.1-exp001",
+        "rollback_to_version": "v2.1",
+        "restored_from": "models\\production\\security_item\\ibvap_security_item_v2_1_production.pt",
+        "restored_to": "data\\training\\runs\\ibvap_security_item_v2_1_exp001\\weights\\best.pt",
+        "sha256": "72464C778DE57270800146AB5ADF2AB683FFEAC55338C89231EE3A83E7F6E1DA",
+        "timestamp": "2026-09-02T18:06:03Z"
+      }
+    }
+  }
+]

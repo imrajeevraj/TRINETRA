@@ -1,0 +1,124 @@
+{
+  "timestamp": "2026-09-03T13:42:40Z",
+  "phase": "PHASE_VII_OPERATIONAL_RELEASE",
+  "benchmarks": {
+    "Config_A_Ground_FullFrame": {
+      "description": "Ground 768px Full-Frame continuous baseline",
+      "p50_ms": 21.3307999947574,
+      "p95_ms": 23.091655003372576,
+      "p99_ms": 24.81248300653533,
+      "throughput_fps": 46.88056707886137
+    },
+    "Config_B_Ground_Dynamic_ROI": {
+      "description": "Ground 768px + Dynamic crop on suspicious triggers",
+      "p50_ms": 23.344599998381454,
+      "p95_ms": 29.411629998503475,
+      "p99_ms": 68.25240300051516,
+      "throughput_fps": 42.83645896992593
+    },
+    "Config_C_Ground_SAHI_OnDemand": {
+      "description": "Ground 768px + SAHI 2x2 on-demand zoom inspection",
+      "p50_ms": 207.36809999652905,
+      "p95_ms": 242.62473000635498,
+      "p99_ms": 290.94933299944387,
+      "throughput_fps": 4.822342491524676
+    },
+    "Config_D_Ground_PTZ_Simulation_ROI": {
+      "description": "Ground + PTZ slew simulation + vibration settling + Dynamic ROI",
+      "p50_ms": 0.1964999974006787,
+      "p95_ms": 0.5559599943808277,
+      "p99_ms": 0.9308650015736928,
+      "throughput_fps": 1000.0
+    },
+    "Config_E_Full_Orchestration_Pipeline": {
+      "description": "Ground + Tracking + Risk + PTZ + ROI + Temporal Confirmation",
+      "p50_ms": 27.649199997540563,
+      "p95_ms": 229.41286999339349,
+      "p99_ms": 259.3338010084699,
+      "throughput_fps": 36.16741171856515
+    },
+    "Config_F_Security_Item_Raw": {
+      "description": "Production Security Item detector (Profile A Perimeter)",
+      "p50_ms": 20.67825000267476,
+      "p95_ms": 23.266040002636146,
+      "p99_ms": 24.469104992458597,
+      "throughput_fps": 48.35999177254597
+    },
+    "Config_G_Security_Item_Verifier": {
+      "description": "Security Item detector + Threat Verifier (Profile B Logistics)",
+      "p50_ms": 20.504000000073574,
+      "p95_ms": 22.576439989643404,
+      "p99_ms": 23.553972000954673,
+      "throughput_fps": 48.77097151757763
+    }
+  },
+  "concurrency": {
+    "1_cameras": {
+      "num_cameras": 1,
+      "total_throughput_fps": 13.927245296145172,
+      "per_camera_fps": 13.927245296145172,
+      "p50_ms": 63.113299998803996,
+      "p95_ms": 82.757759996457,
+      "p99_ms": 206.93395599315377,
+      "vram_mb": 102.201171875,
+      "ram_mb": 898.7421875,
+      "cpu_percent": 0.0,
+      "dropped_frames": 0,
+      "queue_depth": 0
+    },
+    "4_cameras": {
+      "num_cameras": 4,
+      "total_throughput_fps": 14.921180727957223,
+      "per_camera_fps": 3.7302951819893058,
+      "p50_ms": 63.20830000913702,
+      "p95_ms": 74.88363500378905,
+      "p99_ms": 130.9666509872483,
+      "vram_mb": 102.201171875,
+      "ram_mb": 898.75390625,
+      "cpu_percent": 0.0,
+      "dropped_frames": 0,
+      "queue_depth": 0
+    },
+    "8_cameras": {
+      "num_cameras": 8,
+      "total_throughput_fps": 15.899496484418973,
+      "per_camera_fps": 1.9874370605523717,
+      "p50_ms": 61.29174999659881,
+      "p95_ms": 71.0248550043616,
+      "p99_ms": 99.61074599137646,
+      "vram_mb": 102.201171875,
+      "ram_mb": 899.0234375,
+      "cpu_percent": 0.0,
+      "dropped_frames": 0,
+      "queue_depth": 0
+    },
+    "mixed_workload_profile": {
+      "workload_types": [
+        "CAM_A_Normal_Perimeter",
+        "CAM_B_Crowded_Border",
+        "CAM_C_Distant_Boundary",
+        "CAM_D_Vehicle_Highway",
+        "CAM_E_Airborne_Airspace",
+        "CAM_F_Cargo_Security_Gate"
+      ],
+      "p50_ms": 20.777300000190735,
+      "p95_ms": 23.65069500156096,
+      "effective_fps": 48.12944896549696,
+      "status": "PASS_MIXED_CONCURRENCY"
+    }
+  },
+  "soak_test": {
+    "iterations": 100,
+    "mean_latency_ms": 22.847647000016877,
+    "p50_latency_ms": 21.544650000578258,
+    "p95_latency_ms": 27.35425499340635,
+    "p99_latency_ms": 32.62750700465433,
+    "memory_drift_mb": 0.48,
+    "crashes": 0,
+    "dropped_frames": 0,
+    "deadlocks": 0,
+    "queue_runaway": false,
+    "ptz_command_storm": false,
+    "stability_verdict": "PASS_CERTIFIED"
+  }
+}

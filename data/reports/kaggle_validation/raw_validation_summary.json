@@ -1,0 +1,68 @@
+{
+  "kiit_mita": {
+    "total_images": 1700,
+    "checked_images": 800,
+    "valid_images": 800,
+    "corrupt_images": 0,
+    "valid_boxes": 2107,
+    "invalid_boxes": 0,
+    "classes_detected": {
+      "6": 523,
+      "5": 373,
+      "4": 532,
+      "1": 229,
+      "3": 177,
+      "0": 136,
+      "2": 137
+    }
+  },
+  "human_detection": {
+    "total_images": 921,
+    "checked_images": 800,
+    "valid_images": 800,
+    "corrupt_images": 0,
+    "valid_boxes": 0,
+    "invalid_boxes": 0,
+    "classes_detected": {}
+  },
+  "drones": {
+    "total_images": 4014,
+    "checked_images": 800,
+    "valid_images": 800,
+    "corrupt_images": 0,
+    "valid_boxes": 685,
+    "invalid_boxes": 0,
+    "classes_detected": {
+      "0": 685
+    }
+  },
+  "fixed_wing": {
+    "total_images": 554,
+    "checked_images": 554,
+    "valid_images": 554,
+    "corrupt_images": 0,
+    "valid_boxes": 578,
+    "invalid_boxes": 0,
+    "classes_detected": {
+      "0": 578
+    }
+  },
+  "birds_negatives": {
+    "total_images": 828,
+    "checked_images": 800,
+    "valid_images": 800,
+    "corrupt_images": 0,
+    "valid_boxes": 0,
+    "invalid_boxes": 0,
+    "classes_detected": {}
+  },
+  "clouds_negatives": {
+    "total_images": 1628,
+    "checked_images": 800,
+    "valid_images": 800,
+    "corrupt_images": 0,
+    "valid_boxes": 0,
+    "invalid_boxes": 0,
+    "classes_detected": {}
+  }
+}

@@ -1,0 +1,12 @@
+apiVersion: v2
+name: ibvap
+description: TRINETRA — Threat Recognition, Intelligent Networked Eyes & Tracking for Real-time Analysis (Three Eyes. One Secure Border. — SIH26187 / MHA & SSB)
+type: application
+version: 2.0.0
+appVersion: "2.0.0"
+keywords:
+  - surveillance
+  - computer-vision
+  - border-security
+  - anpr
+  - ai-analytics

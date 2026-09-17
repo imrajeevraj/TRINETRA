@@ -1,0 +1,41 @@
+{
+  "1_cameras": {
+    "num_cameras": 1,
+    "total_throughput_fps": 5.600810414873099,
+    "per_camera_fps": 5.600810414873099,
+    "p50_ms": 19.954249997681472,
+    "p95_ms": 200.72819499401015,
+    "p99_ms": 2569.3456390003807,
+    "vram_mb": 61.68212890625,
+    "ram_mb": 915.71875,
+    "cpu_percent": 0.0,
+    "dropped_frames": 0,
+    "queue_depth": 0
+  },
+  "4_cameras": {
+    "num_cameras": 4,
+    "total_throughput_fps": 29.18371755767048,
+    "per_camera_fps": 7.29592938941762,
+    "p50_ms": 27.494350004417356,
+    "p95_ms": 70.170124998549,
+    "p99_ms": 83.05639500598753,
+    "vram_mb": 61.640625,
+    "ram_mb": 915.875,
+    "cpu_percent": 0.0,
+    "dropped_frames": 0,
+    "queue_depth": 0
+  },
+  "8_cameras": {
+    "num_cameras": 8,
+    "total_throughput_fps": 41.867332210674405,
+    "per_camera_fps": 5.233416526334301,
+    "p50_ms": 22.66484999563545,
+    "p95_ms": 30.52375000042955,
+    "p99_ms": 37.5123920002079,
+    "vram_mb": 61.640625,
+    "ram_mb": 916.1015625,
+    "cpu_percent": 0.0,
+    "dropped_frames": 0,
+    "queue_depth": 0
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "mode_a_centralized": {
+    "name": "Phase X Centralized Handover",
+    "handover_latency_ms": 1.25,
+    "central_round_trips_per_hop": 2,
+    "peer_network_bandwidth_kbps": 0.0,
+    "handover_success_rate": 0.96,
+    "pre_cue_lead_time_sec": 11.2,
+    "failover_capable": false
+  },
+  "mode_b_edge_assisted": {
+    "name": "Phase XI Edge-Assisted Mesh",
+    "handover_latency_ms": 0.08,
+    "central_round_trips_per_hop": 0,
+    "peer_network_bandwidth_kbps": 12.4,
+    "handover_success_rate": 0.98,
+    "pre_cue_lead_time_sec": 12.1,
+    "failover_capable": true
+  },
+  "mode_c_edge_with_central_fallback": {
+    "name": "Phase XI Edge + Central Fallback",
+    "handover_latency_ms": 0.12,
+    "central_round_trips_per_hop": 0.05,
+    "peer_network_bandwidth_kbps": 12.8,
+    "handover_success_rate": 0.995,
+    "pre_cue_lead_time_sec": 11.9,
+    "failover_capable": true
+  }
+}

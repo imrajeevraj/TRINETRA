@@ -1,0 +1,37 @@
+{
+  "test_timestamp": "2026-09-02T20:00:29Z",
+  "tests": {
+    "ground_failure": {
+      "scenario": "ground_offline",
+      "air_continued": true,
+      "item_continued": true,
+      "ground_recovered": true,
+      "checksum_verified": true,
+      "state_reset": true,
+      "stale_detections": 0,
+      "pass": true
+    },
+    "air_failure": {
+      "scenario": "airborne_offline",
+      "ground_continued": true,
+      "item_continued": true,
+      "air_recovered": true,
+      "checksum_verified": true,
+      "state_reset": true,
+      "stale_detections": 0,
+      "pass": true
+    },
+    "item_failure": {
+      "scenario": "security_item_offline",
+      "ground_continued": true,
+      "air_continued": true,
+      "item_recovered": true,
+      "checksum_verified": true,
+      "state_reset": true,
+      "stale_detections": 0,
+      "pass": true
+    }
+  },
+  "all_pass": true,
+  "verdict": "PASS"
+}

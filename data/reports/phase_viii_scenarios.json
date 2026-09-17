@@ -1,0 +1,63 @@
+{
+  "scenario_1_valid_transition": {
+    "desc": "Person moves CAM-001 -> CAM-002 in 14s",
+    "score": 0.7,
+    "decision": "SAME_ENTITY_LIKELY",
+    "passed": true
+  },
+  "scenario_2_impossible_travel_window": {
+    "desc": "Person reappears after 65s (exceeds max travel 30s)",
+    "score": 0.05,
+    "decision": "UNRELATED",
+    "passed": true
+  },
+  "scenario_3_two_people_same_camera": {
+    "desc": "Two distinct people tracked on same camera simultaneously",
+    "score": 0.05,
+    "decision": "UNRELATED",
+    "passed": true
+  },
+  "scenario_4_vehicle_anpr_match": {
+    "desc": "Vehicle traverses CAM-001 -> CAM-002 with matching plate DL01AB1234",
+    "score": 0.99,
+    "decision": "SAME_ENTITY_LIKELY",
+    "passed": true
+  },
+  "scenario_5_repeated_zone_entry": {
+    "desc": "Repeated restricted zone entry escalates risk within same incident",
+    "risk_score": 80,
+    "severity": "HIGH",
+    "merged": true,
+    "passed": true
+  },
+  "scenario_6_airborne_correlation": {
+    "desc": "Airborne drone detection correlates with ground intrusion at tower",
+    "merged": true,
+    "severity": "LOW",
+    "passed": true
+  },
+  "scenario_7_security_item_correlation": {
+    "desc": "Firearm detection correlates with person track and escalates to CRITICAL",
+    "merged": true,
+    "severity": "CRITICAL",
+    "passed": true
+  },
+  "scenario_8_duplicate_alert_dedup": {
+    "desc": "Duplicate alerts within 2s merged into single incident",
+    "merged": true,
+    "passed": true
+  },
+  "scenario_9_unrelated_events_separation": {
+    "desc": "Unrelated simultaneous events at distant cameras remain distinct incidents",
+    "inc1_id": "INC-2026-000005",
+    "inc2_id": "INC-2026-000006",
+    "distinct": true,
+    "passed": true
+  },
+  "scenario_10_low_confidence_ocr": {
+    "desc": "Low-confidence OCR is not promoted to definitive match without confirmation",
+    "score": 0.7,
+    "decision": "POSSIBLE_MATCH",
+    "passed": true
+  }
+}

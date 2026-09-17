@@ -1,0 +1,128 @@
+{
+  "benchmark": "IBVAP-GT-ITEM-v1.0",
+  "checkpoint": "data\\training\\runs\\ibvap_security_item_v1_exp001\\weights\\best.pt",
+  "target_class": {
+    "0": "firearm"
+  },
+  "optimal_operating_point": {
+    "confidence_threshold": 0.35,
+    "precision": 0.6306,
+    "recall": 0.6024,
+    "f1": 0.6162,
+    "map50": 0.5144,
+    "map50_95": 0.2185
+  },
+  "confidence_sweep": [
+    {
+      "confidence_threshold": 0.1,
+      "precision": 0.672,
+      "recall": 0.5678,
+      "f1": 0.6155,
+      "map50": 0.5664,
+      "map50_95": 0.2432
+    },
+    {
+      "confidence_threshold": 0.15,
+      "precision": 0.672,
+      "recall": 0.5678,
+      "f1": 0.6155,
+      "map50": 0.5605,
+      "map50_95": 0.239
+    },
+    {
+      "confidence_threshold": 0.2,
+      "precision": 0.672,
+      "recall": 0.5678,
+      "f1": 0.6155,
+      "map50": 0.5436,
+      "map50_95": 0.2328
+    },
+    {
+      "confidence_threshold": 0.25,
+      "precision": 0.672,
+      "recall": 0.5678,
+      "f1": 0.6155,
+      "map50": 0.5351,
+      "map50_95": 0.2264
+    },
+    {
+      "confidence_threshold": 0.3,
+      "precision": 0.672,
+      "recall": 0.5678,
+      "f1": 0.6155,
+      "map50": 0.5202,
+      "map50_95": 0.2206
+    },
+    {
+      "confidence_threshold": 0.35,
+      "precision": 0.6306,
+      "recall": 0.6024,
+      "f1": 0.6162,
+      "map50": 0.5144,
+      "map50_95": 0.2185
+    },
+    {
+      "confidence_threshold": 0.4,
+      "precision": 0.6714,
+      "recall": 0.5663,
+      "f1": 0.6144,
+      "map50": 0.481,
+      "map50_95": 0.2021
+    },
+    {
+      "confidence_threshold": 0.45,
+      "precision": 0.7333,
+      "recall": 0.5301,
+      "f1": 0.6154,
+      "map50": 0.4607,
+      "map50_95": 0.19
+    },
+    {
+      "confidence_threshold": 0.5,
+      "precision": 0.7308,
+      "recall": 0.4578,
+      "f1": 0.563,
+      "map50": 0.4019,
+      "map50_95": 0.1646
+    },
+    {
+      "confidence_threshold": 0.55,
+      "precision": 0.7333,
+      "recall": 0.3976,
+      "f1": 0.5156,
+      "map50": 0.3575,
+      "map50_95": 0.1448
+    },
+    {
+      "confidence_threshold": 0.6,
+      "precision": 0.7949,
+      "recall": 0.3735,
+      "f1": 0.5082,
+      "map50": 0.342,
+      "map50_95": 0.1419
+    }
+  ],
+  "latency_metrics": {
+    "p50_ms": 18.58,
+    "p95_ms": 57.95,
+    "fps": 53.8
+  },
+  "system_resources": {
+    "cpu_percent": 40.9,
+    "ram_percent": 67.4,
+    "gpu_percent": 0.0,
+    "vram_mb": 0.0
+  },
+  "roi_strategy_comparison": {
+    "mode_a_full_frame": {
+      "name": "FULL_FRAME_ITEM_DETECTION",
+      "latency_p50_ms": 18.33,
+      "detections_count": 6
+    },
+    "mode_b_person_roi": {
+      "name": "PERSON_ROI_ITEM_DETECTION",
+      "latency_p50_ms": 19.29,
+      "detections_count": 5
+    }
+  }
+}

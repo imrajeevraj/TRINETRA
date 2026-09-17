@@ -76,3 +76,25 @@ export interface PlateEvent {
   timestamp: string;
   data_origin: 'LIVE' | 'DEMO' | 'TEST' | 'IMPORTED';
 }
+
+export interface DetailedHealth {
+  status: string;
+  cpu: { percent: number };
+  memory: { percent: number; used_mb: number; total_mb: number };
+  disk: { percent: number; free_gb: number };
+  gpu?: { available: boolean; percent?: number; memory_percent?: number; memory_used_mb?: number; memory_total_mb?: number; name?: string; };
+  database_status: string;
+  cameras: { online: number; total: number; inference_fps: number; stale: string[] };
+  stage_profiling_ms?: {
+    avg_inference_ms: number;
+    avg_tracking_ms: number;
+    avg_zone_ms: number;
+    avg_anpr_ms: number;
+    avg_total_pipeline_ms: number;
+  };
+  ground_ai?: { status: string; fps: number; persons: number; vehicles: number };
+  air_ai?: { status: string; fps: number; drones: number; aircraft: number };
+  security_item_ai?: { status: string; fps: number; firearms: number; model: string; version: string };
+  virtual_fence?: { ground_zones: number; air_zones: number; tripwires: number };
+  anpr?: { queue_depth: number };
+}

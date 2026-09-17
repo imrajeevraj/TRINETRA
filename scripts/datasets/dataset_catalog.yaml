@@ -1,0 +1,53 @@
+# ==============================================================================
+# IBVAP — Configuration-Driven Kaggle Dataset Catalog
+# Tracks external surveillance datasets, metadata, annotation formats, and priority
+# ==============================================================================
+
+version: "2.0"
+catalog_date: "2026-09-01"
+
+datasets:
+  - id: "dataset_001"
+    name: "Human Detection in CCTV & Surveillance (Hard-Negatives & Classification)"
+    source: "kaggle"
+    owner: "constantinwerner"
+    dataset: "human-detection-dataset"
+    purpose: "hard_negative"
+    classes: ["person"]
+    annotation_format: "image_folders"
+    priority: 1
+    enabled: true
+    expected_image_count: 921
+    license: "CC0: Public Domain"
+    destination_dir: "data/external/kaggle/human_detection"
+    notes: "Static surveillance camera frames. Subfolder '0' provides 362 high-quality hard-negative background samples."
+
+  - id: "dataset_002"
+    name: "KIIT-MiTA CCTV Surveillance Dataset (Persons & Vehicles)"
+    source: "kaggle"
+    owner: "sudipchakrabarty"
+    dataset: "kiit-mita"
+    purpose: "person_vehicle"
+    classes: ["person", "vehicle"]
+    annotation_format: "yolo"
+    priority: 1
+    enabled: true
+    expected_image_count: 800
+    license: "Research Open Data"
+    destination_dir: "data/external/kaggle/kiit_mita"
+    notes: "CCTV surveillance camera dataset formatted in native YOLO with persons, cars, bikes, and buses."
+
+  - id: "dataset_003"
+    name: "Top-View Perimeter Vehicle Detection"
+    source: "kaggle"
+    owner: "farzadnekouei"
+    dataset: "top-view-vehicle-detection-image-dataset"
+    purpose: "vehicle"
+    classes: ["vehicle"]
+    annotation_format: "yolo"
+    priority: 3
+    enabled: false
+    expected_image_count: 300
+    license: "CC BY 4.0"
+    destination_dir: "data/external/kaggle/top_view_vehicles"
+    notes: "High-angle surveillance vehicles (cars, trucks, vans) for perimeter road crossings."

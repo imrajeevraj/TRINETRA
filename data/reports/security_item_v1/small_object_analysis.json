@@ -1,0 +1,34 @@
+{
+  "total_firearm_instances": 492,
+  "scale_distribution": {
+    "very_small_under_32px": 38,
+    "small_32_to_96px": 327,
+    "medium_96_to_192px": 115,
+    "large_above_192px": 12
+  },
+  "percentage": {
+    "very_small_pct": 7.72,
+    "small_pct": 66.46,
+    "medium_pct": 23.37,
+    "large_pct": 2.44
+  },
+  "mean_bbox_area_px": 8069.59,
+  "split_counts": {
+    "train": {
+      "total": 562,
+      "positives": 280,
+      "negatives": 282
+    },
+    "val": {
+      "total": 120,
+      "positives": 53,
+      "negatives": 67
+    },
+    "test": {
+      "total": 121,
+      "positives": 64,
+      "negatives": 57
+    }
+  },
+  "benchmark_test_split": "IBVAP-GT-ITEM-v1.0"
+}

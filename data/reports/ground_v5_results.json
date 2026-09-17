@@ -1,0 +1,127 @@
+{
+  "exp001": {
+    "experiment": {
+      "exp_id": "ibvap_ground_v5_exp001",
+      "best_weights": "D:\\SIH 2026\\IBVAP\\data\\training\\runs\\ibvap_ground_v5_exp001\\weights\\best.pt",
+      "sha256": "5D03FA988F3D9CEFA094F8B41721D15D90324E65BD957E63A4AC9A323F0CA8F7",
+      "duration_s": 159.93796062469482,
+      "imgsz": 640,
+      "epochs": 12
+    },
+    "benchmark_metrics": {
+      "person": {
+        "Precision": 0.8712121212121212,
+        "Recall": 0.12763596004439512,
+        "F1": 0.22265246853823814,
+        "TP": 115,
+        "FP": 17,
+        "FN": 786
+      },
+      "vehicle": {
+        "Precision": 0.9886363636363636,
+        "Recall": 0.7837837837837838,
+        "F1": 0.8743718592964823,
+        "TP": 87,
+        "FP": 1,
+        "FN": 24
+      },
+      "performance": {
+        "P50_latency_ms": 20.923900003253948,
+        "P95_latency_ms": 26.846069999010062,
+        "AI_FPS": 47.792237577339144
+      }
+    }
+  },
+  "exp002": {
+    "experiment": {
+      "exp_id": "ibvap_ground_v5_exp002",
+      "best_weights": "D:\\SIH 2026\\IBVAP\\data\\training\\runs\\ibvap_ground_v5_exp002\\weights\\best.pt",
+      "sha256": "915B6FB7A1FD0E709EAAB6F3C3947682E52D9C25CCFD186A627DEFA28E8625C1",
+      "duration_s": 235.43687844276428,
+      "imgsz": 768,
+      "epochs": 15
+    },
+    "benchmark_metrics": {
+      "person": {
+        "Precision": 0.9057971014492754,
+        "Recall": 0.13873473917869034,
+        "F1": 0.2406159769008662,
+        "TP": 125,
+        "FP": 13,
+        "FN": 776
+      },
+      "vehicle": {
+        "Precision": 0.9767441860465116,
+        "Recall": 0.7567567567567568,
+        "F1": 0.8527918781725888,
+        "TP": 84,
+        "FP": 2,
+        "FN": 27
+      },
+      "performance": {
+        "P50_latency_ms": 21.222149989625905,
+        "P95_latency_ms": 26.35287000593962,
+        "AI_FPS": 47.120579229193716
+      }
+    }
+  },
+  "exp003": {
+    "experiment": {
+      "exp_id": "ibvap_ground_v5_exp003",
+      "best_weights": "D:\\SIH 2026\\IBVAP\\data\\training\\runs\\ibvap_ground_v5_exp003\\weights\\best.pt",
+      "sha256": "354B813B50CCE711648473537FB97D4EE8C21447962838024B1725AB2C567053",
+      "duration_s": 228.2505009174347,
+      "imgsz": 768,
+      "epochs": 15
+    },
+    "benchmark_metrics": {
+      "person": {
+        "Precision": 0.9180327868852459,
+        "Recall": 0.12430632630410655,
+        "F1": 0.2189638318670577,
+        "TP": 112,
+        "FP": 10,
+        "FN": 789
+      },
+      "vehicle": {
+        "Precision": 0.898876404494382,
+        "Recall": 0.7207207207207207,
+        "F1": 0.7999999999999999,
+        "TP": 80,
+        "FP": 9,
+        "FN": 31
+      },
+      "performance": {
+        "P50_latency_ms": 20.398749999003485,
+        "P95_latency_ms": 24.281724996399134,
+        "AI_FPS": 49.02261168203207
+      }
+    }
+  },
+  "current_production": {
+    "model": "models/current/ibvap_detector.pt",
+    "benchmark_metrics": {
+      "person": {
+        "Precision": 0.6449136276391555,
+        "Recall": 0.7458379578246392,
+        "F1": 0.6917138445702522,
+        "TP": 672,
+        "FP": 370,
+        "FN": 229
+      },
+      "vehicle": {
+        "Precision": 0.9696969696969697,
+        "Recall": 0.8648648648648649,
+        "F1": 0.9142857142857143,
+        "TP": 96,
+        "FP": 3,
+        "FN": 15
+      },
+      "performance": {
+        "P50_latency_ms": 20.3378000005614,
+        "P95_latency_ms": 25.763800003187495,
+        "AI_FPS": 49.169526692778774
+      }
+    }
+  }
+}

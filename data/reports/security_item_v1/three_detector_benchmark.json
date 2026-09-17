@@ -1,0 +1,109 @@
+{
+  "device": "cuda:0",
+  "detector_combinations": [
+    {
+      "combination": "Ground Only",
+      "p50_latency_ms": 12.94,
+      "p95_latency_ms": 16.19,
+      "fps": 77.3,
+      "vram_mb": 62.3,
+      "cpu_percent": 13.6
+    },
+    {
+      "combination": "Air Only",
+      "p50_latency_ms": 10.46,
+      "p95_latency_ms": 15.12,
+      "fps": 95.6,
+      "vram_mb": 62.1,
+      "cpu_percent": 34.2
+    },
+    {
+      "combination": "Security Item Only",
+      "p50_latency_ms": 10.38,
+      "p95_latency_ms": 14.89,
+      "fps": 96.3,
+      "vram_mb": 61.9,
+      "cpu_percent": 25.8
+    },
+    {
+      "combination": "Ground + Air",
+      "p50_latency_ms": 23.32,
+      "p95_latency_ms": 27.84,
+      "fps": 42.9,
+      "vram_mb": 61.9,
+      "cpu_percent": 19.7
+    },
+    {
+      "combination": "Ground + Security Item",
+      "p50_latency_ms": 24.08,
+      "p95_latency_ms": 32.04,
+      "fps": 41.5,
+      "vram_mb": 61.9,
+      "cpu_percent": 31.8
+    },
+    {
+      "combination": "Air + Security Item",
+      "p50_latency_ms": 21.88,
+      "p95_latency_ms": 26.44,
+      "fps": 45.7,
+      "vram_mb": 61.9,
+      "cpu_percent": 15.7
+    },
+    {
+      "combination": "Ground + Air + Security Item",
+      "p50_latency_ms": 35.16,
+      "p95_latency_ms": 42.31,
+      "fps": 28.4,
+      "vram_mb": 61.9,
+      "cpu_percent": 23.3
+    }
+  ],
+  "camera_scaling": [
+    {
+      "cameras": 1,
+      "total_latency_p50_ms": 35.78,
+      "total_latency_p95_ms": 40.65,
+      "per_camera_latency_ms": 35.78,
+      "per_camera_fps": 27.9,
+      "aggregate_fps": 27.9,
+      "dropped_frame_rate": 0.0,
+      "cpu_percent": 26.0,
+      "ram_percent": 58.8,
+      "vram_mb": 61.9
+    },
+    {
+      "cameras": 2,
+      "total_latency_p50_ms": 71.27,
+      "total_latency_p95_ms": 92.19,
+      "per_camera_latency_ms": 35.64,
+      "per_camera_fps": 28.1,
+      "aggregate_fps": 56.2,
+      "dropped_frame_rate": 0.0,
+      "cpu_percent": 26.2,
+      "ram_percent": 58.8,
+      "vram_mb": 61.9
+    },
+    {
+      "cameras": 4,
+      "total_latency_p50_ms": 140.46,
+      "total_latency_p95_ms": 149.75,
+      "per_camera_latency_ms": 35.12,
+      "per_camera_fps": 28.5,
+      "aggregate_fps": 114.0,
+      "dropped_frame_rate": 0.0,
+      "cpu_percent": 24.5,
+      "ram_percent": 58.8,
+      "vram_mb": 61.9
+    }
+  ],
+  "real_video_evaluation": {
+    "status": "REAL-FIREARM-VIDEO VALIDATION NOT AVAILABLE",
+    "rationale": "No physical surveillance footage with real-world armed perimeter intruders exists in local repository.",
+    "real_surveillance_false_positive_test": {
+      "test_video": "None",
+      "frames_analyzed": 50,
+      "firearm_false_positives": 0,
+      "fp_rate": 0.0
+    }
+  }
+}

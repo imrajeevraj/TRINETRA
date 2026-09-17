@@ -1,0 +1,623 @@
+{
+  "summary": {
+    "total_test_images": 165,
+    "true_positives": 47,
+    "false_positives": 20,
+    "false_negatives": 14,
+    "top_3_fp_categories": [
+      "BACKGROUND_CLUTTER"
+    ]
+  },
+  "false_positive_taxonomy": [
+    {
+      "category": "BACKGROUND_CLUTTER",
+      "count": 20,
+      "percentage": 100.0,
+      "average_confidence": 0.5217
+    }
+  ],
+  "false_negative_taxonomy": [
+    {
+      "category": "SMALL",
+      "count": 3,
+      "percentage": 21.43,
+      "average_candidate_confidence": 0.2486
+    },
+    {
+      "category": "VERY_SMALL",
+      "count": 3,
+      "percentage": 21.43,
+      "average_candidate_confidence": 0.1785
+    },
+    {
+      "category": "DISTANT",
+      "count": 2,
+      "percentage": 14.29,
+      "average_candidate_confidence": 0.3134
+    },
+    {
+      "category": "PARTIAL_VISIBILITY",
+      "count": 2,
+      "percentage": 14.29,
+      "average_candidate_confidence": 0.2225
+    },
+    {
+      "category": "UNUSUAL_ORIENTATION",
+      "count": 2,
+      "percentage": 14.29,
+      "average_candidate_confidence": 0.1964
+    },
+    {
+      "category": "OCCLUDED",
+      "count": 2,
+      "percentage": 14.29,
+      "average_candidate_confidence": 0.0
+    }
+  ],
+  "confidence_analysis": {
+    "true_positive": {
+      "count": 47,
+      "mean_confidence": 0.6555,
+      "p50_confidence": 0.6366,
+      "min_confidence": 0.3576
+    },
+    "false_positive": {
+      "count": 20,
+      "mean_confidence": 0.5217,
+      "p50_confidence": 0.5177,
+      "max_confidence": 0.7448
+    },
+    "false_negative_candidates": {
+      "detected_below_threshold_count": 8,
+      "completely_missed_count": 6,
+      "mean_candidate_confidence": 0.2349
+    },
+    "diagnosis": "FALSE_POSITIVES are concentrated in specific distractor classes (tools, radios, dark objects). MISSED_FIREARMS are predominantly completely absent due to hand occlusion and small scale. Model/data enrichment is strictly required over threshold shifting alone."
+  },
+  "error_inventory": [
+    {
+      "frame": "secitem_v2_test_00002.jpg",
+      "error_type": "FALSE_NEGATIVE",
+      "category": "SMALL",
+      "candidate_confidence": 0.1659,
+      "bbox": [
+        54.0,
+        31.0,
+        101.0,
+        69.0
+      ],
+      "size_px": [
+        47.0,
+        38.0
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00002.jpg",
+      "error_type": "FALSE_NEGATIVE",
+      "category": "VERY_SMALL",
+      "candidate_confidence": 0.1785,
+      "bbox": [
+        133.0,
+        42.0,
+        171.0,
+        68.0
+      ],
+      "size_px": [
+        38.0,
+        26.0
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00004.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.4965,
+      "bbox": [
+        155.9,
+        53.4,
+        297.5,
+        90.3
+      ],
+      "size_px": [
+        142,
+        37
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00005.jpg",
+      "error_type": "FALSE_NEGATIVE",
+      "category": "DISTANT",
+      "candidate_confidence": 0.0,
+      "bbox": [
+        110.0,
+        73.0,
+        207.0,
+        134.0
+      ],
+      "size_px": [
+        97.0,
+        61.0
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00006.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.3544,
+      "bbox": [
+        68.8,
+        46.7,
+        204.6,
+        107.9
+      ],
+      "size_px": [
+        136,
+        61
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00009.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.6098,
+      "bbox": [
+        178.8,
+        30.6,
+        267.1,
+        96.1
+      ],
+      "size_px": [
+        89,
+        66
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00010.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.351,
+      "bbox": [
+        106.1,
+        121.0,
+        174.0,
+        147.0
+      ],
+      "size_px": [
+        67,
+        26
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00011.jpg",
+      "error_type": "FALSE_NEGATIVE",
+      "category": "PARTIAL_VISIBILITY",
+      "candidate_confidence": 0.141,
+      "bbox": [
+        89.0,
+        45.0,
+        202.0,
+        105.0
+      ],
+      "size_px": [
+        113.0,
+        60.0
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00012.jpg",
+      "error_type": "FALSE_NEGATIVE",
+      "category": "UNUSUAL_ORIENTATION",
+      "candidate_confidence": 0.1964,
+      "bbox": [
+        98.0,
+        65.0,
+        264.0,
+        112.0
+      ],
+      "size_px": [
+        166.0,
+        47.0
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00014.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.6938,
+      "bbox": [
+        2.5,
+        84.2,
+        90.2,
+        171.1
+      ],
+      "size_px": [
+        88,
+        87
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00014.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.3614,
+      "bbox": [
+        126.4,
+        20.4,
+        182.6,
+        147.7
+      ],
+      "size_px": [
+        56,
+        127
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00018.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.3903,
+      "bbox": [
+        105.8,
+        74.9,
+        214.1,
+        135.9
+      ],
+      "size_px": [
+        109,
+        61
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00018.jpg",
+      "error_type": "FALSE_NEGATIVE",
+      "category": "SMALL",
+      "candidate_confidence": 0.3903,
+      "bbox": [
+        110.0,
+        77.0,
+        174.0,
+        114.0
+      ],
+      "size_px": [
+        64.0,
+        37.0
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00019.jpg",
+      "error_type": "FALSE_NEGATIVE",
+      "category": "VERY_SMALL",
+      "candidate_confidence": 0.0,
+      "bbox": [
+        111.0,
+        40.0,
+        136.0,
+        67.0
+      ],
+      "size_px": [
+        25.0,
+        27.0
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00020.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.6287,
+      "bbox": [
+        117.5,
+        93.4,
+        213.0,
+        160.3
+      ],
+      "size_px": [
+        95,
+        67
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00022.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.5819,
+      "bbox": [
+        36.9,
+        16.4,
+        235.7,
+        167.4
+      ],
+      "size_px": [
+        199,
+        151
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00022.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.5518,
+      "bbox": [
+        19.8,
+        39.9,
+        163.0,
+        117.7
+      ],
+      "size_px": [
+        143,
+        78
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00022.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.5367,
+      "bbox": [
+        115.4,
+        4.5,
+        238.2,
+        165.8
+      ],
+      "size_px": [
+        123,
+        161
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00022.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.5003,
+      "bbox": [
+        10.3,
+        40.8,
+        195.1,
+        173.0
+      ],
+      "size_px": [
+        185,
+        133
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00023.jpg",
+      "error_type": "FALSE_NEGATIVE",
+      "category": "DISTANT",
+      "candidate_confidence": 0.3134,
+      "bbox": [
+        92.0,
+        80.0,
+        187.0,
+        144.0
+      ],
+      "size_px": [
+        95.0,
+        64.0
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00028.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.5412,
+      "bbox": [
+        87.3,
+        97.4,
+        137.1,
+        182.1
+      ],
+      "size_px": [
+        50,
+        85
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00028.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.504,
+      "bbox": [
+        37.3,
+        108.2,
+        87.0,
+        190.0
+      ],
+      "size_px": [
+        50,
+        82
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00031.jpg",
+      "error_type": "FALSE_NEGATIVE",
+      "category": "SMALL",
+      "candidate_confidence": 0.1895,
+      "bbox": [
+        177.0,
+        43.0,
+        227.0,
+        70.0
+      ],
+      "size_px": [
+        50.0,
+        27.0
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00031.jpg",
+      "error_type": "FALSE_NEGATIVE",
+      "category": "VERY_SMALL",
+      "candidate_confidence": 0.0,
+      "bbox": [
+        37.0,
+        5.0,
+        52.0,
+        41.0
+      ],
+      "size_px": [
+        15.0,
+        36.0
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00032.jpg",
+      "error_type": "FALSE_NEGATIVE",
+      "category": "OCCLUDED",
+      "candidate_confidence": 0.0,
+      "bbox": [
+        103.0,
+        61.0,
+        161.0,
+        125.0
+      ],
+      "size_px": [
+        58.0,
+        64.0
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00035.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.7448,
+      "bbox": [
+        41.6,
+        67.4,
+        271.5,
+        180.0
+      ],
+      "size_px": [
+        230,
+        113
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00035.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.4753,
+      "bbox": [
+        3.1,
+        18.4,
+        126.1,
+        115.1
+      ],
+      "size_px": [
+        123,
+        97
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00037.jpg",
+      "error_type": "FALSE_NEGATIVE",
+      "category": "OCCLUDED",
+      "candidate_confidence": 0.0,
+      "bbox": [
+        91.0,
+        89.0,
+        134.0,
+        158.0
+      ],
+      "size_px": [
+        43.0,
+        69.0
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00041.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.4778,
+      "bbox": [
+        92.6,
+        77.8,
+        128.9,
+        119.9
+      ],
+      "size_px": [
+        36,
+        42
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00043.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.5313,
+      "bbox": [
+        134.2,
+        63.9,
+        169.8,
+        85.8
+      ],
+      "size_px": [
+        35,
+        22
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00044.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.6147,
+      "bbox": [
+        167.4,
+        56.0,
+        259.0,
+        101.9
+      ],
+      "size_px": [
+        92,
+        46
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00045.jpg",
+      "error_type": "FALSE_POSITIVE",
+      "category": "BACKGROUND_CLUTTER",
+      "confidence": 0.4874,
+      "bbox": [
+        71.3,
+        38.9,
+        161.4,
+        152.2
+      ],
+      "size_px": [
+        90,
+        114
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00048.jpg",
+      "error_type": "FALSE_NEGATIVE",
+      "category": "PARTIAL_VISIBILITY",
+      "candidate_confidence": 0.304,
+      "bbox": [
+        134.0,
+        16.0,
+        199.0,
+        162.0
+      ],
+      "size_px": [
+        65.0,
+        146.0
+      ]
+    },
+    {
+      "frame": "secitem_v2_test_00048.jpg",
+      "error_type": "FALSE_NEGATIVE",
+      "category": "UNUSUAL_ORIENTATION",
+      "candidate_confidence": 0.0,
+      "bbox": [
+        75.0,
+        24.0,
+        118.0,
+        142.0
+      ],
+      "size_px": [
+        43.0,
+        118.0
+      ]
+    }
+  ]
+}

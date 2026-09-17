@@ -1,0 +1,59 @@
+# ==============================================================================
+# IBVAP — Canonical Class Mapping Configuration
+# Explicitly normalizes heterogeneous source annotation classes to IBVAP taxonomy
+# ==============================================================================
+
+version: "1.0"
+
+# Target IBVAP Classes (Strict Class Order)
+target_classes:
+  0: "person"
+  1: "vehicle"
+
+# Taxonomy mappings from standard annotation conventions
+source_mappings:
+  # Person class variations
+  person: "person"
+  human: "person"
+  pedestrian: "person"
+  individual: "person"
+  people: "person"
+
+  # Vehicle class variations
+  car: "vehicle"
+  automobile: "vehicle"
+  truck: "vehicle"
+  pickup: "vehicle"
+  bus: "vehicle"
+  minivan: "vehicle"
+  van: "vehicle"
+  suv: "vehicle"
+  motorcycle: "vehicle"
+  motorbike: "vehicle"
+  auto: "vehicle"
+  jeep: "vehicle"
+  tractor: "vehicle"
+
+# Classes explicitly excluded to prevent contamination and false alarms
+excluded_classes:
+  - "bicycle"
+  - "traffic light"
+  - "traffic sign"
+  - "bench"
+  - "chair"
+  - "backpack"
+  - "handbag"
+  - "umbrella"
+  - "animal"
+  - "dog"
+  - "cat"
+  - "bird"
+  - "horse"
+
+# Direct COCO 80-Class Index to IBVAP Mapping (for COCO pre-trained models)
+coco_index_mapping:
+  0: 0   # COCO 0: person -> IBVAP 0: person
+  2: 1   # COCO 2: car -> IBVAP 1: vehicle
+  3: 1   # COCO 3: motorcycle -> IBVAP 1: vehicle
+  5: 1   # COCO 5: bus -> IBVAP 1: vehicle
+  7: 1   # COCO 7: truck -> IBVAP 1: vehicle

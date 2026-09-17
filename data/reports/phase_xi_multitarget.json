@@ -1,0 +1,38 @@
+{
+  "10_entities": {
+    "entity_count": 10,
+    "total_elapsed_sec": 0.0006,
+    "handovers_per_sec": 17173.3,
+    "p50_latency_ms": 0.04,
+    "p95_latency_ms": 0.15,
+    "ptz_contention_events": 0,
+    "event_loss_rate": 0.0
+  },
+  "25_entities": {
+    "entity_count": 25,
+    "total_elapsed_sec": 0.0011,
+    "handovers_per_sec": 21849.3,
+    "p50_latency_ms": 0.04,
+    "p95_latency_ms": 0.08,
+    "ptz_contention_events": 0,
+    "event_loss_rate": 0.0
+  },
+  "50_entities": {
+    "entity_count": 50,
+    "total_elapsed_sec": 0.0016,
+    "handovers_per_sec": 30803.4,
+    "p50_latency_ms": 0.03,
+    "p95_latency_ms": 0.05,
+    "ptz_contention_events": 0,
+    "event_loss_rate": 0.0
+  },
+  "100_entities": {
+    "entity_count": 100,
+    "total_elapsed_sec": 0.0038,
+    "handovers_per_sec": 26308.2,
+    "p50_latency_ms": 0.04,
+    "p95_latency_ms": 0.05,
+    "ptz_contention_events": 0,
+    "event_loss_rate": 0.0
+  }
+}

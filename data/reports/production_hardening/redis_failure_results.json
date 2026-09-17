@@ -1,0 +1,31 @@
+{
+  "test_timestamp": "2026-09-01T19:37:58Z",
+  "redis_version": "7.4.8",
+  "redis_reachable": true,
+  "tests": {
+    "failover_behavior": {
+      "scenario": "redis_outage_simulation",
+      "bad_url": "redis://localhost:16379/0",
+      "graceful_failure": true,
+      "error_logged": true,
+      "health_degraded": true
+    },
+    "alert_persistence": {
+      "scenario": "alert_persistence_during_redis_outage",
+      "db_events_count": 13929,
+      "db_is_ground_truth": true,
+      "redis_loss_causes_data_loss": false,
+      "pass": true
+    },
+    "redis_recovery": {
+      "scenario": "redis_recovery",
+      "reconnected": true,
+      "test_write_success": true,
+      "no_event_duplication": true,
+      "pass": true
+    }
+  },
+  "all_pass": true,
+  "verdict": "PASS",
+  "note": "Redis is used for real-time pub/sub (WebSocket broadcast) only. PostgreSQL is the durable event store. Redis outage causes WebSocket event delay but NOT event data loss. System must display DEGRADED status."
+}

@@ -1,0 +1,177 @@
+# ==============================================================================
+# IBVAP — Security Item Model v1 Dataset Catalog
+# Tracks firearm datasets (pistol, handgun, rifle) and hard-negative objects
+# ==============================================================================
+
+version: "1.0"
+catalog_date: "2026-09-01"
+domain: "SECURITY_ITEM"
+target_classes:
+  0: "firearm"
+
+datasets:
+  - id: "secitem_001"
+    name: "Guns Object Detection Dataset"
+    source: "kaggle"
+    owner: "issaisasank"
+    dataset: "guns-object-detection"
+    purpose: "firearm"
+    source_classes: ["gun", "pistol"]
+    target_class_mapping:
+      "gun": 0
+      "pistol": 0
+    annotation_format: "pascal_voc_xml"
+    priority: 1
+    enabled: true
+    expected_image_count: 333
+    destination_dir: "data/raw/security_items/guns"
+    license: "CC0: Public Domain"
+    notes: "Pistols, revolvers, handguns in various poses, angles, and lighting conditions."
+
+  - id: "secitem_002"
+    name: "People with Guns Surveillance & Detection"
+    source: "kaggle"
+    owner: "trainingdatapro"
+    dataset: "people-with-guns-segmentation-and-detection"
+    purpose: "firearm_surveillance"
+    source_classes: ["gun", "rifle", "firearm"]
+    target_class_mapping:
+      "gun": 0
+      "rifle": 0
+      "firearm": 0
+    annotation_format: "coco_json"
+    priority: 1
+    enabled: true
+    expected_image_count: 500
+    destination_dir: "data/raw/security_items/people_with_guns"
+    license: "CC BY-SA 4.0"
+    notes: "CCTV/surveillance angles showing persons carrying or concealing firearms at various distances."
+
+  - id: "secitem_003"
+    name: "CCTV Weapon Detection: Rifles vs Umbrellas Hard Negatives"
+    source: "kaggle"
+    owner: "simuletic"
+    dataset: "cctv-weapon-detection-rifles-vs-umbrellas"
+    purpose: "hard_negatives_long_objects"
+    source_classes: ["rifle", "umbrella"]
+    target_class_mapping:
+      "rifle": 0
+      "umbrella": -1 # negative
+    annotation_format: "yolo"
+    priority: 1
+    enabled: true
+    expected_image_count: 400
+    destination_dir: "data/raw/security_items/rifles_umbrellas"
+    license: "CC0: Public Domain"
+    notes: "Distinguishes elongated handheld objects (rifles) from benign everyday items (umbrellas)."
+
+  - id: "secitem_004"
+    name: "Perimeter Surveillance Handheld Hard Negatives"
+    source: "local_ingest"
+    owner: "ibvap_ground_curated"
+    dataset: "ground_v2_negatives"
+    purpose: "hard_negatives_handheld"
+    source_classes: ["mobile_phone", "wallet", "radio", "tool", "flashlight", "bag", "hand"]
+    target_class_mapping:
+      "mobile_phone": -1
+      "wallet": -1
+      "radio": -1
+      "tool": -1
+      "flashlight": -1
+      "bag": -1
+      "hand": -1
+    annotation_format: "yolo_empty"
+    priority: 1
+    enabled: true
+    expected_image_count: 350
+    destination_dir: "data/raw/security_items/handheld_negatives"
+    license: "Internal Project Surveillance"
+    notes: "Surveillance frames containing handheld items and edge artifacts to eliminate false alarms."
+
+  - id: "secitem_005"
+    name: "CCTV ATM Robbery Detection: Gun & Knife"
+    source: "kaggle"
+    owner: "simuletic"
+    dataset: "cctv-atm-robbery-detection-dataset-gun-and-knife"
+    purpose: "firearm_surveillance_cctv"
+    source_classes: ["gun", "pistol", "handgun"]
+    target_class_mapping:
+      "gun": 0
+      "pistol": 0
+      "handgun": 0
+      "knife": -1 # hard negative
+    annotation_format: "yolo"
+    priority: 1
+    enabled: true
+    expected_image_count: 300
+    destination_dir: "data/raw/security_items/cctv_atm_robbery"
+    license: "CC0: Public Domain"
+    download_date: "2026-09-01"
+    notes: "Authentic CCTV footage angles capturing individuals wielding firearms in indoor/outdoor security enclosures."
+
+  - id: "secitem_006"
+    name: "CCTV Weapon Dataset"
+    source: "kaggle"
+    owner: "simuletic"
+    dataset: "cctv-weapon-dataset"
+    purpose: "firearm_cctv_surveillance"
+    source_classes: ["weapon", "gun", "pistol"]
+    target_class_mapping:
+      "weapon": 0
+      "gun": 0
+      "pistol": 0
+    annotation_format: "yolo"
+    priority: 1
+    enabled: true
+    expected_image_count: 250
+    destination_dir: "data/raw/security_items/cctv_weapon_dataset"
+    license: "CC0: Public Domain"
+    download_date: "2026-09-01"
+    notes: "CCTV surveillance camera angles of armed actors at varied distances."
+
+  - id: "secitem_007"
+    name: "Surveillance Weapon Detection Test Benchmark"
+    source: "kaggle"
+    owner: "snehilsanyal"
+    dataset: "weapon-detection-test"
+    purpose: "firearm_cctv_benchmark"
+    source_classes: ["gun", "weapon", "pistol"]
+    target_class_mapping:
+      "gun": 0
+      "weapon": 0
+      "pistol": 0
+    annotation_format: "pascal_voc_xml"
+    priority: 1
+    enabled: true
+    expected_image_count: 200
+    destination_dir: "data/raw/security_items/weapon_detection_test"
+    license: "CC BY 4.0"
+    download_date: "2026-09-01"
+    notes: "High-angle surveillance weapon scenes for realism testing."
+
+  - id: "secitem_008"
+    name: "Security Item Hard Negative Dataset v2"
+    source: "curated_and_synthesized"
+    owner: "ibvap_security_team"
+    dataset: "security_item_hard_negatives_v2"
+    purpose: "hard_negatives_comprehensive"
+    source_classes: ["phone", "radio", "flashlight", "tool", "hand", "bag", "belt", "stick", "remote"]
+    target_class_mapping:
+      "phone": -1
+      "radio": -1
+      "flashlight": -1
+      "tool": -1
+      "hand": -1
+      "bag": -1
+      "belt": -1
+      "stick": -1
+      "remote": -1
+    annotation_format: "yolo_empty"
+    priority: 1
+    enabled: true
+    expected_image_count: 450
+    destination_dir: "data/raw/security_items/hard_negatives_v2"
+    license: "Internal Curated Dataset"
+    download_date: "2026-09-01"
+    notes: "Specific handheld distractors and cluttered border backgrounds to ensure zero false confirmation."
+

@@ -46,9 +46,9 @@ def run_diagnostics():
     from ultralytics import YOLO
     
     models_to_test = [
-        ("yolo11n.pt", "YOLOv11 Nano"),
-        ("yolov8n.pt", "YOLOv8 Nano"),
-        ("border_threat_yolo.pt", "Border Threat Custom YOLO"),
+        ("yolo11n.pt", "YOLO11 Nano Baseline"),
+        ("models/current/ibvap_detector.pt", "IBVAP Ground Model v2.0 (YOLO11)"),
+        ("models/candidates/yolo26/ground/best.pt", "IBVAP Ground Model v3.0 Candidate (YOLO26)"),
     ]
     
     dummy_1080p = np.random.randint(0, 255, (1080, 1920, 3), dtype=np.uint8)

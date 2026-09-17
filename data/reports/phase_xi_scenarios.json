@@ -1,0 +1,82 @@
+{
+  "scenario_1_single_peer_handover": {
+    "desc": "Single peer handover CAM-001 -> CAM-002",
+    "passed": true
+  },
+  "scenario_2_two_hop_peer_handover": {
+    "desc": "Two-hop peer handover CAM-001 -> CAM-002 -> CAM-003",
+    "passed": true
+  },
+  "scenario_3_four_hop_peer_handover": {
+    "desc": "Four-camera peer corridor CAM-001 -> CAM-002 -> CAM-003 -> CAM-004",
+    "passed": true
+  },
+  "scenario_4_eight_camera_mesh": {
+    "desc": "Full 8-camera mesh topology with sensor specs verified",
+    "passed": true
+  },
+  "scenario_5_central_fallback": {
+    "desc": "Central fallback smoothly handles peer node unavailability",
+    "passed": true
+  },
+  "scenario_6_central_control_plane_outage": {
+    "desc": "Local peer handover continues autonomously during control-plane loss",
+    "passed": true
+  },
+  "scenario_7_network_partition": {
+    "desc": "Network partition transitioned all nodes to PARTITIONED mode",
+    "passed": true
+  },
+  "scenario_8_network_recovery": {
+    "desc": "Network restored and nodes transitioned back to NORMAL",
+    "passed": true
+  },
+  "scenario_9_edge_node_failure": {
+    "desc": "Node offline status detected and autonomy revoked",
+    "passed": true
+  },
+  "scenario_10_edge_node_recovery": {
+    "desc": "Node recovers online status and resumes active autonomy",
+    "passed": true
+  },
+  "scenario_11_duplicate_message": {
+    "desc": "Duplicate message ID rejected idempotently",
+    "passed": true
+  },
+  "scenario_12_replay_attack": {
+    "desc": "Non-monotonic sequence number rejected as replay attack",
+    "passed": true
+  },
+  "scenario_13_expired_lease": {
+    "desc": "Expired authorization lease blocks autonomous peer proposal",
+    "passed": true
+  },
+  "scenario_14_split_brain_ptz_ownership": {
+    "desc": "Split-brain contention between nodes for same camera arbitrated strictly",
+    "passed": true
+  },
+  "scenario_15_camera_contention": {
+    "desc": "Hysteresis delta (+10) holds existing reservation against marginal contenders",
+    "passed": true
+  },
+  "scenario_16_higher_risk_preemption": {
+    "desc": "CRITICAL target preempts lower-priority reservation cleanly",
+    "passed": true
+  },
+  "scenario_17_evidence_synchronization": {
+    "desc": "Buffered evidence synced and verified via SHA-256",
+    "passed": true
+  },
+  "scenario_18_evidence_hash_mismatch": {
+    "desc": "Corrupted evidence payload rejected with EVIDENCE_INTEGRITY_FAILURE",
+    "passed": true
+  },
+  "scenario_19_optical_to_thermal_handover": {
+    "desc": "Optical CAM-001 to Thermal CAM-005 handover confirmed",
+    "passed": true
+  },
+  "scenario_20_thermal_to_optical_handover": {
+    "desc": "Thermal CAM-005 to Optical CAM-001 handover evaluated with probable tier",
+    "passed": true
+  }
+}

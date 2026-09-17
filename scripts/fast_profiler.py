@@ -28,9 +28,9 @@ def main():
         print("INPUT DEVICE: cuda:0", flush=True)
     
     # 1. Model Loading
-    model_path = os.path.join(ROOT_DIR, "border_threat_yolo.pt")
+    model_path = os.path.join(ROOT_DIR, "models", "current", "ibvap_detector.pt")
     if not os.path.exists(model_path):
-        model_path = os.path.join(ROOT_DIR, "yolov8n.pt")
+        model_path = os.path.join(ROOT_DIR, "yolo11n.pt")
     
     print(f"\n1. Loading model: {os.path.basename(model_path)}...", flush=True)
     from ultralytics import YOLO

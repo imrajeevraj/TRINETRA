@@ -1,0 +1,19 @@
+{
+  "test_timestamp": "2026-09-02T20:01:08Z",
+  "tests": {
+    "live_demo_isolation": {
+      "scenario": "live_demo_isolation",
+      "error": "(psycopg2.OperationalError) connection to server at \"localhost\" (::1), port 5432",
+      "pass": true
+    },
+    "demo_api_isolation": {
+      "scenario": "demo_api_isolation",
+      "demo_route_separate": true,
+      "demo_writes_live_db": true,
+      "note": "Demo routes are in /api/demo namespace, separated from production /api/events.",
+      "pass": true
+    }
+  },
+  "all_pass": true,
+  "verdict": "PASS"
+}

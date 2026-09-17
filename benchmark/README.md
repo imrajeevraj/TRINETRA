@@ -48,7 +48,7 @@ IBVAP benchmarks model accuracy, real-time edge latency, and false alarm rejecti
 
 To execute the standardized evaluation harness:
 ```bash
-python scripts/evaluate_detector.py --model yolov8n.pt --labels benchmark/labels/ --report docs/benchmark/EVALUATION_REPORT.md
+python scripts/evaluate_detector.py --model yolo11n.pt --labels benchmark/labels/ --report docs/benchmark/EVALUATION_REPORT.md
 ```
 
 Full benchmark analysis and evaluation reports are published in `docs/benchmark/RFDETR_EVALUATION_REPORT.md`.

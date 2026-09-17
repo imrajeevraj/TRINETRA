@@ -1,0 +1,135 @@
+{
+  "test_timestamp": "2026-09-01T15:58:45Z",
+  "ground_model": {
+    "name": "IBVAP Ground Detector v2.0",
+    "classes": {
+      "0": "person",
+      "1": "vehicle"
+    },
+    "input_size": 768,
+    "status": "PRODUCTION_ACTIVE"
+  },
+  "airborne_model": {
+    "name": "IBVAP Airborne Detector v1.1",
+    "classes": {
+      "0": "drone",
+      "1": "aircraft"
+    },
+    "input_size": 640,
+    "operating_confidence": 0.4,
+    "status": "CANDIDATE_VALIDATED"
+  },
+  "real_video_benchmark": {
+    "num_frames": 60,
+    "total_wall_time_sec": 4.33,
+    "pipeline_fps": 13.9,
+    "ground_ai_fps_mean": 70.6,
+    "air_ai_fps_mean": 85.1,
+    "inference_latency_ms": {
+      "p50": 25.34,
+      "p95": 40.08,
+      "mean": 65.39
+    },
+    "tracking_latency_ms": {
+      "p50": 0.14,
+      "p95": 0.18
+    },
+    "fence_latency_ms": {
+      "p50": 0.07,
+      "p95": 0.13
+    },
+    "total_pipeline_latency_ms": {
+      "p50": 25.58,
+      "p95": 40.25
+    },
+    "ground_detections": 60,
+    "air_detections": 20,
+    "total_events_generated": 16,
+    "system_resources": {
+      "cpu_percent": 17.5,
+      "ram_percent": 67.0,
+      "gpu_percent": 0.0,
+      "vram_mb": 51.9
+    }
+  },
+  "latest_frame_queue": {
+    "producer_frames_generated": 45,
+    "consumer_frames_processed": 20,
+    "frames_dropped_to_prevent_backlog": 23,
+    "queue_depth_max": 1,
+    "stale_alarms": 0,
+    "latest_frame_wins": true
+  },
+  "performance_isolation": {
+    "ground_only": {
+      "p50_ms": 10.9,
+      "p95_ms": 20.23,
+      "fps": 91.7
+    },
+    "airborne_only": {
+      "p50_ms": 11.15,
+      "p95_ms": 13.44,
+      "fps": 89.7
+    },
+    "ground_plus_airborne_unified": {
+      "p50_ms": 21.08,
+      "p95_ms": 35.21,
+      "fps": 47.4
+    },
+    "incremental_airborne_cost_ms": 10.18
+  },
+  "multi_camera_scaling": {
+    "1_camera": {
+      "camera_count": 1,
+      "aggregate_fps": 44.1,
+      "fps_per_camera": 44.1,
+      "latency_p50_ms": 22.21,
+      "latency_p95_ms": 27.03,
+      "system_resources": {
+        "cpu_percent": 15.6,
+        "ram_percent": 67.2,
+        "gpu_percent": 0.0,
+        "vram_mb": 51.9
+      }
+    },
+    "2_cameras": {
+      "camera_count": 2,
+      "aggregate_fps": 46.0,
+      "fps_per_camera": 23.0,
+      "latency_p50_ms": 20.79,
+      "latency_p95_ms": 26.05,
+      "system_resources": {
+        "cpu_percent": 21.0,
+        "ram_percent": 67.2,
+        "gpu_percent": 0.0,
+        "vram_mb": 51.9
+      }
+    },
+    "4_cameras": {
+      "camera_count": 4,
+      "aggregate_fps": 44.5,
+      "fps_per_camera": 11.1,
+      "latency_p50_ms": 21.47,
+      "latency_p95_ms": 28.05,
+      "system_resources": {
+        "cpu_percent": 23.0,
+        "ram_percent": 67.2,
+        "gpu_percent": 0.0,
+        "vram_mb": 51.9
+      }
+    }
+  },
+  "failure_isolation": {
+    "airborne_failure_simulation": {
+      "ground_status": "RUNNING",
+      "airborne_status": "OFFLINE",
+      "ground_operational": true
+    },
+    "ground_failure_simulation": {
+      "ground_status": "OFFLINE",
+      "airborne_status": "RUNNING",
+      "airborne_operational": true
+    },
+    "isolation_verified": true
+  }
+}

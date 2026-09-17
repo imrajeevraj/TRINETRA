@@ -1,0 +1,30 @@
+{
+  "experiment_id": "IBVAP-ITEM-Y26-001",
+  "run_name": "ibvap_security_item_y26n_exp001",
+  "architecture": "YOLO26n",
+  "base_model": "yolo26n.pt",
+  "note": "Trained from COCO-pretrained YOLO26n. YOLO11 weights incompatible (different architecture).",
+  "dataset_yaml": "C:\\Users\\rajee\\Downloads\\SIH 2026\\IBVAP\\data\\normalized\\security_item_v2_1\\dataset.yaml",
+  "dataset_version": "security_item_v2_1",
+  "epochs": 10,
+  "batch_size": 16,
+  "image_size": 640,
+  "optimizer": "AdamW",
+  "lr0": 0.0005,
+  "seed": 42,
+  "device": "0",
+  "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "elapsed_seconds": 733.7,
+  "weights_path": "C:\\Users\\rajee\\Downloads\\SIH 2026\\IBVAP\\data\\training\\runs\\ibvap_security_item_y26n_exp001\\weights\\best.pt",
+  "candidate_path": "models\\candidates\\yolo26\\security_item\\best.pt",
+  "sha256": "11ADFD8E3D3F580540BCBB8A86C5A658B9CA975013FF1307348E030B7EAE51F3",
+  "critical_limitation": "REAL-FIREARM-VIDEO VALIDATION NOT AVAILABLE",
+  "software": {
+    "python": "3.11.9",
+    "torch": "2.7.1+cu118",
+    "ultralytics": "8.4.128",
+    "cuda": "11.8"
+  },
+  "started_at": "2026-09-02T17:42:40Z",
+  "completed_at": "2026-09-02T17:54:54Z"
+}

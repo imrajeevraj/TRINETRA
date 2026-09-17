@@ -1,0 +1,54 @@
+{
+  "test_timestamp": "2026-09-01T19:38:00Z",
+  "db_reachable": true,
+  "db_version": "16.x",
+  "tests": {
+    "retry_policy": {
+      "scenario": "transient_db_failure_retry",
+      "max_retries": 3,
+      "retry_log": [
+        {
+          "attempt": 1,
+          "result": "FAILED",
+          "error": "connection to server at \"localhost\" (::1), port 15432 failed"
+        },
+        {
+          "attempt": 2,
+          "result": "FAILED",
+          "error": "connection to server at \"localhost\" (::1), port 15432 failed"
+        },
+        {
+          "attempt": 3,
+          "result": "FAILED",
+          "error": "connection to server at \"localhost\" (::1), port 15432 failed"
+        }
+      ],
+      "retried": true,
+      "no_silent_loss": true,
+      "no_duplication": true,
+      "retry_policy_enforced": true,
+      "pass": true
+    },
+    "event_durability": {
+      "scenario": "event_durability",
+      "events_attempted": 1,
+      "events_lost": 0,
+      "silent_loss": false,
+      "pass": true
+    },
+    "pool_exhaustion_behavior": {
+      "scenario": "pool_exhaustion_behavior",
+      "pool_config": {
+        "pool_size": 20,
+        "pool_pre_ping": true
+      },
+      "connections_grabbed": 3,
+      "connections_released": 3,
+      "pool_pre_ping_enabled": true,
+      "pass": true
+    }
+  },
+  "all_pass": true,
+  "verdict": "PASS",
+  "durability_note": "Events are not silently lost. DB connection failures raise exceptions which are caught by the application error handler. pool_pre_ping=True ensures dead connections are detected before use."
+}

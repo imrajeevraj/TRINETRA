@@ -1,0 +1,30 @@
+{
+  "test_timestamp": "2026-09-02T20:01:25Z",
+  "tests": {
+    "alert_schema_completeness": {
+      "scenario": "alert_schema_completeness",
+      "required_fields": [
+        "timestamp",
+        "camera_id",
+        "frame_id",
+        "detection_id"
+      ],
+      "missing_fields": [],
+      "schema_valid": true,
+      "validate_method": "detection_service.validate_detection_schema()",
+      "pass": true
+    },
+    "stale_event_rejection": {
+      "scenario": "stale_event_rejection",
+      "event_age_sec": 23400.0,
+      "stale_threshold_ms": 500.0,
+      "schema_valid": true,
+      "age_exceeds_threshold": true,
+      "dashboard_must_reject": true,
+      "note": "Schema validates structure; staleness enforcement is at display/dashboard layer.",
+      "pass": true
+    }
+  },
+  "all_pass": true,
+  "verdict": "PASS"
+}

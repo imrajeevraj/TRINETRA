@@ -3,6 +3,9 @@ import type { SystemStats } from '../types';
 import {
   LogOut,
   User as UserIcon,
+  Video,
+  BarChart3,
+  Map as MapIcon,
 } from 'lucide-react';
 
 interface MissionHeaderProps {
@@ -12,6 +15,8 @@ interface MissionHeaderProps {
   stats: SystemStats;
   dataOrigin: 'LIVE' | 'DEMO' | 'IMPORTED';
   systemStatus: 'operational' | 'degraded' | 'critical';
+  activeAppView: 'tactical' | 'dashboard' | 'map';
+  onSelectAppView: (view: 'tactical' | 'dashboard' | 'map') => void;
   onLogout: () => void;
 }
 
@@ -28,14 +33,16 @@ export const MissionHeader: React.FC<MissionHeaderProps> = ({
   stats,
   dataOrigin,
   systemStatus,
+  activeAppView,
+  onSelectAppView,
   onLogout,
 }) => {
   return (
     <header className="mission-header" role="banner">
       {/* Left: Brand + Status */}
       <div className="header-left">
-        <div className="brand">
-          <span className="brand-name">IBVAP</span>
+        <div className="brand" onClick={() => onSelectAppView('tactical')} style={{ cursor: 'pointer' }}>
+          <span className="brand-name">TRINETRA</span>
           <span className="brand-subtitle">Command Center</span>
         </div>
 
@@ -44,6 +51,39 @@ export const MissionHeader: React.FC<MissionHeaderProps> = ({
           {STATUS_LABELS[systemStatus]}
         </div>
       </div>
+
+      {/* Primary Navigation Modes */}
+      <nav className="header-nav-modes" aria-label="Primary Navigation">
+        <button
+          className={`nav-mode-btn ${activeAppView === 'tactical' ? 'active' : ''}`}
+          onClick={() => onSelectAppView('tactical')}
+          title="Live multi-camera tactical surveillance console"
+        >
+          <Video size={13} />
+          <span>Tactical Console</span>
+        </button>
+
+        <button
+          className={`nav-mode-btn ${activeAppView === 'dashboard' ? 'active' : ''}`}
+          onClick={() => onSelectAppView('dashboard')}
+          title="High-level strategic threat & operational analytics dashboard"
+        >
+          <BarChart3 size={13} />
+          <span>Executive Dashboard</span>
+          {stats.critical_alerts > 0 && (
+            <span className="nav-badge-critical">{stats.critical_alerts}</span>
+          )}
+        </button>
+
+        <button
+          className={`nav-mode-btn ${activeAppView === 'map' ? 'active' : ''}`}
+          onClick={() => onSelectAppView('map')}
+          title="Full-screen geospatial border outpost map"
+        >
+          <MapIcon size={13} />
+          <span>Geospatial Map</span>
+        </button>
+      </nav>
 
       {/* Center: Compact Telemetry */}
       <div className="header-telemetry" aria-label="Operational telemetry">
@@ -90,3 +130,4 @@ export const MissionHeader: React.FC<MissionHeaderProps> = ({
     </header>
   );
 };
+

@@ -1,6 +1,7 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from datetime import datetime
 from typing import Optional
+
 
 class CameraBase(BaseModel):
     id: str
@@ -11,8 +12,10 @@ class CameraBase(BaseModel):
     fps: int = 30
     is_active: bool = True
 
+
 class CameraCreate(CameraBase):
     pass
+
 
 class CameraUpdate(BaseModel):
     name: Optional[str] = None
@@ -22,6 +25,7 @@ class CameraUpdate(BaseModel):
     fps: Optional[int] = None
     is_active: Optional[bool] = None
     status: Optional[str] = None
+
 
 class CameraResponse(BaseModel):
     id: str
@@ -37,5 +41,4 @@ class CameraResponse(BaseModel):
     inference_latency_ms: float = 0.0
     ai_result_age_seconds: Optional[float] = None
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)

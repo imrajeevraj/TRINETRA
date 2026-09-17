@@ -1,4 +1,5 @@
 # IBVAP — Video Data Directory & Placement Guidelines
+# TRINETRA — Video Data Directory & Placement Guidelines
 
 ## 1. Intentional Repository Exclusion
 Surveillance video files (`*.mp4`, `*.avi`, `*.mkv`, etc.) are **strictly excluded from this Git repository** in accordance with:
@@ -29,6 +30,7 @@ data/videos/
 ## 3. VIRAT Video Dataset Reference
 
 IBVAP benchmarks and offline retrospective audits utilize the **VIRAT Video Dataset** (Release 2.0):
+TRINETRA benchmarks and offline retrospective audits utilize the **VIRAT Video Dataset** (Release 2.0):
 - **Source:** [VIRAT Video Dataset](https://viratdata.org/)
 - **Description:** Real-world surveillance footage captured from high-angle CCTV and airborne cameras with realistic human-vehicle interactions, occlusions, and border outpost scenarios.
 - **License / Terms of Use:** Research and educational use only under the VIRAT dataset agreement. Users must obtain the files directly from the official portal or authorized research mirrors.
@@ -37,8 +39,10 @@ IBVAP benchmarks and offline retrospective audits utilize the **VIRAT Video Data
 ---
 
 ## 4. Configuring Custom Video Feeds in IBVAP
+## 4. Configuring Custom Video Feeds in TRINETRA
 
 To configure local video files as emulated camera feeds in IBVAP:
+To configure local video files as emulated camera feeds in TRINETRA:
 
 1. Copy your test `.mp4` files into `data/videos/`.
 2. Edit `configs/cameras.yaml` to specify the local path under the `source` parameter:

@@ -1,0 +1,7 @@
+path: C:/Users/rajee/Downloads/SIH 2026/IBVAP
+train: C:/Users/rajee/Downloads/SIH 2026/IBVAP/benchmark/images/test
+val: C:/Users/rajee/Downloads/SIH 2026/IBVAP/benchmark/images/test
+names:
+  0: person
+  1: vehicle
+nc: 2

@@ -2,17 +2,58 @@ name: IBVAP Continuous Integration & Automated Testing Pipeline
 
 on:
   push:
-    branches: [ main, master, dev ]
+    branches: [ main, develop ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main, develop ]
 
 jobs:
+  # S-08: Secret detection runs first — before any build — so leaked credentials
+  # never make it into CI artefacts or Docker images.
+  secret-scan:
+    name: Secret Detection (gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history so gitleaks can scan all commits
+      - name: Run gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   # ============================================================================
   # 1. Backend Python & AI Engine Verification
   # ============================================================================
   backend-test:
     name: Backend Tests & AI Verification
     runs-on: ubuntu-latest
+    needs: [secret-scan]
+
+    # T-01: Real PostgreSQL with pgvector + Redis service containers for integration testing
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: ibvap_user
+          POSTGRES_PASSWORD: CiCdTestPostgresPassword123
+          POSTGRES_DB: ibvap_db
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
     steps:
       - name: Checkout Repository
@@ -46,8 +87,23 @@ jobs:
         run: |
           bandit -r backend/app -ll
 
-      - name: Run Backend Pytest Suite
+      - name: Run Ruff Code Style Check (T-07)
+        run: |
+          pip install ruff
+          ruff format --check backend/app
+          ruff check backend/app
+
+      - name: Run Alembic Database Migrations (T-01)
         env:
+          DATABASE_URL: "postgresql://ibvap_user:CiCdTestPostgresPassword123@localhost:5432/ibvap_db"
+        run: |
+          cd backend
+          alembic upgrade head
+
+      - name: Run Backend Pytest Suite (T-01 / T-02)
+        env:
+          DATABASE_URL: "postgresql://ibvap_user:CiCdTestPostgresPassword123@localhost:5432/ibvap_db"
+          REDIS_URL: "redis://localhost:6379/0"
           JWT_SECRET: "CiCdTestingSecretKeyMustBe32CharactersMinimumLength12345"
           ADMIN_USERNAME: "ibvap-admin"
           ADMIN_PASSWORD: "TestPassword123"
@@ -119,3 +175,25 @@ jobs:
       - name: Validate Docker Compose Configuration
         run: |
           docker compose config
+
+      - name: Build Docker Images for Trivy Scan (S-11)
+        run: |
+          docker compose build backend frontend
+
+      - name: Run Trivy Container Vulnerability Scan — Backend (S-11)
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ibvap-backend
+          format: table
+          exit-code: '1'
+          severity: CRITICAL,HIGH
+          ignore-unfixed: true
+
+      - name: Run Trivy Container Vulnerability Scan — Frontend (S-11)
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ibvap-frontend
+          format: table
+          exit-code: '1'
+          severity: CRITICAL,HIGH
+          ignore-unfixed: true

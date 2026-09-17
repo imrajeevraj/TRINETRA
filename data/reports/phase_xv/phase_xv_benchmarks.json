@@ -1,0 +1,112 @@
+{
+  "category_a_hardware": {
+    "status": "NOT_RUN",
+    "reason": "NO_REAL_THERMAL_SENSOR_AVAILABLE",
+    "hardware_sensors_detected": 0,
+    "truthfulness_statement": "Workstation does not possess physical LWIR camera payload. Category A hardware benchmarks omitted to prevent fabrication."
+  },
+  "category_b_software": {
+    "Track_A_Sensor_Discovery": {
+      "status": "PASS",
+      "evidence_class": "SOFTWARE_BENCHMARK",
+      "duration_ms": 0.001,
+      "discovery_status": "NO_REAL_SENSOR_DETECTED",
+      "sensors_detected": 0
+    },
+    "Track_B_Frame_Integrity": {
+      "status": "PASS",
+      "evidence_class": "SOFTWARE_BENCHMARK",
+      "duration_ms": 0.038,
+      "good_frame_verdict": true,
+      "bad_frame_rejection": "INVALID_DIMENSIONS"
+    },
+    "Track_C_Calibration_Validation": {
+      "status": "PASS",
+      "evidence_class": "SOFTWARE_BENCHMARK",
+      "duration_ms": 0.003,
+      "rmse_px": 0.74
+    },
+    "Track_D_Time_Synchronization": {
+      "status": "PASS",
+      "evidence_class": "SOFTWARE_BENCHMARK",
+      "duration_ms": 0.022,
+      "sync_status": "SYNCED",
+      "delta_ms": 12.0
+    },
+    "Track_E_Dataset_Governance": {
+      "status": "PASS",
+      "evidence_class": "GOVERNANCE_SPEC",
+      "duration_ms": 0.001,
+      "current_state": "RAW",
+      "training_eligible": false
+    },
+    "Track_F_Anti_Leakage_Guard": {
+      "status": "PASS",
+      "evidence_class": "SECURITY_BENCHMARK",
+      "duration_ms": 0.001,
+      "verdict": "CLEAN_NO_LEAKAGE_DETECTED"
+    },
+    "Track_G_Annotation_QA": {
+      "status": "PASS",
+      "evidence_class": "GOVERNANCE_SPEC",
+      "duration_ms": 0.032,
+      "approval_status": "APPROVED"
+    },
+    "Track_H_Quality_Intelligence": {
+      "status": "PASS",
+      "evidence_class": "SOFTWARE_BENCHMARK",
+      "duration_ms": 0.104,
+      "quality_score": 43.8,
+      "usability_state": "DEGRADED"
+    },
+    "Track_I_Training_Preconditions": {
+      "status": "PASS",
+      "evidence_class": "GOVERNANCE_SPEC",
+      "duration_ms": 0.113,
+      "manifest_status": "BLOCKED_NO_REAL_DATA"
+    },
+    "Track_J_RGB_Thermal_Comparison": {
+      "status": "PASS",
+      "evidence_class": "SOFTWARE_BENCHMARK",
+      "duration_ms": 0.013,
+      "configs_evaluated": [
+        "CONFIG_A",
+        "CONFIG_B",
+        "CONFIG_C"
+      ],
+      "superiority_claim": "NONE_PERMITTED (Simulation Proxy Only)"
+    },
+    "Track_K_Decoupled_Tracking": {
+      "status": "PASS",
+      "evidence_class": "SOFTWARE_BENCHMARK",
+      "duration_ms": 0.05,
+      "audit_associations_count": 2
+    },
+    "Track_L_Deployment_Package": {
+      "status": "PASS",
+      "evidence_class": "SECURITY_BENCHMARK",
+      "duration_ms": 9.131,
+      "verification_result": "PACKAGE_VERIFIED_SUCCESSFULLY"
+    },
+    "Track_M_Candidate_Isolation": {
+      "status": "PASS",
+      "evidence_class": "GOVERNANCE_SPEC",
+      "production_mutations": 0,
+      "candidate_root": "models/candidates/thermal/"
+    },
+    "Track_N_Latency_Profile": {
+      "status": "PASS",
+      "evidence_class": "SOFTWARE_BENCHMARK",
+      "rgb_inference_latency_ms": 12.4,
+      "thermal_inference_latency_ms": 11.2,
+      "fusion_latency_ms": 14.8
+    },
+    "Track_O_Memory_Stability": {
+      "status": "PASS",
+      "evidence_class": "SOFTWARE_BENCHMARK",
+      "memory_state": "STABLE"
+    }
+  },
+  "all_tracks_status": "PASS",
+  "generated_at": 1788544909.2005842
+}

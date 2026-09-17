@@ -34,9 +34,8 @@ RUN pip install --no-cache-dir --upgrade pip && \
 COPY backend /app/backend
 COPY configs /app/configs
 COPY data /app/data
+COPY models /app/models
 COPY yolo11n.pt /app/yolo11n.pt
-COPY yolov8n.pt /app/yolov8n.pt
-COPY border_threat_yolo.pt /app/border_threat_yolo.pt
 
 # Expose FastAPI backend port
 EXPOSE 8000

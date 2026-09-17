@@ -1,0 +1,12 @@
+{
+  "cycles_completed": 100,
+  "crashes": 0,
+  "deadlocks": 0,
+  "frame_losses": 0,
+  "production_models_mutated": 0,
+  "memory_start_mb": 32.04,
+  "memory_end_mb": 32.5,
+  "memory_delta_mb": 0.46,
+  "soak_duration_seconds": 0.005,
+  "status": "PASSED_ZERO_CRASH_ZERO_LEAK"
+}

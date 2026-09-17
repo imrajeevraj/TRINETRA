@@ -26,7 +26,9 @@ export const VideoViewport: React.FC<VideoViewportProps> = ({ camera }) => {
   }
 
   const webrtcUrl = `http://${webrtcHost}:8889/${camera.id}/`;
-  const mjpegUrl = `${apiBase}/api/cameras/${camera.id}/stream?k=${key}`;
+  const token = localStorage.getItem('trinetra_token') || localStorage.getItem('ibvap_token') || sessionStorage.getItem('trinetra_token') || sessionStorage.getItem('ibvap_token') || '';
+  const tokenParam = token ? `&token=${encodeURIComponent(token)}` : '';
+  const mjpegUrl = `${apiBase}/api/cameras/${camera.id}/stream?k=${key}${tokenParam}`;
   const isStreaming = camera.status === 'ONLINE' || camera.status === 'DEGRADED';
 
   const personCount = camera.detections

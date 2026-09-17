@@ -1,0 +1,27 @@
+{
+  "experiment_id": "IBVAP-AIR-Y26-001",
+  "run_name": "ibvap_airborne_y26n_exp001",
+  "architecture": "YOLO26n",
+  "base_model": "yolo26n.pt",
+  "dataset_yaml": "data\\normalized\\airborne_v1_1\\dataset.yaml",
+  "dataset_version": "airborne_v1_1",
+  "epochs": 30,
+  "batch_size": 16,
+  "image_size": 640,
+  "optimizer": "AdamW",
+  "lr0": 0.002,
+  "seed": 42,
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "elapsed_seconds": 3947.78,
+  "weights_path": "data\\training\\runs\\ibvap_airborne_y26n_exp001\\weights\\best.pt",
+  "candidate_path": "models\\candidates\\yolo26\\airborne\\best.pt",
+  "sha256": "03D5E7621E2BA81C33F8D882B76A735D9A91E11198D4F03D555CBA2DDBF14985",
+  "software": {
+    "python": "3.11.9",
+    "torch": "2.7.1+cu118",
+    "ultralytics": "8.4.128",
+    "cuda": "11.8"
+  },
+  "completed_at": "2026-09-02T17:30:30Z"
+}

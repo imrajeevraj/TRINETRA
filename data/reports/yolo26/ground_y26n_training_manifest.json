@@ -1,0 +1,29 @@
+{
+  "experiment_id": "IBVAP-GROUND-Y26-001",
+  "run_name": "ibvap_ground_y26n_exp001",
+  "architecture": "YOLO26n",
+  "base_model": "yolo26n.pt",
+  "dataset_yaml": "data\\normalized\\ground_v2_exp002\\dataset.yaml",
+  "dataset_version": "ground_v2_exp002",
+  "epochs": 40,
+  "batch_size": 16,
+  "image_size": 768,
+  "optimizer": "AdamW",
+  "lr0": 0.002,
+  "lrf": 0.0001,
+  "cos_lr": true,
+  "seed": 42,
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "elapsed_seconds": 920.21,
+  "weights_path": "data\\training\\runs\\ibvap_ground_y26n_exp001-2\\weights\\best.pt",
+  "candidate_path": "models\\candidates\\yolo26\\ground\\best.pt",
+  "sha256": "83EA58623A735842BBA54403D8AF093F37730CC9B6BBA28AF52E3BE0E028C03A",
+  "software": {
+    "python": "3.11.9",
+    "torch": "2.7.1+cu118",
+    "ultralytics": "8.4.128",
+    "cuda": "11.8"
+  },
+  "completed_at": "2026-09-02T16:19:54Z"
+}

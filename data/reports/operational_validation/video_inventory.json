@@ -1,0 +1,79 @@
+{
+  "inventory_timestamp": "2026-09-01T17:34:24Z",
+  "virat_videos": [
+    {
+      "path": "data/videos/virat\\VIRAT_S_000001.mp4",
+      "exists": true,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30.0,
+      "frame_count": 20655,
+      "duration_sec": 688.5,
+      "size_mb": 1388.9,
+      "role": "GROUND_SURVEILLANCE",
+      "dataset": "VIRAT Video Dataset Release 2.0",
+      "camera_id": "CAM-001"
+    },
+    {
+      "path": "data/videos/virat\\VIRAT_S_000002.mp4",
+      "exists": true,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30.0,
+      "frame_count": 9075,
+      "duration_sec": 302.5,
+      "size_mb": 612.0,
+      "role": "GROUND_SURVEILLANCE",
+      "dataset": "VIRAT Video Dataset Release 2.0",
+      "camera_id": "CAM-002"
+    },
+    {
+      "path": "data/videos/virat\\VIRAT_S_000003.mp4",
+      "exists": false,
+      "width": -1,
+      "height": -1,
+      "fps": -1.0,
+      "frame_count": -1,
+      "duration_sec": 0.0,
+      "size_mb": 752.0,
+      "role": "GROUND_SURVEILLANCE",
+      "dataset": "VIRAT Video Dataset Release 2.0",
+      "camera_id": "CAM-003"
+    },
+    {
+      "path": "data/videos/virat\\VIRAT_S_000004.mp4",
+      "exists": true,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30.0,
+      "frame_count": 17640,
+      "duration_sec": 588.0,
+      "size_mb": 1197.7,
+      "role": "GROUND_SURVEILLANCE",
+      "dataset": "VIRAT Video Dataset Release 2.0",
+      "camera_id": "CAM-004"
+    }
+  ],
+  "airborne_videos": [
+    {
+      "path": "data/videos/drone_aerial_test.mp4",
+      "exists": true,
+      "width": 1200,
+      "height": 720,
+      "fps": 30.0,
+      "frame_count": 150,
+      "duration_sec": 5.0,
+      "size_mb": 16.3,
+      "role": "AIRBORNE_TEST",
+      "dataset": "Internal Drone Aerial Test Feed",
+      "camera_id": "AIR-001"
+    }
+  ],
+  "summary": {
+    "total_video_files": 5,
+    "virat_available": 3,
+    "airborne_available": 1,
+    "total_size_gb": 3.87,
+    "total_frames": 47519
+  }
+}

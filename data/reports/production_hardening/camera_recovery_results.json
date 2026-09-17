@@ -1,0 +1,56 @@
+{
+  "test_timestamp": "2026-09-01T19:37:53Z",
+  "source": "data/videos/virat/VIRAT_S_000001.mp4",
+  "tests": {
+    "disconnect_reconnect": {
+      "scenario": "disconnect_reconnect",
+      "initial_status": "ONLINE",
+      "after_failure": "NO_SIGNAL",
+      "reconnected": true,
+      "final_status": "ONLINE",
+      "attempts": 1,
+      "backoff_delays": [
+        0.231
+      ],
+      "pass": true
+    },
+    "frozen_stream": {
+      "scenario": "frozen_stream",
+      "degraded_detected": true,
+      "recovered": true,
+      "pass": true
+    },
+    "corrupt_frame": {
+      "scenario": "corrupt_frame",
+      "corruption_detected": "True",
+      "system_recovered": true,
+      "pass": "True"
+    },
+    "repeated_disconnect_reconnect": {
+      "scenario": "repeated_disconnect_reconnect",
+      "cycles": 3,
+      "all_recovered": true,
+      "alert_counts": [
+        0,
+        0,
+        0
+      ],
+      "no_duplicate_alerts": true,
+      "pass": true
+    },
+    "exponential_backoff": {
+      "scenario": "exponential_backoff",
+      "delays_sec": [
+        0.213,
+        0.402,
+        0.809,
+        1.611
+      ],
+      "delays_increasing": true,
+      "jitter_present": true,
+      "pass": true
+    }
+  },
+  "all_pass": true,
+  "verdict": "PASS"
+}

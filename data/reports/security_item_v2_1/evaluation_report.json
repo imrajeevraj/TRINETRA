@@ -1,0 +1,122 @@
+{
+  "benchmark": "IBVAP-GT-ITEM-v2.0",
+  "evaluated_model": "ibvap_security_item_v2_1_exp001",
+  "resolution_experiment": {
+    "imgsz_640": {
+      "benchmark": "IBVAP-GT-ITEM-v2.0",
+      "checkpoint": "data/training/runs/ibvap_security_item_v2_1_exp001/weights/best.pt",
+      "imgsz": 640,
+      "operating_threshold": 0.35,
+      "tp": 51,
+      "fp": 10,
+      "fn": 10,
+      "precision": 0.8361,
+      "recall": 0.8361,
+      "f1": 0.8361,
+      "map50": 0.8579,
+      "map50_95": 0.3447,
+      "small_object_recall": 0.8571,
+      "occluded_recall": 0.8667,
+      "low_light_recall": 0.8333,
+      "p50_latency_ms": 10.17,
+      "p95_latency_ms": 48.88,
+      "fps": 73.7,
+      "operational": {
+        "fp_per_100_frames": 6.06,
+        "fp_per_hour_unconfirmed": 5454.5,
+        "candidate_alerts_per_hr": 66.5,
+        "confirmation_delay_sec": 0.12
+      }
+    },
+    "imgsz_768": {
+      "benchmark": "IBVAP-GT-ITEM-v2.0",
+      "checkpoint": "data/training/runs/ibvap_security_item_v2_1_exp001/weights/best.pt",
+      "imgsz": 768,
+      "operating_threshold": 0.35,
+      "tp": 51,
+      "fp": 17,
+      "fn": 10,
+      "precision": 0.75,
+      "recall": 0.8361,
+      "f1": 0.7907,
+      "map50": 0.8325,
+      "map50_95": 0.3554,
+      "small_object_recall": 0.8,
+      "occluded_recall": 0.8,
+      "low_light_recall": 0.6667,
+      "p50_latency_ms": 11.36,
+      "p95_latency_ms": 47.13,
+      "fps": 66.9,
+      "operational": {
+        "fp_per_100_frames": 10.3,
+        "fp_per_hour_unconfirmed": 9272.7,
+        "candidate_alerts_per_hr": 74.2,
+        "confirmation_delay_sec": 0.12
+      }
+    }
+  },
+  "roi_experiment": {
+    "mode_a_full_frame": {
+      "name": "Full-Frame Direct Detection",
+      "p50_latency_ms": 10.17,
+      "precision": 0.8361,
+      "recall": 0.8361,
+      "f1": 0.8361,
+      "recommendation": "PRIMARY (Edge Pipeline Default: zero-dependency, lowest pipeline complexity, lowest latency)"
+    },
+    "mode_b_person_roi": {
+      "name": "Person-ROI Strict Crop",
+      "p50_latency_ms": 155.9,
+      "precision": 0.714,
+      "recall": 0.742,
+      "f1": 0.728,
+      "recommendation": "SECONDARY (Dependent on Ground Model Person track)"
+    },
+    "mode_c_person_roi_padded": {
+      "name": "Person-ROI Padded (+20%)",
+      "p50_latency_ms": 147.4,
+      "precision": 0.735,
+      "recall": 0.768,
+      "f1": 0.751,
+      "recommendation": "TERTIARY (Operator Zoom Verification Mode)"
+    }
+  },
+  "temporal_confirmation": {
+    "policy": "N=3, M=5 Confirmation Window",
+    "description": "Requires item detection in >= 3 frames out of the last 5 frames before escalating from ITEM_CANDIDATE to ITEM_CONFIRMED.",
+    "false_positive_reduction_rate": "97.4%",
+    "confirmation_delay_ms": 120.0,
+    "recommendation": "MAINTAIN N=3, M=5 as system baseline."
+  },
+  "chosen_primary_configuration": {
+    "model": "ibvap_security_item_v2_1_exp001",
+    "imgsz": 640,
+    "operating_threshold": 0.35,
+    "metrics": {
+      "benchmark": "IBVAP-GT-ITEM-v2.0",
+      "checkpoint": "data/training/runs/ibvap_security_item_v2_1_exp001/weights/best.pt",
+      "imgsz": 640,
+      "operating_threshold": 0.35,
+      "tp": 51,
+      "fp": 10,
+      "fn": 10,
+      "precision": 0.8361,
+      "recall": 0.8361,
+      "f1": 0.8361,
+      "map50": 0.8579,
+      "map50_95": 0.3447,
+      "small_object_recall": 0.8571,
+      "occluded_recall": 0.8667,
+      "low_light_recall": 0.8333,
+      "p50_latency_ms": 10.17,
+      "p95_latency_ms": 48.88,
+      "fps": 73.7,
+      "operational": {
+        "fp_per_100_frames": 6.06,
+        "fp_per_hour_unconfirmed": 5454.5,
+        "candidate_alerts_per_hr": 66.5,
+        "confirmation_delay_sec": 0.12
+      }
+    }
+  }
+}

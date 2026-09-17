@@ -1,0 +1,32 @@
+{
+  "test_timestamp": "2026-09-02T20:00:59Z",
+  "tests": {
+    "person_firearm": {
+      "scenario": "person_firearm_correlation",
+      "detections": 2,
+      "events_generated": 2,
+      "traceable": true,
+      "sources_distinct": true,
+      "intent_inferred": false,
+      "pass": true
+    },
+    "drone_air_zone": {
+      "scenario": "drone_air_zone",
+      "detections": 1,
+      "events_generated": 0,
+      "domain": "AIR",
+      "traceable": true,
+      "pass": true
+    },
+    "vehicle_ground_zone": {
+      "scenario": "vehicle_ground_zone",
+      "detections": 1,
+      "events_generated": 0,
+      "domain": "GROUND",
+      "traceable": true,
+      "pass": true
+    }
+  },
+  "all_pass": true,
+  "verdict": "PASS"
+}

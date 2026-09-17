@@ -1,0 +1,18 @@
+{
+  "benchmark_id": "IBVAP-THERMAL-READINESS-v0",
+  "version": "v0.1-readiness",
+  "status": "NOT_VALIDATED",
+  "is_frozen": true,
+  "sample_count": 0,
+  "classes": [
+    "person",
+    "vehicle",
+    "drone",
+    "aircraft",
+    "firearm",
+    "security_item"
+  ],
+  "data_origin": "NOT_COLLECTED",
+  "freeze_timestamp": 1789591975.8960674,
+  "notes": "Thermal ground truth readiness benchmark. Real sample count is 0 because no genuine operational LWIR data exists in the repository. Native thermal AI evaluation status: NOT_VALIDATED."
+}

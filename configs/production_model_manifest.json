@@ -1,0 +1,66 @@
+{
+  "manifest_version": "1.0",
+  "generated_at": "2026-09-04T09:25:00Z",
+  "governance_policy": "STRICT_PRODUCTION_MODEL_FREEZE",
+  "models": {
+    "ground": {
+      "model_id": "IBVAP-GROUND-v2.0",
+      "model_name": "IBVAP Ground Neural Detector Production",
+      "architecture": "YOLO11n",
+      "version": "v2.0.0",
+      "task": "object_detection",
+      "classes": {
+        "0": "person",
+        "1": "vehicle"
+      },
+      "file_path": "models/current/ibvap_detector.pt",
+      "sha256": "7DBF36027768194F61C6EBBC000E1421374624558168F8A9896F727B296277B0",
+      "dataset_version": "IBVAP-GROUND-TRAIN-v2.0-EXP002B",
+      "benchmark_version": "IBVAP-GT-v1.0",
+      "deployment_status": "ACTIVE_PRODUCTION",
+      "rollback_version": "IBVAP-GROUND-v1.0",
+      "rollback_path": "models/archive/ibvap_detector_v1_legacy.pt",
+      "input_dimensions": [768, 768, 3],
+      "immutable": true
+    },
+    "airborne": {
+      "model_id": "IBVAP-AIRBORNE-v2.0",
+      "model_name": "IBVAP Airborne Threat Detector Production",
+      "architecture": "YOLO11n",
+      "version": "v2.0.0",
+      "task": "airborne_object_detection",
+      "classes": {
+        "0": "drone",
+        "1": "aircraft"
+      },
+      "file_path": "models/production/airborne/ibvap_airborne_v2_production.pt",
+      "sha256": "5229632C3D7A12A279A45032D558FB4712BF9DB43667828D30367D2354106384",
+      "dataset_version": "IBVAP-AIRBORNE-TRAIN-v2.0-EXP001",
+      "benchmark_version": "IBVAP-GT-v1.0",
+      "deployment_status": "ACTIVE_PRODUCTION",
+      "rollback_version": "IBVAP-AIRBORNE-v1.0",
+      "rollback_path": "models/production/airborne/rollback_v1_production.pt",
+      "input_dimensions": [640, 640, 3],
+      "immutable": true
+    },
+    "security_item": {
+      "model_id": "IBVAP-SECURITY-v2.1",
+      "model_name": "IBVAP Security Item Threat Verifier Production",
+      "architecture": "YOLO11n",
+      "version": "v2.1.0",
+      "task": "security_item_detection",
+      "classes": {
+        "0": "firearm"
+      },
+      "file_path": "models/production/security_item/ibvap_security_item_v2_1_production.pt",
+      "sha256": "72464C778DE57270800146AB5ADF2AB683FFEAC55338C89231EE3A83E7F6E1DA",
+      "dataset_version": "IBVAP-SECURITY-TRAIN-v2.1-EXP001",
+      "benchmark_version": "IBVAP-GT-v1.0",
+      "deployment_status": "ACTIVE_PRODUCTION",
+      "rollback_version": "IBVAP-SECURITY-v1.0",
+      "rollback_path": "models/production/security_item/ibvap_security_item_v1_production.pt",
+      "input_dimensions": [640, 640, 3],
+      "immutable": true
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "test_timestamp": "2026-09-02T20:00:59Z",
+  "tests": {
+    "jwt_secret_strength": {
+      "scenario": "jwt_secret_strength",
+      "length": 56,
+      "length_ok": true,
+      "not_default": true,
+      "pass": true
+    },
+    "model_checksum_verification": {
+      "scenario": "model_checksum_verification",
+      "registry_has_sha": true,
+      "detection_service_verifies_on_load": true,
+      "pass": true
+    },
+    "path_traversal": {
+      "scenario": "path_traversal_protection",
+      "attempts": 4,
+      "blocked": 4,
+      "all_blocked": true,
+      "pass": true
+    },
+    "hardcoded_secret_scan": {
+      "scenario": "hardcoded_secret_scan",
+      "files_scanned": 20,
+      "suspicious_files": [
+        {
+          "file": "backend\\tests\\test_security.py",
+          "matches": 1
+        }
+      ],
+      "count": 1,
+      "pass": true
+    },
+    "https_wss_config": {
+      "scenario": "https_wss_config",
+      "cors_origins": "htt",
+      "wildcard_cors": false,
+      "note": "HTTPS/WSS termination is handled by reverse proxy (nginx/caddy) in production deployment.",
+      "pass": true
+    }
+  },
+  "all_pass": true,
+  "verdict": "PASS"
+}

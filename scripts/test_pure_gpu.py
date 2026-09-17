@@ -12,7 +12,7 @@ def main():
     print(f"Device: {device}", flush=True)
     
     from ultralytics import YOLO
-    model = YOLO("border_threat_yolo.pt")
+    model = YOLO("yolo11n.pt")
     model.to(device)
     
     # Extract the underlying PyTorch nn.Module

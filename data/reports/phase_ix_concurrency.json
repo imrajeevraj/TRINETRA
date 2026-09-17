@@ -1,0 +1,32 @@
+{
+  "1_cameras": {
+    "num_cameras": 1,
+    "total_throughput_fps": 16756.03,
+    "per_camera_fps": 16756.03,
+    "p50_ms": 0.04,
+    "p95_ms": 0.17,
+    "p99_ms": 0.2,
+    "dropped_frames": 0,
+    "queue_depth": 0
+  },
+  "4_cameras": {
+    "num_cameras": 4,
+    "total_throughput_fps": 22615.48,
+    "per_camera_fps": 5653.87,
+    "p50_ms": 0.04,
+    "p95_ms": 0.1,
+    "p99_ms": 0.21,
+    "dropped_frames": 0,
+    "queue_depth": 0
+  },
+  "8_cameras": {
+    "num_cameras": 8,
+    "total_throughput_fps": 24574.55,
+    "per_camera_fps": 3071.82,
+    "p50_ms": 0.03,
+    "p95_ms": 0.08,
+    "p99_ms": 0.1,
+    "dropped_frames": 0,
+    "queue_depth": 0
+  }
+}

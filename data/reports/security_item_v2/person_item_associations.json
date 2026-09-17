@@ -1,0 +1,7278 @@
+[
+  {
+    "image": "secitem_v2_train_00000.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      93.0,
+      31.0,
+      178.0,
+      107.0
+    ],
+    "person_bbox": [
+      50.5,
+      0.0,
+      237.5,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00001.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      75.0,
+      6.0,
+      129.0,
+      107.0
+    ],
+    "person_bbox": [
+      48.0,
+      0.0,
+      166.8,
+      184.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00002.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      6.0,
+      78.0,
+      273.0,
+      154.0
+    ],
+    "person_bbox": [
+      0.0,
+      2.0,
+      305.0,
+      165.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00002.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      72.0,
+      12.0,
+      300.0,
+      79.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      305.0,
+      165.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00003.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      177.0,
+      51.0,
+      229.0,
+      76.0
+    ],
+    "person_bbox": [
+      151.0,
+      26.0,
+      265.4,
+      126.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00004.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      125.0,
+      122.0,
+      153.0,
+      185.0
+    ],
+    "person_bbox": [
+      111.0,
+      59.0,
+      172.6,
+      273.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00004.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      23.0,
+      113.0,
+      51.0,
+      182.0
+    ],
+    "person_bbox": [
+      9.0,
+      44.0,
+      70.6,
+      273.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00005.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      123.0,
+      81.0,
+      165.0,
+      105.0
+    ],
+    "person_bbox": [
+      102.0,
+      57.0,
+      194.4,
+      146.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00006.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      113.0,
+      33.0,
+      222.0,
+      80.0
+    ],
+    "person_bbox": [
+      58.5,
+      0.0,
+      298.3,
+      155.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00007.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      16.0,
+      9.0,
+      68.0,
+      56.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      104.4,
+      150.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00007.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      127.0,
+      26.0,
+      149.0,
+      58.0
+    ],
+    "person_bbox": [
+      116.0,
+      0.0,
+      164.4,
+      122.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00008.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      57.0,
+      48.0,
+      196.0,
+      151.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      293.3,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00009.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      83.0,
+      37.0,
+      190.0,
+      156.0
+    ],
+    "person_bbox": [
+      29.5,
+      0.0,
+      264.9,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00010.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      139.0,
+      19.0,
+      239.0,
+      96.0
+    ],
+    "person_bbox": [
+      89.0,
+      0.0,
+      264.0,
+      191.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00011.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      221.0,
+      4.0,
+      316.0,
+      56.0
+    ],
+    "person_bbox": [
+      173.5,
+      0.0,
+      345.0,
+      146.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00012.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      6.0,
+      63.0,
+      92.0,
+      96.0
+    ],
+    "person_bbox": [
+      0.0,
+      30.0,
+      152.2,
+      162.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00013.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      65.0,
+      57.0,
+      130.0,
+      105.0
+    ],
+    "person_bbox": [
+      32.5,
+      9.0,
+      175.5,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00014.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      38.0,
+      78.0,
+      179.0,
+      120.0
+    ],
+    "person_bbox": [
+      0.0,
+      36.0,
+      275.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00015.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      97.0,
+      68.0,
+      142.0,
+      96.0
+    ],
+    "person_bbox": [
+      74.5,
+      40.0,
+      173.5,
+      152.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00015.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      234.0,
+      34.0,
+      272.0,
+      56.0
+    ],
+    "person_bbox": [
+      215.0,
+      12.0,
+      276.0,
+      100.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00016.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      153.0,
+      46.0,
+      223.0,
+      91.0
+    ],
+    "person_bbox": [
+      118.0,
+      1.0,
+      272.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00017.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      38.0,
+      74.0,
+      85.0,
+      165.0
+    ],
+    "person_bbox": [
+      14.5,
+      0.0,
+      117.9,
+      196.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00018.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      148.0,
+      25.0,
+      252.0,
+      101.0
+    ],
+    "person_bbox": [
+      96.0,
+      0.0,
+      262.0,
+      193.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00019.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      118.0,
+      46.0,
+      225.0,
+      87.0
+    ],
+    "person_bbox": [
+      64.5,
+      5.0,
+      299.9,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00020.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      69.0,
+      64.0,
+      137.0,
+      88.0
+    ],
+    "person_bbox": [
+      35.0,
+      40.0,
+      184.6,
+      136.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00020.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      169.0,
+      64.0,
+      238.0,
+      89.0
+    ],
+    "person_bbox": [
+      134.5,
+      39.0,
+      271.0,
+      139.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00021.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      33.0,
+      58.0,
+      118.0,
+      113.0
+    ],
+    "person_bbox": [
+      0.0,
+      3.0,
+      177.5,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00022.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      16.0,
+      65.0,
+      148.0,
+      124.0
+    ],
+    "person_bbox": [
+      0.0,
+      6.0,
+      240.4,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00023.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      85.0,
+      22.0,
+      116.0,
+      100.0
+    ],
+    "person_bbox": [
+      69.5,
+      0.0,
+      137.7,
+      144.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00024.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      107.0,
+      51.0,
+      294.0,
+      105.0
+    ],
+    "person_bbox": [
+      13.5,
+      0.0,
+      300.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00025.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      138.0,
+      65.0,
+      173.0,
+      88.0
+    ],
+    "person_bbox": [
+      120.5,
+      42.0,
+      197.5,
+      134.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00026.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      133.0,
+      67.0,
+      194.0,
+      176.0
+    ],
+    "person_bbox": [
+      102.5,
+      0.0,
+      236.7,
+      191.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00027.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      134.0,
+      6.0,
+      314.0,
+      101.0
+    ],
+    "person_bbox": [
+      44.0,
+      0.0,
+      318.0,
+      159.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00028.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      94.0,
+      35.0,
+      179.0,
+      104.0
+    ],
+    "person_bbox": [
+      51.5,
+      0.0,
+      238.5,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00029.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      93.0,
+      44.0,
+      266.0,
+      104.0
+    ],
+    "person_bbox": [
+      6.5,
+      0.0,
+      275.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00030.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      84.0,
+      110.0,
+      259.0,
+      149.0
+    ],
+    "person_bbox": [
+      0.0,
+      71.0,
+      275.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00031.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      181.0,
+      113.0,
+      210.0,
+      147.0
+    ],
+    "person_bbox": [
+      166.5,
+      79.0,
+      230.3,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00031.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      56.0,
+      124.0,
+      83.0,
+      158.0
+    ],
+    "person_bbox": [
+      42.5,
+      90.0,
+      101.9,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00032.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      74.0,
+      33.0,
+      175.0,
+      88.0
+    ],
+    "person_bbox": [
+      23.5,
+      0.0,
+      245.7,
+      187.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00033.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      111.0,
+      60.0,
+      164.0,
+      98.0
+    ],
+    "person_bbox": [
+      84.5,
+      22.0,
+      201.1,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00034.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      37.0,
+      17.0,
+      142.0,
+      176.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      215.5,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00035.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      45.0,
+      61.0,
+      99.0,
+      92.0
+    ],
+    "person_bbox": [
+      18.0,
+      30.0,
+      136.8,
+      145.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00036.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      70.0,
+      10.0,
+      187.0,
+      186.0
+    ],
+    "person_bbox": [
+      11.5,
+      0.0,
+      259.0,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00037.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      49.0,
+      69.0,
+      126.0,
+      151.0
+    ],
+    "person_bbox": [
+      10.5,
+      0.0,
+      179.9,
+      205.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00038.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      61.0,
+      82.0,
+      89.0,
+      168.0
+    ],
+    "person_bbox": [
+      47.0,
+      0.0,
+      108.6,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00039.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      79.0,
+      31.0,
+      127.0,
+      173.0
+    ],
+    "person_bbox": [
+      55.0,
+      0.0,
+      160.6,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00040.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      56.0,
+      43.0,
+      193.0,
+      78.0
+    ],
+    "person_bbox": [
+      0.0,
+      8.0,
+      195.0,
+      148.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00041.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      87.0,
+      70.0,
+      156.0,
+      180.0
+    ],
+    "person_bbox": [
+      52.5,
+      0.0,
+      204.3,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00042.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      118.0,
+      27.0,
+      168.0,
+      79.0
+    ],
+    "person_bbox": [
+      93.0,
+      0.0,
+      203.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00043.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      109.0,
+      109.0,
+      177.0,
+      226.0
+    ],
+    "person_bbox": [
+      75.0,
+      0.0,
+      183.0,
+      275.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00043.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      2.0,
+      107.0,
+      90.0,
+      220.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      151.6,
+      275.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00044.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      29.0,
+      60.0,
+      194.0,
+      109.0
+    ],
+    "person_bbox": [
+      0.0,
+      11.0,
+      309.5,
+      154.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00045.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      104.0,
+      34.0,
+      225.0,
+      125.0
+    ],
+    "person_bbox": [
+      43.5,
+      0.0,
+      264.0,
+      191.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00046.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      64.0,
+      43.0,
+      202.0,
+      108.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      243.0,
+      207.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00047.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      111.0,
+      114.0,
+      161.0,
+      141.0
+    ],
+    "person_bbox": [
+      86.0,
+      87.0,
+      196.0,
+      177.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00047.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      7.0,
+      1.0,
+      31.0,
+      46.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      47.8,
+      136.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00048.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      79.0,
+      35.0,
+      107.0,
+      57.0
+    ],
+    "person_bbox": [
+      65.0,
+      13.0,
+      126.6,
+      101.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00049.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      165.0,
+      49.0,
+      197.0,
+      76.0
+    ],
+    "person_bbox": [
+      149.0,
+      22.0,
+      219.4,
+      130.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00050.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      80.0,
+      74.0,
+      147.0,
+      118.0
+    ],
+    "person_bbox": [
+      46.5,
+      30.0,
+      193.9,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00051.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      189.0,
+      34.0,
+      282.0,
+      94.0
+    ],
+    "person_bbox": [
+      142.5,
+      0.0,
+      346.0,
+      146.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00051.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      265.0,
+      45.0,
+      323.0,
+      83.0
+    ],
+    "person_bbox": [
+      236.0,
+      7.0,
+      346.0,
+      146.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00052.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      65.0,
+      154.0,
+      147.0,
+      183.0
+    ],
+    "person_bbox": [
+      24.0,
+      125.0,
+      204.4,
+      195.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00053.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      18.0,
+      56.0,
+      136.0,
+      97.0
+    ],
+    "person_bbox": [
+      0.0,
+      15.0,
+      218.6,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00054.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      114.0,
+      24.0,
+      214.0,
+      95.0
+    ],
+    "person_bbox": [
+      64.0,
+      0.0,
+      284.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00055.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      82.0,
+      68.0,
+      266.0,
+      134.0
+    ],
+    "person_bbox": [
+      0.0,
+      2.0,
+      275.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00056.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      217.0,
+      7.0,
+      255.0,
+      64.0
+    ],
+    "person_bbox": [
+      198.0,
+      0.0,
+      281.6,
+      164.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00056.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      33.0,
+      8.0,
+      67.0,
+      71.0
+    ],
+    "person_bbox": [
+      16.0,
+      0.0,
+      90.8,
+      164.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00057.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      207.0,
+      87.0,
+      297.0,
+      136.0
+    ],
+    "person_bbox": [
+      162.0,
+      38.0,
+      299.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00058.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      103.0,
+      48.0,
+      227.0,
+      86.0
+    ],
+    "person_bbox": [
+      41.0,
+      10.0,
+      300.0,
+      162.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00059.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      77.0,
+      62.0,
+      127.0,
+      171.0
+    ],
+    "person_bbox": [
+      52.0,
+      0.0,
+      162.0,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00059.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      158.0,
+      72.0,
+      199.0,
+      179.0
+    ],
+    "person_bbox": [
+      137.5,
+      0.0,
+      227.7,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00059.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      217.0,
+      65.0,
+      242.0,
+      176.0
+    ],
+    "person_bbox": [
+      204.5,
+      0.0,
+      259.0,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00060.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      134.0,
+      79.0,
+      174.0,
+      123.0
+    ],
+    "person_bbox": [
+      114.0,
+      35.0,
+      184.0,
+      211.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00061.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      105.0,
+      21.0,
+      237.0,
+      129.0
+    ],
+    "person_bbox": [
+      39.0,
+      0.0,
+      258.0,
+      196.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00062.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      124.0,
+      54.0,
+      165.0,
+      174.0
+    ],
+    "person_bbox": [
+      103.5,
+      0.0,
+      193.7,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00063.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      90.0,
+      35.0,
+      242.0,
+      93.0
+    ],
+    "person_bbox": [
+      14.0,
+      0.0,
+      271.0,
+      186.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00064.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      229.0,
+      13.0,
+      273.0,
+      111.0
+    ],
+    "person_bbox": [
+      207.0,
+      0.0,
+      303.8,
+      144.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00064.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      59.0,
+      7.0,
+      103.0,
+      110.0
+    ],
+    "person_bbox": [
+      37.0,
+      0.0,
+      133.8,
+      144.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00065.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      71.0,
+      11.0,
+      115.0,
+      101.0
+    ],
+    "person_bbox": [
+      49.0,
+      0.0,
+      145.8,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00065.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      171.0,
+      78.0,
+      223.0,
+      110.0
+    ],
+    "person_bbox": [
+      145.0,
+      46.0,
+      259.4,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00066.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      32.0,
+      61.0,
+      125.0,
+      172.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      190.1,
+      187.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00067.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      56.0,
+      50.0,
+      190.0,
+      121.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      283.8,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00068.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      85.0,
+      82.0,
+      126.0,
+      126.0
+    ],
+    "person_bbox": [
+      64.5,
+      38.0,
+      154.7,
+      177.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00069.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      70.0,
+      57.0,
+      194.0,
+      113.0
+    ],
+    "person_bbox": [
+      8.0,
+      1.0,
+      280.0,
+      180.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00070.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      156.0,
+      80.0,
+      289.0,
+      144.0
+    ],
+    "person_bbox": [
+      89.5,
+      16.0,
+      305.0,
+      165.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00071.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      9.0,
+      23.0,
+      225.0,
+      107.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      300.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00072.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      25.0,
+      108.0,
+      88.0,
+      169.0
+    ],
+    "person_bbox": [
+      0.0,
+      47.0,
+      132.1,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00073.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      120.0,
+      104.0,
+      178.0,
+      163.0
+    ],
+    "person_bbox": [
+      91.0,
+      45.0,
+      183.0,
+      275.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00074.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      8.0,
+      61.0,
+      161.0,
+      114.0
+    ],
+    "person_bbox": [
+      0.0,
+      8.0,
+      165.0,
+      220.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00074.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      8.0,
+      11.0,
+      159.0,
+      50.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      165.0,
+      128.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00075.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      99.0,
+      112.0,
+      177.0,
+      217.0
+    ],
+    "person_bbox": [
+      60.0,
+      7.0,
+      183.0,
+      275.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00075.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      4.0,
+      113.0,
+      80.0,
+      226.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      133.2,
+      275.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00076.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      225.0,
+      116.0,
+      285.0,
+      164.0
+    ],
+    "person_bbox": [
+      195.0,
+      68.0,
+      290.0,
+      173.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00076.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      155.0,
+      120.0,
+      217.0,
+      167.0
+    ],
+    "person_bbox": [
+      124.0,
+      73.0,
+      260.4,
+      173.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00076.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      85.0,
+      117.0,
+      147.0,
+      167.0
+    ],
+    "person_bbox": [
+      54.0,
+      67.0,
+      190.4,
+      173.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00076.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      15.0,
+      119.0,
+      78.0,
+      165.0
+    ],
+    "person_bbox": [
+      0.0,
+      73.0,
+      122.1,
+      173.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00076.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      17.0,
+      65.0,
+      74.0,
+      112.0
+    ],
+    "person_bbox": [
+      0.0,
+      18.0,
+      113.9,
+      173.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00076.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      84.0,
+      64.0,
+      143.0,
+      108.0
+    ],
+    "person_bbox": [
+      54.5,
+      20.0,
+      184.3,
+      173.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00076.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      156.0,
+      63.0,
+      213.0,
+      110.0
+    ],
+    "person_bbox": [
+      127.5,
+      16.0,
+      252.9,
+      173.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00076.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      229.0,
+      55.0,
+      288.0,
+      104.0
+    ],
+    "person_bbox": [
+      199.5,
+      6.0,
+      290.0,
+      173.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00076.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      225.0,
+      0.0,
+      283.0,
+      55.0
+    ],
+    "person_bbox": [
+      196.0,
+      0.0,
+      290.0,
+      165.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00076.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      79.0,
+      9.0,
+      137.0,
+      54.0
+    ],
+    "person_bbox": [
+      50.0,
+      0.0,
+      177.6,
+      144.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00076.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      9.0,
+      6.0,
+      67.0,
+      60.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      107.6,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00076.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      137.0,
+      4.0,
+      213.0,
+      60.0
+    ],
+    "person_bbox": [
+      99.0,
+      0.0,
+      266.2,
+      172.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00077.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      88.0,
+      48.0,
+      136.0,
+      80.0
+    ],
+    "person_bbox": [
+      64.0,
+      16.0,
+      169.6,
+      144.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00078.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      128.0,
+      74.0,
+      183.0,
+      161.0
+    ],
+    "person_bbox": [
+      100.5,
+      0.0,
+      221.5,
+      225.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00078.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      42.0,
+      71.0,
+      105.0,
+      153.0
+    ],
+    "person_bbox": [
+      10.5,
+      0.0,
+      149.1,
+      225.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00079.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      11.0,
+      101.0,
+      200.0,
+      145.0
+    ],
+    "person_bbox": [
+      0.0,
+      57.0,
+      225.0,
+      225.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00080.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      142.0,
+      57.0,
+      192.0,
+      89.0
+    ],
+    "person_bbox": [
+      117.0,
+      25.0,
+      227.0,
+      145.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00081.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      186.0,
+      45.0,
+      280.0,
+      85.0
+    ],
+    "person_bbox": [
+      139.0,
+      5.0,
+      300.0,
+      165.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00082.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      59.0,
+      43.0,
+      226.0,
+      94.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      338.0,
+      149.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00083.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      161.0,
+      35.0,
+      190.0,
+      84.0
+    ],
+    "person_bbox": [
+      146.5,
+      0.0,
+      210.3,
+      145.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00083.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      41.0,
+      21.0,
+      67.0,
+      61.0
+    ],
+    "person_bbox": [
+      28.0,
+      0.0,
+      85.2,
+      141.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00084.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      141.0,
+      41.0,
+      249.0,
+      103.0
+    ],
+    "person_bbox": [
+      87.0,
+      0.0,
+      300.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00085.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      102.0,
+      27.0,
+      179.0,
+      60.0
+    ],
+    "person_bbox": [
+      63.5,
+      0.0,
+      232.9,
+      126.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00086.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      131.0,
+      44.0,
+      174.0,
+      81.0
+    ],
+    "person_bbox": [
+      109.5,
+      7.0,
+      204.1,
+      155.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00087.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      149.0,
+      32.0,
+      221.0,
+      73.0
+    ],
+    "person_bbox": [
+      113.0,
+      0.0,
+      259.0,
+      155.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00088.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      66.0,
+      52.0,
+      208.0,
+      89.0
+    ],
+    "person_bbox": [
+      0.0,
+      15.0,
+      300.0,
+      163.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00089.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      107.0,
+      25.0,
+      273.0,
+      94.0
+    ],
+    "person_bbox": [
+      24.0,
+      0.0,
+      299.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00090.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      75.0,
+      42.0,
+      174.0,
+      106.0
+    ],
+    "person_bbox": [
+      25.5,
+      0.0,
+      243.3,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00091.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      70.0,
+      32.0,
+      212.0,
+      67.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      271.0,
+      137.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00092.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      45.0,
+      98.0,
+      256.0,
+      162.0
+    ],
+    "person_bbox": [
+      0.0,
+      34.0,
+      300.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00092.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      44.0,
+      11.0,
+      256.0,
+      83.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      300.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00093.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      134.0,
+      58.0,
+      228.0,
+      110.0
+    ],
+    "person_bbox": [
+      87.0,
+      6.0,
+      276.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00094.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      206.0,
+      52.0,
+      269.0,
+      96.0
+    ],
+    "person_bbox": [
+      174.5,
+      8.0,
+      300.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00095.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      149.0,
+      55.0,
+      296.0,
+      94.0
+    ],
+    "person_bbox": [
+      75.5,
+      16.0,
+      296.0,
+      170.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00095.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      72.0,
+      33.0,
+      206.0,
+      68.0
+    ],
+    "person_bbox": [
+      5.0,
+      0.0,
+      296.0,
+      138.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00096.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      97.0,
+      72.0,
+      266.0,
+      139.0
+    ],
+    "person_bbox": [
+      12.5,
+      5.0,
+      299.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00097.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      73.0,
+      53.0,
+      156.0,
+      108.0
+    ],
+    "person_bbox": [
+      31.5,
+      0.0,
+      214.1,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00098.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      45.0,
+      141.0,
+      124.0,
+      207.0
+    ],
+    "person_bbox": [
+      5.5,
+      75.0,
+      179.3,
+      274.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00099.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      56.0,
+      80.0,
+      237.0,
+      168.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      275.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00100.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      137.0,
+      18.0,
+      262.0,
+      78.0
+    ],
+    "person_bbox": [
+      74.5,
+      0.0,
+      273.0,
+      185.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00101.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      179.0,
+      98.0,
+      242.0,
+      127.0
+    ],
+    "person_bbox": [
+      147.5,
+      69.0,
+      286.1,
+      147.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00101.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      242.0,
+      59.0,
+      288.0,
+      91.0
+    ],
+    "person_bbox": [
+      219.0,
+      27.0,
+      320.2,
+      147.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00102.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      143.0,
+      35.0,
+      271.0,
+      101.0
+    ],
+    "person_bbox": [
+      79.0,
+      0.0,
+      275.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00102.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      12.0,
+      94.0,
+      105.0,
+      139.0
+    ],
+    "person_bbox": [
+      0.0,
+      49.0,
+      170.1,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00103.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      95.0,
+      35.0,
+      182.0,
+      84.0
+    ],
+    "person_bbox": [
+      51.5,
+      0.0,
+      242.9,
+      179.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00104.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      175.0,
+      22.0,
+      237.0,
+      60.0
+    ],
+    "person_bbox": [
+      144.0,
+      0.0,
+      280.4,
+      136.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00105.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      182.0,
+      66.0,
+      257.0,
+      101.0
+    ],
+    "person_bbox": [
+      144.5,
+      31.0,
+      274.0,
+      171.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00106.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      106.0,
+      87.0,
+      190.0,
+      204.0
+    ],
+    "person_bbox": [
+      64.0,
+      0.0,
+      222.0,
+      227.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00106.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      44.0,
+      89.0,
+      73.0,
+      212.0
+    ],
+    "person_bbox": [
+      29.5,
+      0.0,
+      93.3,
+      227.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00107.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      151.0,
+      80.0,
+      255.0,
+      120.0
+    ],
+    "person_bbox": [
+      99.0,
+      40.0,
+      275.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00108.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      33.0,
+      14.0,
+      125.0,
+      170.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      189.4,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00108.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      136.0,
+      7.0,
+      245.0,
+      168.0
+    ],
+    "person_bbox": [
+      81.5,
+      0.0,
+      259.0,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00109.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      173.0,
+      67.0,
+      240.0,
+      124.0
+    ],
+    "person_bbox": [
+      139.5,
+      10.0,
+      286.9,
+      166.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00110.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      6.0,
+      64.0,
+      157.0,
+      147.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      200.0,
+      149.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00110.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      54.0,
+      7.0,
+      192.0,
+      83.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      200.0,
+      149.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00111.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      58.0,
+      73.0,
+      227.0,
+      141.0
+    ],
+    "person_bbox": [
+      0.0,
+      5.0,
+      300.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00112.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      100.0,
+      123.0,
+      185.0,
+      184.0
+    ],
+    "person_bbox": [
+      57.5,
+      62.0,
+      196.0,
+      257.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00113.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      116.0,
+      52.0,
+      159.0,
+      72.0
+    ],
+    "person_bbox": [
+      94.5,
+      32.0,
+      189.1,
+      112.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00114.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      6.0,
+      17.0,
+      241.0,
+      166.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      259.0,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00115.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      92.0,
+      71.0,
+      141.0,
+      200.0
+    ],
+    "person_bbox": [
+      67.5,
+      0.0,
+      175.3,
+      249.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00116.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      21.0,
+      38.0,
+      50.0,
+      82.0
+    ],
+    "person_bbox": [
+      6.5,
+      0.0,
+      70.3,
+      170.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00116.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      101.0,
+      35.0,
+      135.0,
+      63.0
+    ],
+    "person_bbox": [
+      84.0,
+      7.0,
+      158.8,
+      119.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00117.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      74.0,
+      36.0,
+      96.0,
+      56.0
+    ],
+    "person_bbox": [
+      63.0,
+      16.0,
+      111.4,
+      96.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00117.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      213.0,
+      56.0,
+      231.0,
+      83.0
+    ],
+    "person_bbox": [
+      204.0,
+      29.0,
+      243.6,
+      137.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00118.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      62.0,
+      95.0,
+      148.0,
+      178.0
+    ],
+    "person_bbox": [
+      19.0,
+      12.0,
+      208.2,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00118.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      118.0,
+      26.0,
+      154.0,
+      122.0
+    ],
+    "person_bbox": [
+      100.0,
+      0.0,
+      179.2,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00119.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      25.0,
+      127.0,
+      179.0,
+      230.0
+    ],
+    "person_bbox": [
+      0.0,
+      24.0,
+      194.0,
+      260.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00119.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      24.0,
+      24.0,
+      177.0,
+      116.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      194.0,
+      260.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00120.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      76.0,
+      45.0,
+      146.0,
+      87.0
+    ],
+    "person_bbox": [
+      41.0,
+      3.0,
+      195.0,
+      145.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00121.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      45.0,
+      45.0,
+      94.0,
+      146.0
+    ],
+    "person_bbox": [
+      20.5,
+      0.0,
+      128.3,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00122.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      99.0,
+      52.0,
+      175.0,
+      155.0
+    ],
+    "person_bbox": [
+      61.0,
+      0.0,
+      184.0,
+      274.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00123.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      69.0,
+      49.0,
+      105.0,
+      83.0
+    ],
+    "person_bbox": [
+      51.0,
+      15.0,
+      130.2,
+      151.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00124.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      15.0,
+      15.0,
+      54.0,
+      55.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      81.3,
+      135.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00124.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      117.0,
+      226.0,
+      143.0,
+      259.0
+    ],
+    "person_bbox": [
+      104.0,
+      193.0,
+      161.2,
+      261.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00125.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      144.0,
+      72.0,
+      185.0,
+      143.0
+    ],
+    "person_bbox": [
+      123.5,
+      1.0,
+      213.7,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00125.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      79.0,
+      96.0,
+      123.0,
+      147.0
+    ],
+    "person_bbox": [
+      57.0,
+      45.0,
+      153.8,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00126.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      109.0,
+      60.0,
+      193.0,
+      92.0
+    ],
+    "person_bbox": [
+      67.0,
+      28.0,
+      251.8,
+      156.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00127.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      153.0,
+      68.0,
+      220.0,
+      154.0
+    ],
+    "person_bbox": [
+      119.5,
+      0.0,
+      266.9,
+      164.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00128.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      153.0,
+      50.0,
+      197.0,
+      117.0
+    ],
+    "person_bbox": [
+      131.0,
+      0.0,
+      227.8,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00129.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      102.0,
+      81.0,
+      137.0,
+      137.0
+    ],
+    "person_bbox": [
+      84.5,
+      25.0,
+      161.5,
+      171.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00130.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      111.0,
+      139.0,
+      149.0,
+      179.0
+    ],
+    "person_bbox": [
+      92.0,
+      99.0,
+      175.6,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00131.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      114.0,
+      34.0,
+      157.0,
+      61.0
+    ],
+    "person_bbox": [
+      92.5,
+      7.0,
+      187.1,
+      115.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00132.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      102.0,
+      35.0,
+      240.0,
+      106.0
+    ],
+    "person_bbox": [
+      33.0,
+      0.0,
+      318.0,
+      159.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00133.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      154.0,
+      31.0,
+      193.0,
+      67.0
+    ],
+    "person_bbox": [
+      134.5,
+      0.0,
+      220.3,
+      139.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00133.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      189.0,
+      39.0,
+      232.0,
+      64.0
+    ],
+    "person_bbox": [
+      167.5,
+      14.0,
+      262.1,
+      114.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00134.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      95.0,
+      49.0,
+      186.0,
+      85.0
+    ],
+    "person_bbox": [
+      49.5,
+      13.0,
+      249.7,
+      157.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00135.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      80.0,
+      30.0,
+      128.0,
+      158.0
+    ],
+    "person_bbox": [
+      56.0,
+      0.0,
+      161.6,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00136.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      78.0,
+      71.0,
+      195.0,
+      98.0
+    ],
+    "person_bbox": [
+      19.5,
+      44.0,
+      225.0,
+      152.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00137.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      66.0,
+      53.0,
+      233.0,
+      124.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      281.0,
+      179.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00138.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      67.0,
+      59.0,
+      282.0,
+      123.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      300.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00139.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      6.0,
+      7.0,
+      211.0,
+      132.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      225.0,
+      225.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00139.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      154.0,
+      136.0,
+      218.0,
+      222.0
+    ],
+    "person_bbox": [
+      122.0,
+      50.0,
+      225.0,
+      225.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00140.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      77.0,
+      65.0,
+      253.0,
+      143.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      275.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00141.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      73.0,
+      66.0,
+      280.0,
+      145.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      300.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00142.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      78.0,
+      82.0,
+      138.0,
+      163.0
+    ],
+    "person_bbox": [
+      48.0,
+      1.0,
+      180.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00143.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      26.0,
+      59.0,
+      77.0,
+      93.0
+    ],
+    "person_bbox": [
+      0.5,
+      25.0,
+      112.7,
+      161.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00144.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      139.0,
+      45.0,
+      251.0,
+      101.0
+    ],
+    "person_bbox": [
+      83.0,
+      0.0,
+      300.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00145.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      74.0,
+      8.0,
+      136.0,
+      93.0
+    ],
+    "person_bbox": [
+      43.0,
+      0.0,
+      179.4,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00145.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      172.0,
+      71.0,
+      222.0,
+      100.0
+    ],
+    "person_bbox": [
+      147.0,
+      42.0,
+      257.0,
+      158.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00146.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      84.0,
+      35.0,
+      258.0,
+      106.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      300.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00147.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      119.0,
+      87.0,
+      146.0,
+      141.0
+    ],
+    "person_bbox": [
+      105.5,
+      33.0,
+      164.9,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00148.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      75.0,
+      44.0,
+      131.0,
+      141.0
+    ],
+    "person_bbox": [
+      47.0,
+      0.0,
+      170.2,
+      182.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00149.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      120.0,
+      101.0,
+      180.0,
+      150.0
+    ],
+    "person_bbox": [
+      90.0,
+      52.0,
+      183.0,
+      248.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00150.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      162.0,
+      100.0,
+      193.0,
+      131.0
+    ],
+    "person_bbox": [
+      146.5,
+      69.0,
+      214.7,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00151.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      156.0,
+      57.0,
+      202.0,
+      120.0
+    ],
+    "person_bbox": [
+      133.0,
+      0.0,
+      234.2,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00152.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      98.0,
+      49.0,
+      237.0,
+      88.0
+    ],
+    "person_bbox": [
+      28.5,
+      10.0,
+      300.0,
+      166.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00153.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      26.0,
+      94.0,
+      129.0,
+      177.0
+    ],
+    "person_bbox": [
+      0.0,
+      11.0,
+      201.1,
+      177.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00154.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      211.0,
+      89.0,
+      295.0,
+      131.0
+    ],
+    "person_bbox": [
+      169.0,
+      47.0,
+      299.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00155.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      185.0,
+      40.0,
+      218.0,
+      65.0
+    ],
+    "person_bbox": [
+      168.5,
+      15.0,
+      241.1,
+      115.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00155.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      28.0,
+      89.0,
+      55.0,
+      108.0
+    ],
+    "person_bbox": [
+      14.5,
+      70.0,
+      73.9,
+      146.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00156.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      17.0,
+      55.0,
+      168.0,
+      119.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      259.0,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00157.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      110.0,
+      131.0,
+      164.0,
+      163.0
+    ],
+    "person_bbox": [
+      83.0,
+      99.0,
+      168.0,
+      227.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00158.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      74.0,
+      75.0,
+      114.0,
+      124.0
+    ],
+    "person_bbox": [
+      54.0,
+      26.0,
+      142.0,
+      165.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00159.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      159.0,
+      35.0,
+      194.0,
+      53.0
+    ],
+    "person_bbox": [
+      141.5,
+      17.0,
+      218.5,
+      89.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00159.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      193.0,
+      40.0,
+      230.0,
+      63.0
+    ],
+    "person_bbox": [
+      174.5,
+      17.0,
+      255.9,
+      109.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00160.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      35.0,
+      32.0,
+      117.0,
+      67.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      174.4,
+      137.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00161.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      100.0,
+      33.0,
+      177.0,
+      124.0
+    ],
+    "person_bbox": [
+      61.5,
+      0.0,
+      230.9,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00162.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      9.0,
+      58.0,
+      58.0,
+      140.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      92.3,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00162.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      77.0,
+      65.0,
+      127.0,
+      134.0
+    ],
+    "person_bbox": [
+      52.0,
+      0.0,
+      162.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00163.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      12.0,
+      16.0,
+      64.0,
+      58.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      100.4,
+      142.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00163.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      118.0,
+      220.0,
+      142.0,
+      258.0
+    ],
+    "person_bbox": [
+      106.0,
+      182.0,
+      158.8,
+      261.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00164.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      58.0,
+      9.0,
+      210.0,
+      117.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      299.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00165.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      24.0,
+      53.0,
+      80.0,
+      137.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      119.2,
+      201.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00166.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      221.0,
+      50.0,
+      287.0,
+      80.0
+    ],
+    "person_bbox": [
+      188.0,
+      20.0,
+      333.2,
+      140.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00167.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      164.0,
+      30.0,
+      223.0,
+      91.0
+    ],
+    "person_bbox": [
+      134.5,
+      0.0,
+      264.3,
+      148.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00168.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      173.0,
+      21.0,
+      234.0,
+      64.0
+    ],
+    "person_bbox": [
+      142.5,
+      0.0,
+      276.7,
+      146.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00169.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      112.0,
+      86.0,
+      142.0,
+      163.0
+    ],
+    "person_bbox": [
+      97.0,
+      9.0,
+      163.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00169.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      164.0,
+      94.0,
+      200.0,
+      154.0
+    ],
+    "person_bbox": [
+      146.0,
+      34.0,
+      225.2,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00170.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      16.0,
+      6.0,
+      223.0,
+      138.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      275.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00171.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      178.0,
+      41.0,
+      238.0,
+      74.0
+    ],
+    "person_bbox": [
+      148.0,
+      8.0,
+      280.0,
+      140.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00172.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      217.0,
+      66.0,
+      258.0,
+      121.0
+    ],
+    "person_bbox": [
+      196.5,
+      11.0,
+      286.7,
+      169.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00173.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      110.0,
+      40.0,
+      136.0,
+      62.0
+    ],
+    "person_bbox": [
+      97.0,
+      18.0,
+      154.2,
+      106.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00173.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      197.0,
+      106.0,
+      225.0,
+      132.0
+    ],
+    "person_bbox": [
+      183.0,
+      80.0,
+      244.6,
+      181.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00174.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      84.0,
+      5.0,
+      163.0,
+      165.0
+    ],
+    "person_bbox": [
+      44.5,
+      0.0,
+      218.3,
+      190.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00175.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      123.0,
+      102.0,
+      208.0,
+      142.0
+    ],
+    "person_bbox": [
+      80.5,
+      62.0,
+      267.5,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00175.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      131.0,
+      59.0,
+      228.0,
+      80.0
+    ],
+    "person_bbox": [
+      82.5,
+      38.0,
+      295.9,
+      122.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00175.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      215.0,
+      80.0,
+      299.0,
+      103.0
+    ],
+    "person_bbox": [
+      173.0,
+      57.0,
+      300.0,
+      149.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00175.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      215.0,
+      113.0,
+      300.0,
+      138.0
+    ],
+    "person_bbox": [
+      172.5,
+      88.0,
+      300.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00176.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      17.0,
+      68.0,
+      100.0,
+      194.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      158.1,
+      197.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00177.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      104.0,
+      24.0,
+      240.0,
+      95.0
+    ],
+    "person_bbox": [
+      36.0,
+      0.0,
+      262.0,
+      192.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00178.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      94.0,
+      60.0,
+      178.0,
+      128.0
+    ],
+    "person_bbox": [
+      52.0,
+      0.0,
+      236.8,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00179.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      23.0,
+      45.0,
+      88.0,
+      91.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      133.5,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00180.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      31.0,
+      72.0,
+      115.0,
+      140.0
+    ],
+    "person_bbox": [
+      0.0,
+      4.0,
+      173.8,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00181.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      49.0,
+      35.0,
+      105.0,
+      71.0
+    ],
+    "person_bbox": [
+      21.0,
+      0.0,
+      144.2,
+      143.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00182.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      29.0,
+      57.0,
+      104.0,
+      208.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      156.5,
+      245.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00183.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      231.0,
+      13.0,
+      277.0,
+      45.0
+    ],
+    "person_bbox": [
+      208.0,
+      0.0,
+      309.2,
+      109.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00183.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      50.0,
+      5.0,
+      92.0,
+      44.0
+    ],
+    "person_bbox": [
+      29.0,
+      0.0,
+      121.4,
+      122.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00184.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      101.0,
+      58.0,
+      250.0,
+      94.0
+    ],
+    "person_bbox": [
+      26.5,
+      22.0,
+      275.0,
+      166.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00185.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      115.0,
+      130.0,
+      163.0,
+      161.0
+    ],
+    "person_bbox": [
+      91.0,
+      99.0,
+      168.0,
+      223.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00186.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      164.0,
+      32.0,
+      226.0,
+      62.0
+    ],
+    "person_bbox": [
+      133.0,
+      2.0,
+      269.4,
+      122.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00187.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      117.0,
+      53.0,
+      246.0,
+      102.0
+    ],
+    "person_bbox": [
+      52.5,
+      4.0,
+      251.0,
+      200.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00188.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      120.0,
+      77.0,
+      166.0,
+      150.0
+    ],
+    "person_bbox": [
+      97.0,
+      4.0,
+      198.2,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00189.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      50.0,
+      33.0,
+      164.0,
+      95.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      243.8,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00190.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      222.0,
+      95.0,
+      286.0,
+      130.0
+    ],
+    "person_bbox": [
+      190.0,
+      60.0,
+      330.8,
+      146.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00190.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      164.0,
+      78.0,
+      195.0,
+      105.0
+    ],
+    "person_bbox": [
+      148.5,
+      51.0,
+      216.7,
+      146.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00191.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      99.0,
+      60.0,
+      220.0,
+      103.0
+    ],
+    "person_bbox": [
+      38.5,
+      17.0,
+      253.0,
+      189.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00192.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      118.0,
+      101.0,
+      169.0,
+      147.0
+    ],
+    "person_bbox": [
+      92.5,
+      55.0,
+      204.7,
+      225.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00193.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      50.0,
+      9.0,
+      99.0,
+      69.0
+    ],
+    "person_bbox": [
+      25.5,
+      0.0,
+      133.3,
+      144.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00194.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      92.0,
+      74.0,
+      186.0,
+      91.0
+    ],
+    "person_bbox": [
+      45.0,
+      57.0,
+      251.8,
+      125.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00195.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      129.0,
+      40.0,
+      199.0,
+      89.0
+    ],
+    "person_bbox": [
+      94.0,
+      0.0,
+      248.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00196.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      180.0,
+      84.0,
+      247.0,
+      127.0
+    ],
+    "person_bbox": [
+      146.5,
+      41.0,
+      293.9,
+      146.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00197.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      55.0,
+      52.0,
+      121.0,
+      85.0
+    ],
+    "person_bbox": [
+      22.0,
+      19.0,
+      167.2,
+      151.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00198.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      103.0,
+      27.0,
+      166.0,
+      143.0
+    ],
+    "person_bbox": [
+      71.5,
+      0.0,
+      181.0,
+      279.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00198.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      83.0,
+      210.0,
+      114.0,
+      234.0
+    ],
+    "person_bbox": [
+      67.5,
+      186.0,
+      135.7,
+      279.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00199.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      33.0,
+      85.0,
+      80.0,
+      111.0
+    ],
+    "person_bbox": [
+      9.5,
+      59.0,
+      112.9,
+      163.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00200.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      125.0,
+      46.0,
+      180.0,
+      77.0
+    ],
+    "person_bbox": [
+      97.5,
+      15.0,
+      180.0,
+      139.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00201.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      36.0,
+      84.0,
+      111.0,
+      145.0
+    ],
+    "person_bbox": [
+      0.0,
+      23.0,
+      163.5,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00202.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      79.0,
+      68.0,
+      126.0,
+      139.0
+    ],
+    "person_bbox": [
+      55.5,
+      0.0,
+      158.9,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00202.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      8.0,
+      59.0,
+      61.0,
+      131.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      98.1,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00203.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      53.0,
+      53.0,
+      205.0,
+      140.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      276.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00204.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      26.0,
+      43.0,
+      192.0,
+      90.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      299.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00205.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      42.0,
+      85.0,
+      139.0,
+      134.0
+    ],
+    "person_bbox": [
+      0.0,
+      36.0,
+      206.9,
+      147.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00206.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      150.0,
+      53.0,
+      212.0,
+      94.0
+    ],
+    "person_bbox": [
+      119.0,
+      12.0,
+      255.4,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00207.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      140.0,
+      64.0,
+      178.0,
+      112.0
+    ],
+    "person_bbox": [
+      121.0,
+      16.0,
+      204.6,
+      146.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00208.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      62.0,
+      124.0,
+      140.0,
+      167.0
+    ],
+    "person_bbox": [
+      23.0,
+      81.0,
+      194.6,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00209.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      27.0,
+      15.0,
+      93.0,
+      53.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      139.2,
+      129.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00210.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      75.0,
+      74.0,
+      162.0,
+      103.0
+    ],
+    "person_bbox": [
+      31.5,
+      45.0,
+      189.0,
+      161.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00211.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      182.0,
+      47.0,
+      218.0,
+      71.0
+    ],
+    "person_bbox": [
+      164.0,
+      23.0,
+      243.2,
+      119.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00212.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      99.0,
+      45.0,
+      176.0,
+      154.0
+    ],
+    "person_bbox": [
+      60.5,
+      0.0,
+      184.0,
+      274.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00213.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      54.0,
+      73.0,
+      98.0,
+      116.0
+    ],
+    "person_bbox": [
+      32.0,
+      30.0,
+      128.8,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00214.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      114.0,
+      73.0,
+      166.0,
+      110.0
+    ],
+    "person_bbox": [
+      88.0,
+      36.0,
+      202.4,
+      169.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00215.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      25.0,
+      59.0,
+      116.0,
+      107.0
+    ],
+    "person_bbox": [
+      0.0,
+      11.0,
+      179.7,
+      203.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00216.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      150.0,
+      105.0,
+      190.0,
+      161.0
+    ],
+    "person_bbox": [
+      130.0,
+      49.0,
+      218.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00217.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      94.0,
+      41.0,
+      138.0,
+      78.0
+    ],
+    "person_bbox": [
+      72.0,
+      4.0,
+      168.8,
+      152.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00218.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      205.0,
+      12.0,
+      223.0,
+      25.0
+    ],
+    "person_bbox": [
+      196.0,
+      0.0,
+      235.6,
+      51.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00218.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      188.0,
+      15.0,
+      209.0,
+      27.0
+    ],
+    "person_bbox": [
+      177.5,
+      3.0,
+      223.7,
+      51.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00219.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      185.0,
+      74.0,
+      285.0,
+      154.0
+    ],
+    "person_bbox": [
+      135.0,
+      0.0,
+      300.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00219.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      32.0,
+      64.0,
+      119.0,
+      134.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      179.9,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00220.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      56.0,
+      102.0,
+      92.0,
+      128.0
+    ],
+    "person_bbox": [
+      38.0,
+      76.0,
+      117.2,
+      180.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00221.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      164.0,
+      8.0,
+      256.0,
+      59.0
+    ],
+    "person_bbox": [
+      118.0,
+      0.0,
+      300.0,
+      161.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00222.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      26.0,
+      69.0,
+      60.0,
+      146.0
+    ],
+    "person_bbox": [
+      9.0,
+      0.0,
+      83.8,
+      196.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00223.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      115.0,
+      48.0,
+      190.0,
+      91.0
+    ],
+    "person_bbox": [
+      77.5,
+      5.0,
+      242.5,
+      144.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00224.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      117.0,
+      98.0,
+      168.0,
+      156.0
+    ],
+    "person_bbox": [
+      91.5,
+      40.0,
+      203.7,
+      225.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00225.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      113.0,
+      47.0,
+      251.0,
+      94.0
+    ],
+    "person_bbox": [
+      44.0,
+      0.0,
+      275.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00226.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      30.0,
+      20.0,
+      169.0,
+      108.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      266.3,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00227.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      46.0,
+      35.0,
+      107.0,
+      84.0
+    ],
+    "person_bbox": [
+      15.5,
+      0.0,
+      149.7,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00228.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      204.0,
+      150.0,
+      265.0,
+      182.0
+    ],
+    "person_bbox": [
+      173.5,
+      118.0,
+      275.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00228.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      147.0,
+      152.0,
+      200.0,
+      181.0
+    ],
+    "person_bbox": [
+      120.5,
+      123.0,
+      237.1,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00228.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      89.0,
+      110.0,
+      136.0,
+      149.0
+    ],
+    "person_bbox": [
+      65.5,
+      71.0,
+      168.9,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00228.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      139.0,
+      112.0,
+      197.0,
+      140.0
+    ],
+    "person_bbox": [
+      110.0,
+      84.0,
+      237.6,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00228.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      199.0,
+      110.0,
+      271.0,
+      146.0
+    ],
+    "person_bbox": [
+      163.0,
+      74.0,
+      275.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00228.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      44.0,
+      71.0,
+      95.0,
+      101.0
+    ],
+    "person_bbox": [
+      18.5,
+      41.0,
+      130.7,
+      161.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00228.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      56.0,
+      145.0,
+      101.0,
+      178.0
+    ],
+    "person_bbox": [
+      33.5,
+      112.0,
+      132.5,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00228.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      168.0,
+      68.0,
+      215.0,
+      97.0
+    ],
+    "person_bbox": [
+      144.5,
+      39.0,
+      247.9,
+      155.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00228.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      185.0,
+      29.0,
+      243.0,
+      62.0
+    ],
+    "person_bbox": [
+      156.0,
+      0.0,
+      275.0,
+      128.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00228.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      60.0,
+      38.0,
+      103.0,
+      62.0
+    ],
+    "person_bbox": [
+      38.5,
+      14.0,
+      133.1,
+      110.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00228.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      1.0,
+      3.0,
+      46.0,
+      36.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      77.5,
+      102.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00229.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      37.0,
+      59.0,
+      251.0,
+      131.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      259.0,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00230.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      23.0,
+      18.0,
+      100.0,
+      58.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      153.9,
+      138.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00230.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      250.0,
+      32.0,
+      297.0,
+      62.0
+    ],
+    "person_bbox": [
+      226.5,
+      2.0,
+      329.9,
+      122.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00231.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      170.0,
+      16.0,
+      264.0,
+      79.0
+    ],
+    "person_bbox": [
+      123.0,
+      0.0,
+      287.0,
+      176.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00232.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      106.0,
+      60.0,
+      166.0,
+      93.0
+    ],
+    "person_bbox": [
+      76.0,
+      27.0,
+      208.0,
+      159.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00233.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      36.0,
+      27.0,
+      85.0,
+      62.0
+    ],
+    "person_bbox": [
+      11.5,
+      0.0,
+      119.3,
+      132.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_train_00234.jpg",
+    "split": "train",
+    "firearm_bbox": [
+      182.0,
+      92.0,
+      233.0,
+      130.0
+    ],
+    "person_bbox": [
+      156.5,
+      54.0,
+      268.7,
+      167.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00000.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      148.0,
+      85.0,
+      209.0,
+      122.0
+    ],
+    "person_bbox": [
+      117.5,
+      48.0,
+      251.7,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00001.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      127.0,
+      84.0,
+      196.0,
+      117.0
+    ],
+    "person_bbox": [
+      92.5,
+      51.0,
+      244.3,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00002.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      70.0,
+      78.0,
+      122.0,
+      122.0
+    ],
+    "person_bbox": [
+      44.0,
+      34.0,
+      158.4,
+      165.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00003.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      117.0,
+      19.0,
+      342.0,
+      107.0
+    ],
+    "person_bbox": [
+      4.5,
+      0.0,
+      344.0,
+      147.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00004.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      56.0,
+      51.0,
+      109.0,
+      84.0
+    ],
+    "person_bbox": [
+      29.5,
+      18.0,
+      146.1,
+      150.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00005.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      73.0,
+      54.0,
+      151.0,
+      98.0
+    ],
+    "person_bbox": [
+      34.0,
+      10.0,
+      205.6,
+      186.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00006.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      166.0,
+      24.0,
+      276.0,
+      91.0
+    ],
+    "person_bbox": [
+      111.0,
+      0.0,
+      348.0,
+      145.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00007.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      143.0,
+      16.0,
+      234.0,
+      166.0
+    ],
+    "person_bbox": [
+      97.5,
+      0.0,
+      297.7,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00008.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      34.0,
+      22.0,
+      188.0,
+      142.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      248.0,
+      203.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00009.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      158.0,
+      71.0,
+      230.0,
+      95.0
+    ],
+    "person_bbox": [
+      122.0,
+      47.0,
+      280.4,
+      143.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00010.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      25.0,
+      37.0,
+      76.0,
+      74.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      111.7,
+      148.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00011.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      7.0,
+      53.0,
+      35.0,
+      77.0
+    ],
+    "person_bbox": [
+      0.0,
+      29.0,
+      54.6,
+      125.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00012.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      32.0,
+      88.0,
+      125.0,
+      118.0
+    ],
+    "person_bbox": [
+      0.0,
+      58.0,
+      190.1,
+      143.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00012.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      6.0,
+      24.0,
+      71.0,
+      60.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      116.5,
+      132.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00013.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      64.0,
+      25.0,
+      241.0,
+      84.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      300.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00014.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      153.0,
+      25.0,
+      198.0,
+      70.0
+    ],
+    "person_bbox": [
+      130.5,
+      0.0,
+      229.5,
+      160.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00015.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      119.0,
+      83.0,
+      247.0,
+      133.0
+    ],
+    "person_bbox": [
+      55.0,
+      33.0,
+      295.0,
+      171.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00016.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      113.0,
+      60.0,
+      263.0,
+      126.0
+    ],
+    "person_bbox": [
+      38.0,
+      0.0,
+      275.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00017.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      32.0,
+      72.0,
+      67.0,
+      96.0
+    ],
+    "person_bbox": [
+      14.5,
+      48.0,
+      91.5,
+      144.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00018.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      166.0,
+      36.0,
+      227.0,
+      119.0
+    ],
+    "person_bbox": [
+      135.5,
+      0.0,
+      269.7,
+      146.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00019.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      122.0,
+      17.0,
+      260.0,
+      77.0
+    ],
+    "person_bbox": [
+      53.0,
+      0.0,
+      272.0,
+      185.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00020.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      126.0,
+      15.0,
+      259.0,
+      75.0
+    ],
+    "person_bbox": [
+      59.5,
+      0.0,
+      272.0,
+      185.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00021.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      104.0,
+      135.0,
+      178.0,
+      160.0
+    ],
+    "person_bbox": [
+      67.0,
+      110.0,
+      229.8,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00022.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      16.0,
+      50.0,
+      80.0,
+      108.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      124.8,
+      193.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00023.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      3.0,
+      30.0,
+      121.0,
+      81.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      199.0,
+      132.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00024.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      116.0,
+      68.0,
+      195.0,
+      139.0
+    ],
+    "person_bbox": [
+      76.5,
+      0.0,
+      250.3,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00025.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      128.0,
+      34.0,
+      170.0,
+      72.0
+    ],
+    "person_bbox": [
+      107.0,
+      0.0,
+      199.4,
+      148.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00026.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      104.0,
+      74.0,
+      158.0,
+      116.0
+    ],
+    "person_bbox": [
+      77.0,
+      32.0,
+      195.8,
+      182.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00026.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      20.0,
+      51.0,
+      92.0,
+      114.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      142.4,
+      182.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00026.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      178.0,
+      54.0,
+      242.0,
+      119.0
+    ],
+    "person_bbox": [
+      146.0,
+      0.0,
+      276.0,
+      182.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00027.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      12.0,
+      18.0,
+      177.0,
+      114.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      225.0,
+      224.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00028.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      109.0,
+      32.0,
+      130.0,
+      74.0
+    ],
+    "person_bbox": [
+      98.5,
+      0.0,
+      144.7,
+      158.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00028.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      217.0,
+      101.0,
+      227.0,
+      129.0
+    ],
+    "person_bbox": [
+      212.0,
+      73.0,
+      234.0,
+      185.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00028.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      96.0,
+      59.0,
+      106.0,
+      82.0
+    ],
+    "person_bbox": [
+      91.0,
+      36.0,
+      113.0,
+      128.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00029.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      206.0,
+      95.0,
+      264.0,
+      131.0
+    ],
+    "person_bbox": [
+      177.0,
+      59.0,
+      300.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00030.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      111.0,
+      76.0,
+      146.0,
+      144.0
+    ],
+    "person_bbox": [
+      93.5,
+      8.0,
+      170.5,
+      171.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00030.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      33.0,
+      18.0,
+      84.0,
+      109.0
+    ],
+    "person_bbox": [
+      7.5,
+      0.0,
+      119.7,
+      171.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00030.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      237.0,
+      19.0,
+      276.0,
+      81.0
+    ],
+    "person_bbox": [
+      217.5,
+      0.0,
+      295.0,
+      171.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00031.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      123.0,
+      45.0,
+      158.0,
+      75.0
+    ],
+    "person_bbox": [
+      105.5,
+      15.0,
+      182.5,
+      135.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00032.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      156.0,
+      40.0,
+      225.0,
+      113.0
+    ],
+    "person_bbox": [
+      121.5,
+      0.0,
+      273.3,
+      146.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00033.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      161.0,
+      62.0,
+      198.0,
+      107.0
+    ],
+    "person_bbox": [
+      142.5,
+      17.0,
+      223.9,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00034.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      22.0,
+      102.0,
+      288.0,
+      162.0
+    ],
+    "person_bbox": [
+      0.0,
+      42.0,
+      301.0,
+      167.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00034.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      41.0,
+      6.0,
+      271.0,
+      40.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      301.0,
+      108.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00034.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      30.0,
+      54.0,
+      275.0,
+      92.0
+    ],
+    "person_bbox": [
+      0.0,
+      16.0,
+      301.0,
+      167.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00035.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      95.0,
+      9.0,
+      131.0,
+      48.0
+    ],
+    "person_bbox": [
+      77.0,
+      0.0,
+      156.2,
+      126.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00036.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      91.0,
+      80.0,
+      184.0,
+      129.0
+    ],
+    "person_bbox": [
+      44.5,
+      31.0,
+      249.1,
+      165.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00037.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      97.0,
+      111.0,
+      177.0,
+      209.0
+    ],
+    "person_bbox": [
+      57.0,
+      13.0,
+      183.0,
+      275.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00037.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      6.0,
+      113.0,
+      76.0,
+      212.0
+    ],
+    "person_bbox": [
+      0.0,
+      14.0,
+      125.0,
+      275.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00038.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      118.0,
+      30.0,
+      178.0,
+      121.0
+    ],
+    "person_bbox": [
+      88.0,
+      0.0,
+      220.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00038.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      182.0,
+      49.0,
+      239.0,
+      122.0
+    ],
+    "person_bbox": [
+      153.5,
+      0.0,
+      278.9,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00038.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      26.0,
+      35.0,
+      84.0,
+      127.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      124.6,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00039.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      139.0,
+      50.0,
+      212.0,
+      154.0
+    ],
+    "person_bbox": [
+      102.5,
+      0.0,
+      259.0,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00040.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      143.0,
+      96.0,
+      221.0,
+      140.0
+    ],
+    "person_bbox": [
+      104.0,
+      52.0,
+      275.6,
+      171.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00041.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      207.0,
+      88.0,
+      293.0,
+      133.0
+    ],
+    "person_bbox": [
+      164.0,
+      43.0,
+      299.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00042.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      44.0,
+      62.0,
+      266.0,
+      135.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      343.0,
+      147.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00043.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      34.0,
+      28.0,
+      95.0,
+      79.0
+    ],
+    "person_bbox": [
+      3.5,
+      0.0,
+      137.7,
+      167.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00044.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      68.0,
+      55.0,
+      138.0,
+      132.0
+    ],
+    "person_bbox": [
+      33.0,
+      0.0,
+      187.0,
+      175.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00045.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      101.0,
+      93.0,
+      134.0,
+      114.0
+    ],
+    "person_bbox": [
+      84.5,
+      72.0,
+      157.1,
+      151.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00046.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      155.0,
+      6.0,
+      209.0,
+      44.0
+    ],
+    "person_bbox": [
+      128.0,
+      0.0,
+      246.8,
+      120.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00047.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      37.0,
+      64.0,
+      84.0,
+      96.0
+    ],
+    "person_bbox": [
+      13.5,
+      32.0,
+      116.9,
+      160.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_val_00048.jpg",
+    "split": "val",
+    "firearm_bbox": [
+      232.0,
+      8.0,
+      308.0,
+      58.0
+    ],
+    "person_bbox": [
+      194.0,
+      0.0,
+      348.0,
+      145.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00000.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      59.0,
+      18.0,
+      111.0,
+      151.0
+    ],
+    "person_bbox": [
+      33.0,
+      0.0,
+      147.4,
+      165.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00001.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      186.0,
+      73.0,
+      250.0,
+      127.0
+    ],
+    "person_bbox": [
+      154.0,
+      19.0,
+      275.0,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00002.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      54.0,
+      31.0,
+      101.0,
+      69.0
+    ],
+    "person_bbox": [
+      30.5,
+      0.0,
+      133.9,
+      145.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00002.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      133.0,
+      42.0,
+      171.0,
+      68.0
+    ],
+    "person_bbox": [
+      114.0,
+      16.0,
+      197.6,
+      120.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00002.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      71.0,
+      142.0,
+      138.0,
+      177.0
+    ],
+    "person_bbox": [
+      37.5,
+      107.0,
+      184.9,
+      225.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00003.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      181.0,
+      92.0,
+      244.0,
+      134.0
+    ],
+    "person_bbox": [
+      149.5,
+      50.0,
+      288.1,
+      147.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00003.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      239.0,
+      62.0,
+      286.0,
+      87.0
+    ],
+    "person_bbox": [
+      215.5,
+      37.0,
+      318.9,
+      137.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00004.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      129.0,
+      53.0,
+      346.0,
+      96.0
+    ],
+    "person_bbox": [
+      20.5,
+      10.0,
+      353.0,
+      143.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00005.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      110.0,
+      73.0,
+      207.0,
+      134.0
+    ],
+    "person_bbox": [
+      61.5,
+      12.0,
+      274.9,
+      181.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00006.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      51.0,
+      37.0,
+      115.0,
+      65.0
+    ],
+    "person_bbox": [
+      19.0,
+      9.0,
+      159.8,
+      121.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00007.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      94.0,
+      65.0,
+      139.0,
+      88.0
+    ],
+    "person_bbox": [
+      71.5,
+      42.0,
+      170.5,
+      134.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00007.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      238.0,
+      29.0,
+      271.0,
+      63.0
+    ],
+    "person_bbox": [
+      221.5,
+      0.0,
+      276.0,
+      131.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00008.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      47.0,
+      63.0,
+      99.0,
+      109.0
+    ],
+    "person_bbox": [
+      21.0,
+      17.0,
+      135.4,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00009.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      192.0,
+      34.0,
+      271.0,
+      83.0
+    ],
+    "person_bbox": [
+      152.5,
+      0.0,
+      326.3,
+      147.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00010.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      82.0,
+      115.0,
+      241.0,
+      180.0
+    ],
+    "person_bbox": [
+      2.5,
+      50.0,
+      251.0,
+      201.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00011.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      89.0,
+      45.0,
+      202.0,
+      105.0
+    ],
+    "person_bbox": [
+      32.5,
+      0.0,
+      281.1,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00012.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      98.0,
+      65.0,
+      264.0,
+      112.0
+    ],
+    "person_bbox": [
+      15.0,
+      18.0,
+      380.2,
+      126.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00012.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      125.0,
+      18.0,
+      311.0,
+      67.0
+    ],
+    "person_bbox": [
+      32.0,
+      0.0,
+      401.0,
+      126.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00012.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      17.0,
+      7.0,
+      109.0,
+      114.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      173.4,
+      126.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00012.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      310.0,
+      5.0,
+      397.0,
+      119.0
+    ],
+    "person_bbox": [
+      266.5,
+      0.0,
+      401.0,
+      126.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00013.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      149.0,
+      60.0,
+      194.0,
+      103.0
+    ],
+    "person_bbox": [
+      126.5,
+      17.0,
+      225.5,
+      145.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00014.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      125.0,
+      21.0,
+      189.0,
+      142.0
+    ],
+    "person_bbox": [
+      93.0,
+      0.0,
+      233.8,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00015.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      47.0,
+      93.0,
+      143.0,
+      166.0
+    ],
+    "person_bbox": [
+      0.0,
+      20.0,
+      194.0,
+      259.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00016.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      81.0,
+      69.0,
+      143.0,
+      106.0
+    ],
+    "person_bbox": [
+      50.0,
+      32.0,
+      186.4,
+      180.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00017.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      16.0,
+      39.0,
+      193.0,
+      100.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      316.9,
+      159.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00018.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      110.0,
+      77.0,
+      174.0,
+      114.0
+    ],
+    "person_bbox": [
+      78.0,
+      40.0,
+      218.8,
+      177.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00019.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      111.0,
+      40.0,
+      136.0,
+      67.0
+    ],
+    "person_bbox": [
+      98.5,
+      13.0,
+      153.5,
+      121.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00019.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      194.0,
+      101.0,
+      227.0,
+      135.0
+    ],
+    "person_bbox": [
+      177.5,
+      67.0,
+      250.1,
+      181.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00020.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      102.0,
+      45.0,
+      215.0,
+      136.0
+    ],
+    "person_bbox": [
+      45.5,
+      0.0,
+      259.0,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00021.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      10.0,
+      11.0,
+      152.0,
+      120.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      251.4,
+      186.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00022.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      9.0,
+      7.0,
+      227.0,
+      165.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      240.0,
+      173.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00023.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      92.0,
+      80.0,
+      187.0,
+      144.0
+    ],
+    "person_bbox": [
+      44.5,
+      16.0,
+      253.5,
+      176.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00024.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      7.0,
+      69.0,
+      163.0,
+      133.0
+    ],
+    "person_bbox": [
+      0.0,
+      5.0,
+      259.0,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00025.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      167.0,
+      32.0,
+      218.0,
+      93.0
+    ],
+    "person_bbox": [
+      141.5,
+      0.0,
+      253.7,
+      148.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00026.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      157.0,
+      63.0,
+      249.0,
+      107.0
+    ],
+    "person_bbox": [
+      111.0,
+      19.0,
+      251.0,
+      195.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00027.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      186.0,
+      30.0,
+      253.0,
+      98.0
+    ],
+    "person_bbox": [
+      152.5,
+      0.0,
+      299.9,
+      138.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00027.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      17.0,
+      55.0,
+      59.0,
+      98.0
+    ],
+    "person_bbox": [
+      0.0,
+      12.0,
+      88.4,
+      138.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00028.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      92.0,
+      108.0,
+      149.0,
+      161.0
+    ],
+    "person_bbox": [
+      63.5,
+      55.0,
+      188.9,
+      195.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00029.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      30.0,
+      22.0,
+      104.0,
+      137.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      155.8,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00030.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      231.0,
+      26.0,
+      296.0,
+      74.0
+    ],
+    "person_bbox": [
+      198.5,
+      0.0,
+      300.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00031.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      177.0,
+      43.0,
+      227.0,
+      70.0
+    ],
+    "person_bbox": [
+      152.0,
+      16.0,
+      227.0,
+      124.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00031.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      37.0,
+      5.0,
+      52.0,
+      41.0
+    ],
+    "person_bbox": [
+      29.5,
+      0.0,
+      62.5,
+      113.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00032.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      103.0,
+      61.0,
+      161.0,
+      125.0
+    ],
+    "person_bbox": [
+      74.0,
+      0.0,
+      201.6,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00033.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      81.0,
+      60.0,
+      191.0,
+      103.0
+    ],
+    "person_bbox": [
+      26.0,
+      17.0,
+      259.0,
+      189.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00034.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      232.0,
+      29.0,
+      294.0,
+      71.0
+    ],
+    "person_bbox": [
+      201.0,
+      0.0,
+      300.0,
+      155.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00035.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      64.0,
+      71.0,
+      268.0,
+      181.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      272.0,
+      185.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00035.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      9.0,
+      5.0,
+      208.0,
+      87.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      272.0,
+      185.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00036.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      101.0,
+      35.0,
+      233.0,
+      115.0
+    ],
+    "person_bbox": [
+      35.0,
+      0.0,
+      274.0,
+      184.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00037.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      91.0,
+      89.0,
+      134.0,
+      158.0
+    ],
+    "person_bbox": [
+      69.5,
+      20.0,
+      164.1,
+      194.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00038.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      71.0,
+      22.0,
+      130.0,
+      78.0
+    ],
+    "person_bbox": [
+      41.5,
+      0.0,
+      171.3,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00039.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      52.0,
+      24.0,
+      245.0,
+      139.0
+    ],
+    "person_bbox": [
+      0.0,
+      0.0,
+      262.0,
+      192.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00040.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      107.0,
+      18.0,
+      319.0,
+      74.0
+    ],
+    "person_bbox": [
+      1.0,
+      0.0,
+      392.0,
+      129.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00041.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      187.0,
+      70.0,
+      275.0,
+      107.0
+    ],
+    "person_bbox": [
+      143.0,
+      33.0,
+      293.0,
+      172.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00042.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      136.0,
+      49.0,
+      252.0,
+      117.0
+    ],
+    "person_bbox": [
+      78.0,
+      0.0,
+      299.0,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00043.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      137.0,
+      68.0,
+      179.0,
+      88.0
+    ],
+    "person_bbox": [
+      116.0,
+      48.0,
+      208.4,
+      128.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00044.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      115.0,
+      35.0,
+      152.0,
+      55.0
+    ],
+    "person_bbox": [
+      96.5,
+      15.0,
+      177.9,
+      95.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00045.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      76.0,
+      39.0,
+      162.0,
+      164.0
+    ],
+    "person_bbox": [
+      33.0,
+      0.0,
+      222.2,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00046.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      52.0,
+      100.0,
+      140.0,
+      146.0
+    ],
+    "person_bbox": [
+      8.0,
+      54.0,
+      201.6,
+      177.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00047.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      128.0,
+      58.0,
+      181.0,
+      110.0
+    ],
+    "person_bbox": [
+      101.5,
+      6.0,
+      218.1,
+      168.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00048.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      134.0,
+      16.0,
+      199.0,
+      162.0
+    ],
+    "person_bbox": [
+      101.5,
+      0.0,
+      244.5,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  },
+  {
+    "image": "secitem_v2_test_00048.jpg",
+    "split": "test",
+    "firearm_bbox": [
+      75.0,
+      24.0,
+      118.0,
+      142.0
+    ],
+    "person_bbox": [
+      53.5,
+      0.0,
+      148.1,
+      183.0
+    ],
+    "association_type": "SPATIAL_PROXIMITY_HANDHELD"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "1_cameras": {
+    "num_cameras": 1,
+    "total_throughput_fps": 32.05155942061326,
+    "per_camera_fps": 32.05155942061326,
+    "p50_latency_ms": 27.006149997760076,
+    "p95_latency_ms": 36.28845500206807,
+    "gpu_vram_mb": 98.10107421875,
+    "cpu_percent": 0.0,
+    "ram_mb": 953.4765625,
+    "dropped_frames": 0
+  },
+  "4_cameras": {
+    "num_cameras": 4,
+    "total_throughput_fps": 34.148469634825936,
+    "per_camera_fps": 8.537117408706484,
+    "p50_latency_ms": 28.142850002041087,
+    "p95_latency_ms": 37.69234500214225,
+    "gpu_vram_mb": 98.10107421875,
+    "cpu_percent": 0.0,
+    "ram_mb": 953.48046875,
+    "dropped_frames": 0
+  },
+  "8_cameras": {
+    "num_cameras": 8,
+    "total_throughput_fps": 35.01056400002993,
+    "per_camera_fps": 4.376320500003741,
+    "p50_latency_ms": 27.575649997743312,
+    "p95_latency_ms": 36.668739996093784,
+    "gpu_vram_mb": 98.10107421875,
+    "cpu_percent": 0.0,
+    "ram_mb": 953.48046875,
+    "dropped_frames": 0
+  },
+  "soak_test": {
+    "iterations": 100,
+    "mean_latency_ms": 30.55773099855287,
+    "p50_latency_ms": 29.84324999852106,
+    "p95_latency_ms": 36.97743999800878,
+    "memory_drift_mb": 0.0,
+    "crashes": 0,
+    "dropped_frames": 0,
+    "stability_status": "PASS_STABLE"
+  }
+}

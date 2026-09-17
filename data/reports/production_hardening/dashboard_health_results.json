@@ -1,0 +1,58 @@
+{
+  "test_timestamp": "2026-09-02T20:01:32Z",
+  "tests": {
+    "system_health_service": {
+      "scenario": "system_health_service",
+      "cpu_percent": 23.1,
+      "ram_percent": 65.0,
+      "disk_free_gb": 268.2634963989258,
+      "gpu_available": true,
+      "gpu_memory_mb": 0.0,
+      "missing_fields": [],
+      "pass": true
+    },
+    "detector_health_panel": {
+      "scenario": "detector_health_panel",
+      "detectors": {
+        "ground": {
+          "has_attributes": true,
+          "status": "RUNNING"
+        },
+        "airborne": {
+          "has_attributes": true,
+          "status": "RUNNING"
+        },
+        "item": {
+          "has_attributes": true,
+          "status": "RUNNING"
+        }
+      },
+      "all_present": true,
+      "ground_ai": {
+        "state": "RUNNING",
+        "model": "IBVAP Ground v2.0",
+        "version": "v2.0"
+      },
+      "air_ai": {
+        "state": "RUNNING",
+        "model": "IBVAP Airborne v1.1",
+        "version": "v1.1"
+      },
+      "security_ai": {
+        "state": "RUNNING",
+        "model": "IBVAP Item v2.1",
+        "version": "v2.1"
+      },
+      "pass": true
+    },
+    "system_api_route": {
+      "scenario": "system_api_route",
+      "file_exists": true,
+      "has_health_route": true,
+      "has_status_route": true,
+      "pass": true
+    }
+  },
+  "all_pass": true,
+  "verdict": "PASS"
+}

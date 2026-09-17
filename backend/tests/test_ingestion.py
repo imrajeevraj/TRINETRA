@@ -46,8 +46,9 @@ def test_camera_database_model(db_session):
     
     db.delete(db_cam)
     db.commit()
+@patch("os.path.isfile", return_value=True)
 @patch("cv2.VideoCapture")
-def test_camera_stream_thread_success(mock_video_capture):
+def test_camera_stream_thread_success(mock_video_capture, mock_isfile):
     # Mock cv2.VideoCapture to return a dummy video frame
     mock_cap = MagicMock()
     mock_cap.isOpened.return_value = True

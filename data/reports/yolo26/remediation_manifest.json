@@ -1,0 +1,194 @@
+{
+  "remediation_date": "2026-09-02T16:00:00Z",
+  "dry_run": false,
+  "summary": {
+    "ground": 16,
+    "airborne": 12,
+    "security_item": 5
+  },
+  "details": {
+    "ground": {
+      "dataset": "ground",
+      "moves": [
+        {
+          "image": "data\\normalized\\ground_v2_exp002\\images\\train\\hardneg_205.png",
+          "label": "data\\normalized\\ground_v2_exp002\\labels\\train\\hardneg_205.txt",
+          "reason": "within_train_duplicate (kept hardneg_161.png)"
+        },
+        {
+          "image": "data\\normalized\\ground_v2_exp002\\images\\train\\kiit_mita_image_s3r2_kiit_1487.jpeg",
+          "label": "data\\normalized\\ground_v2_exp002\\labels\\train\\kiit_mita_image_s3r2_kiit_1487.txt",
+          "reason": "within_train_duplicate (kept kiit_mita_image_s3r2_kiit_1158.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\ground_v2_exp002\\images\\train\\kiit_mita_image_s3r2_kiit_153.jpeg",
+          "label": "data\\normalized\\ground_v2_exp002\\labels\\train\\kiit_mita_image_s3r2_kiit_153.txt",
+          "reason": "within_train_duplicate (kept kiit_mita_image_s3r2_kiit_142.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\ground_v2_exp002\\images\\train\\kiit_mita_image_s3r2_kiit_428.jpeg",
+          "label": "data\\normalized\\ground_v2_exp002\\labels\\train\\kiit_mita_image_s3r2_kiit_428.txt",
+          "reason": "within_train_duplicate (kept kiit_mita_image_s3r2_kiit_1079.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\ground_v2_exp002\\images\\train\\kiit_mita_image_s3r2_kiit_563.jpeg",
+          "label": "data\\normalized\\ground_v2_exp002\\labels\\train\\kiit_mita_image_s3r2_kiit_563.txt",
+          "reason": "within_train_duplicate (kept kiit_mita_image_s3r2_kiit_1011.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\ground_v2_exp002\\images\\train\\kiit_mita_image_s3r2_kiit_566.jpeg",
+          "label": "data\\normalized\\ground_v2_exp002\\labels\\train\\kiit_mita_image_s3r2_kiit_566.txt",
+          "reason": "within_train_duplicate (kept kiit_mita_image_s3r2_kiit_281.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\ground_v2_exp002\\images\\train\\kiit_mita_image_s3r2_kiit_578.jpeg",
+          "label": "data\\normalized\\ground_v2_exp002\\labels\\train\\kiit_mita_image_s3r2_kiit_578.txt",
+          "reason": "within_train_duplicate (kept kiit_mita_image_s3r2_kiit_425.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\ground_v2_exp002\\images\\train\\kiit_mita_image_s3r2_kiit_60.jpeg",
+          "label": "data\\normalized\\ground_v2_exp002\\labels\\train\\kiit_mita_image_s3r2_kiit_60.txt",
+          "reason": "within_train_duplicate (kept kiit_mita_image_s3r2_kiit_1151.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\ground_v2_exp002\\images\\train\\kiit_mita_image_s3r2_kiit_679.jpeg",
+          "label": "data\\normalized\\ground_v2_exp002\\labels\\train\\kiit_mita_image_s3r2_kiit_679.txt",
+          "reason": "within_train_duplicate (kept kiit_mita_image_s3r2_kiit_417.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\ground_v2_exp002\\images\\train\\kiit_mita_image_s3r2_kiit_730.jpeg",
+          "label": "data\\normalized\\ground_v2_exp002\\labels\\train\\kiit_mita_image_s3r2_kiit_730.txt",
+          "reason": "within_train_duplicate (kept kiit_mita_image_s3r2_kiit_227.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\ground_v2_exp002\\images\\train\\kiit_mita_image_s3r2_kiit_774.jpeg",
+          "label": "data\\normalized\\ground_v2_exp002\\labels\\train\\kiit_mita_image_s3r2_kiit_774.txt",
+          "reason": "within_train_duplicate (kept kiit_mita_image_s3r2_kiit_280.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\ground_v2_exp002\\images\\train\\kiit_mita_image_s3r2_kiit_880.jpeg",
+          "label": "data\\normalized\\ground_v2_exp002\\labels\\train\\kiit_mita_image_s3r2_kiit_880.txt",
+          "reason": "within_train_duplicate (kept kiit_mita_image_s3r2_kiit_244.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\ground_v2_exp002\\images\\train\\kiit_mita_image_s3r2_kiit_972.jpeg",
+          "label": "data\\normalized\\ground_v2_exp002\\labels\\train\\kiit_mita_image_s3r2_kiit_972.txt",
+          "reason": "within_train_duplicate (kept kiit_mita_image_s3r2_kiit_813.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\ground_v2_exp002\\images\\train\\kiit_mita_image_s3r2_kiit_52.jpeg",
+          "label": "data\\normalized\\ground_v2_exp002\\labels\\train\\kiit_mita_image_s3r2_kiit_52.txt",
+          "reason": "train_val_leakage (matches val/kiit_mita_image_s3r2_kiit_1051.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\ground_v2_exp002\\images\\train\\kiit_mita_image_s3r2_kiit_975.jpeg",
+          "label": "data\\normalized\\ground_v2_exp002\\labels\\train\\kiit_mita_image_s3r2_kiit_975.txt",
+          "reason": "train_val_leakage (matches val/kiit_mita_image_s3r2_kiit_191.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\ground_v2_exp002\\images\\train\\kiit_mita_image_s3r2_kiit_1164.jpeg",
+          "label": "data\\normalized\\ground_v2_exp002\\labels\\train\\kiit_mita_image_s3r2_kiit_1164.txt",
+          "reason": "train_val_leakage (matches val/kiit_mita_image_s3r2_kiit_914.jpeg)"
+        }
+      ],
+      "count": 16
+    },
+    "airborne": {
+      "dataset": "airborne",
+      "moves": [
+        {
+          "image": "data\\normalized\\airborne_v1_1\\images\\train\\drone_74.jpeg",
+          "label": "data\\normalized\\airborne_v1_1\\labels\\train\\drone_74.txt",
+          "reason": "within_train_duplicate (kept drone_114.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\airborne_v1_1\\images\\train\\neg_bird_singleBirdinsky23.jpeg",
+          "label": "data\\normalized\\airborne_v1_1\\labels\\train\\neg_bird_singleBirdinsky23.txt",
+          "reason": "within_train_duplicate (kept neg_bird_singleBirdinsky22.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\airborne_v1_1\\images\\train\\neg_bird_singleBirdinsky370.jpeg",
+          "label": "data\\normalized\\airborne_v1_1\\labels\\train\\neg_bird_singleBirdinsky370.txt",
+          "reason": "within_train_duplicate (kept neg_bird_singleBirdinsky369.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\airborne_v1_1\\images\\train\\neg_bird_singleBirdinsky395.jpeg",
+          "label": "data\\normalized\\airborne_v1_1\\labels\\train\\neg_bird_singleBirdinsky395.txt",
+          "reason": "within_train_duplicate (kept neg_bird_singleBirdinsky394.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\airborne_v1_1\\images\\train\\neg_bird_singleBirdinsky48.jpeg",
+          "label": "data\\normalized\\airborne_v1_1\\labels\\train\\neg_bird_singleBirdinsky48.txt",
+          "reason": "within_train_duplicate (kept neg_bird_singleBirdinsky47.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\airborne_v1_1\\images\\train\\neg_bird_singleBirdinsky98.jpeg",
+          "label": "data\\normalized\\airborne_v1_1\\labels\\train\\neg_bird_singleBirdinsky98.txt",
+          "reason": "within_train_duplicate (kept neg_bird_singleBirdinsky97.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\airborne_v1_1\\images\\train\\drone_video1396.jpeg",
+          "label": "data\\normalized\\airborne_v1_1\\labels\\train\\drone_video1396.txt",
+          "reason": "train_val_leakage (matches val/drone_video1380.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\airborne_v1_1\\images\\train\\neg_bird_singleBirdinsky170.jpeg",
+          "label": "data\\normalized\\airborne_v1_1\\labels\\train\\neg_bird_singleBirdinsky170.txt",
+          "reason": "train_val_leakage (matches val/neg_bird_singleBirdinsky171.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\airborne_v1_1\\images\\train\\neg_bird_singleBirdinsky195.jpeg",
+          "label": "data\\normalized\\airborne_v1_1\\labels\\train\\neg_bird_singleBirdinsky195.txt",
+          "reason": "train_val_leakage (matches val/neg_bird_singleBirdinsky196.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\airborne_v1_1\\images\\train\\neg_bird_singleBirdinsky320.jpeg",
+          "label": "data\\normalized\\airborne_v1_1\\labels\\train\\neg_bird_singleBirdinsky320.txt",
+          "reason": "train_val_leakage (matches val/neg_bird_singleBirdinsky319.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\airborne_v1_1\\images\\train\\neg_bird_singleBirdinsky345.jpeg",
+          "label": "data\\normalized\\airborne_v1_1\\labels\\train\\neg_bird_singleBirdinsky345.txt",
+          "reason": "train_val_leakage (matches val/neg_bird_singleBirdinsky344.jpeg)"
+        },
+        {
+          "image": "data\\normalized\\airborne_v1_1\\images\\train\\neg_bird_singleBirdinsky88.jpeg",
+          "label": "data\\normalized\\airborne_v1_1\\labels\\train\\neg_bird_singleBirdinsky88.txt",
+          "reason": "train_val_leakage (matches val/neg_bird_singleBirdinsky89.jpeg)"
+        }
+      ],
+      "count": 12
+    },
+    "security_item": {
+      "dataset": "security_item",
+      "moves": [
+        {
+          "image": "data\\normalized\\security_item_v2_1\\images\\train\\secitem_v2_1_train_00411.jpg",
+          "label": "data\\normalized\\security_item_v2_1\\labels\\train\\secitem_v2_1_train_00411.txt",
+          "reason": "within_train_duplicate (kept secitem_v2_1_train_00344.jpg)"
+        },
+        {
+          "image": "data\\normalized\\security_item_v2_1\\images\\train\\secitem_v2_1_train_00635.jpg",
+          "label": "data\\normalized\\security_item_v2_1\\labels\\train\\secitem_v2_1_train_00635.txt",
+          "reason": "within_train_duplicate (kept secitem_v2_1_train_00350.jpg)"
+        },
+        {
+          "image": "data\\normalized\\security_item_v2_1\\images\\train\\secitem_v2_1_train_00726.jpg",
+          "label": "data\\normalized\\security_item_v2_1\\labels\\train\\secitem_v2_1_train_00726.txt",
+          "reason": "within_train_duplicate (kept secitem_v2_1_train_00206.jpg)"
+        },
+        {
+          "image": "data\\normalized\\security_item_v2_1\\images\\train\\secitem_v2_1_train_00525.jpg",
+          "label": "data\\normalized\\security_item_v2_1\\labels\\train\\secitem_v2_1_train_00525.txt",
+          "reason": "train_val_leakage (matches val/secitem_v2_1_val_00060.jpg)"
+        },
+        {
+          "image": "data\\normalized\\security_item_v2_1\\images\\train\\secitem_v2_1_train_00750.jpg",
+          "label": "data\\normalized\\security_item_v2_1\\labels\\train\\secitem_v2_1_train_00750.txt",
+          "reason": "train_val_leakage (matches val/secitem_v2_1_val_00080.jpg)"
+        }
+      ],
+      "count": 5
+    }
+  }
+}

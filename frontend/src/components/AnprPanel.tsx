@@ -1,38 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import type { PlateEvent } from '../types';
 import { Car } from 'lucide-react';
 
 interface Props {
-  apiBase: string;
+  plates: PlateEvent[];
   dataOrigin: 'LIVE' | 'DEMO' | 'IMPORTED';
 }
 
-export const AnprPanel: React.FC<Props> = ({ apiBase, dataOrigin }) => {
-  const [plates, setPlates] = useState<PlateEvent[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  const fetchPlates = async () => {
-    try {
-      const res = await fetch(`${apiBase}/api/anpr/plates?data_origin=${dataOrigin}`, {
-        credentials: 'include'
-      });
-      if (res.ok) {
-        const data = await res.json();
-        setPlates(data);
-      }
-    } catch (e) {
-      console.error("Failed to fetch plates", e);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchPlates();
-    const interval = setInterval(fetchPlates, 5000);
-    return () => clearInterval(interval);
-  }, [apiBase, dataOrigin]);
-
+export const AnprPanel: React.FC<Props> = ({ plates, dataOrigin }) => {
   return (
     <div className="anpr-section">
       <div className="anpr-header">
@@ -40,12 +15,7 @@ export const AnprPanel: React.FC<Props> = ({ apiBase, dataOrigin }) => {
       </div>
 
       <div className="anpr-list">
-        {loading && plates.length === 0 ? (
-          <div className="empty-state">
-            <Car size={20} className="empty-state-icon" />
-            <span className="empty-state-sub">Scanning for plates...</span>
-          </div>
-        ) : plates.length === 0 ? (
+        {plates.length === 0 ? (
           <div className="empty-state">
             <Car size={20} className="empty-state-icon" />
             <span className="empty-state-title">No Vehicles Detected</span>

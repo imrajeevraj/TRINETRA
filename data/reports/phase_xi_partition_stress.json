@@ -1,0 +1,42 @@
+{
+  "1s_outage": {
+    "outage_duration_sec": 1.0,
+    "events_buffered": 3,
+    "synced_events": 3,
+    "integrity_failures": 0,
+    "sync_duration_ms": 0.01,
+    "state_consistency": "VERIFIED"
+  },
+  "5s_outage": {
+    "outage_duration_sec": 5.0,
+    "events_buffered": 3,
+    "synced_events": 3,
+    "integrity_failures": 0,
+    "sync_duration_ms": 0.02,
+    "state_consistency": "VERIFIED"
+  },
+  "15s_outage": {
+    "outage_duration_sec": 15.0,
+    "events_buffered": 3,
+    "synced_events": 3,
+    "integrity_failures": 0,
+    "sync_duration_ms": 0.01,
+    "state_consistency": "VERIFIED"
+  },
+  "30s_outage": {
+    "outage_duration_sec": 30.0,
+    "events_buffered": 3,
+    "synced_events": 3,
+    "integrity_failures": 0,
+    "sync_duration_ms": 0.01,
+    "state_consistency": "VERIFIED"
+  },
+  "60s_outage": {
+    "outage_duration_sec": 60.0,
+    "events_buffered": 3,
+    "synced_events": 3,
+    "integrity_failures": 0,
+    "sync_duration_ms": 0.01,
+    "state_consistency": "VERIFIED"
+  }
+}

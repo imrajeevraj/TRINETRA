@@ -1,0 +1,324 @@
+{
+  "experiment_id": "IBVAP-ITEM-Y26-001",
+  "model": "models\\candidates\\yolo26\\security_item\\best.pt",
+  "benchmark": "IBVAP-GT-ITEM-v2.0",
+  "benchmark_images": 165,
+  "imgsz": 640,
+  "primary_conf": 0.35,
+  "iou_threshold": 0.45,
+  "evaluated_at": "2026-09-02T17:59:48Z",
+  "critical_limitation": "REAL-FIREARM-VIDEO VALIDATION NOT AVAILABLE",
+  "official_map50": 0.3054,
+  "official_map50_95": 0.1465,
+  "primary_eval": {
+    "TP": 23,
+    "FP": 9,
+    "FN": 38,
+    "GT": 61,
+    "precision": 0.7188,
+    "recall": 0.377,
+    "f1": 0.4946,
+    "hard_cases": {
+      "small": {
+        "GT": 57,
+        "TP": 23,
+        "FN": 34,
+        "recall": 0.4035
+      },
+      "occluded": {
+        "GT": 0,
+        "TP": 0,
+        "FN": 0,
+        "recall": null
+      },
+      "low_light": {
+        "GT": 0,
+        "TP": 0,
+        "FN": 0,
+        "recall": null
+      }
+    }
+  },
+  "confidence_sweep": {
+    "0.1": {
+      "TP": 44,
+      "FP": 69,
+      "FN": 17,
+      "GT": 61,
+      "precision": 0.3894,
+      "recall": 0.7213,
+      "f1": 0.5057,
+      "hard_cases": {
+        "small": {
+          "GT": 57,
+          "TP": 43,
+          "FN": 14,
+          "recall": 0.7544
+        },
+        "occluded": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        },
+        "low_light": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        }
+      }
+    },
+    "0.15": {
+      "TP": 40,
+      "FP": 45,
+      "FN": 21,
+      "GT": 61,
+      "precision": 0.4706,
+      "recall": 0.6557,
+      "f1": 0.5479,
+      "hard_cases": {
+        "small": {
+          "GT": 57,
+          "TP": 39,
+          "FN": 18,
+          "recall": 0.6842
+        },
+        "occluded": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        },
+        "low_light": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        }
+      }
+    },
+    "0.2": {
+      "TP": 34,
+      "FP": 25,
+      "FN": 27,
+      "GT": 61,
+      "precision": 0.5763,
+      "recall": 0.5574,
+      "f1": 0.5667,
+      "hard_cases": {
+        "small": {
+          "GT": 57,
+          "TP": 33,
+          "FN": 24,
+          "recall": 0.5789
+        },
+        "occluded": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        },
+        "low_light": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        }
+      }
+    },
+    "0.25": {
+      "TP": 29,
+      "FP": 19,
+      "FN": 32,
+      "GT": 61,
+      "precision": 0.6042,
+      "recall": 0.4754,
+      "f1": 0.5321,
+      "hard_cases": {
+        "small": {
+          "GT": 57,
+          "TP": 28,
+          "FN": 29,
+          "recall": 0.4912
+        },
+        "occluded": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        },
+        "low_light": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        }
+      }
+    },
+    "0.3": {
+      "TP": 25,
+      "FP": 15,
+      "FN": 36,
+      "GT": 61,
+      "precision": 0.625,
+      "recall": 0.4098,
+      "f1": 0.495,
+      "hard_cases": {
+        "small": {
+          "GT": 57,
+          "TP": 24,
+          "FN": 33,
+          "recall": 0.4211
+        },
+        "occluded": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        },
+        "low_light": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        }
+      }
+    },
+    "0.35": {
+      "TP": 23,
+      "FP": 9,
+      "FN": 38,
+      "GT": 61,
+      "precision": 0.7188,
+      "recall": 0.377,
+      "f1": 0.4946,
+      "hard_cases": {
+        "small": {
+          "GT": 57,
+          "TP": 23,
+          "FN": 34,
+          "recall": 0.4035
+        },
+        "occluded": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        },
+        "low_light": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        }
+      }
+    },
+    "0.4": {
+      "TP": 18,
+      "FP": 6,
+      "FN": 43,
+      "GT": 61,
+      "precision": 0.75,
+      "recall": 0.2951,
+      "f1": 0.4235,
+      "hard_cases": {
+        "small": {
+          "GT": 57,
+          "TP": 18,
+          "FN": 39,
+          "recall": 0.3158
+        },
+        "occluded": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        },
+        "low_light": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        }
+      }
+    },
+    "0.5": {
+      "TP": 13,
+      "FP": 0,
+      "FN": 48,
+      "GT": 61,
+      "precision": 1.0,
+      "recall": 0.2131,
+      "f1": 0.3514,
+      "hard_cases": {
+        "small": {
+          "GT": 57,
+          "TP": 13,
+          "FN": 44,
+          "recall": 0.2281
+        },
+        "occluded": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        },
+        "low_light": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        }
+      }
+    },
+    "0.6": {
+      "TP": 7,
+      "FP": 0,
+      "FN": 54,
+      "GT": 61,
+      "precision": 1.0,
+      "recall": 0.1148,
+      "f1": 0.2059,
+      "hard_cases": {
+        "small": {
+          "GT": 57,
+          "TP": 7,
+          "FN": 50,
+          "recall": 0.1228
+        },
+        "occluded": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        },
+        "low_light": {
+          "GT": 0,
+          "TP": 0,
+          "FN": 0,
+          "recall": null
+        }
+      }
+    }
+  },
+  "latency": {
+    "p50_ms": 59.399,
+    "p95_ms": 215.955,
+    "p99_ms": 399.943,
+    "fps": 16.8
+  },
+  "yolo11_baseline": {
+    "map50": 0.8579,
+    "precision": 0.8361,
+    "recall": 0.8361,
+    "f1": 0.8361,
+    "p50_ms": 11.99,
+    "p95_ms": 53.75
+  },
+  "delta": {
+    "map50": -0.5525,
+    "precision": -0.1173,
+    "recall": -0.4591
+  }
+}

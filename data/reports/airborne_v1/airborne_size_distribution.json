@@ -1,0 +1,46 @@
+{
+  "drone": {
+    "total_instances": 3342,
+    "min_area": 0.000212673611110625,
+    "median_area": 0.005531684027777265,
+    "max_area": 0.8839949324323048,
+    "very_small_under_0_1pct": {
+      "count": 194,
+      "pct": 5.8
+    },
+    "small_0_1pct_to_0_5pct": {
+      "count": 1392,
+      "pct": 41.7
+    },
+    "medium_0_5pct_to_5pct": {
+      "count": 1303,
+      "pct": 39.0
+    },
+    "large_over_5pct": {
+      "count": 453,
+      "pct": 13.6
+    }
+  },
+  "aircraft": {
+    "total_instances": 578,
+    "min_area": 0.0007031250000000001,
+    "median_area": 0.0813687865497076,
+    "max_area": 0.9348223684210527,
+    "very_small_under_0_1pct": {
+      "count": 2,
+      "pct": 0.3
+    },
+    "small_0_1pct_to_0_5pct": {
+      "count": 45,
+      "pct": 7.8
+    },
+    "medium_0_5pct_to_5pct": {
+      "count": 185,
+      "pct": 32.0
+    },
+    "large_over_5pct": {
+      "count": 346,
+      "pct": 59.9
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "Config_A_Ground_FullFrame": {
+    "description": "Ground 768px Full-Frame continuous baseline",
+    "p50_ms": 21.3307999947574,
+    "p95_ms": 23.091655003372576,
+    "p99_ms": 24.81248300653533,
+    "throughput_fps": 46.88056707886137
+  },
+  "Config_B_Ground_Dynamic_ROI": {
+    "description": "Ground 768px + Dynamic crop on suspicious triggers",
+    "p50_ms": 23.344599998381454,
+    "p95_ms": 29.411629998503475,
+    "p99_ms": 68.25240300051516,
+    "throughput_fps": 42.83645896992593
+  },
+  "Config_C_Ground_SAHI_OnDemand": {
+    "description": "Ground 768px + SAHI 2x2 on-demand zoom inspection",
+    "p50_ms": 207.36809999652905,
+    "p95_ms": 242.62473000635498,
+    "p99_ms": 290.94933299944387,
+    "throughput_fps": 4.822342491524676
+  },
+  "Config_D_Ground_PTZ_Simulation_ROI": {
+    "description": "Ground + PTZ slew simulation + vibration settling + Dynamic ROI",
+    "p50_ms": 0.1964999974006787,
+    "p95_ms": 0.5559599943808277,
+    "p99_ms": 0.9308650015736928,
+    "throughput_fps": 1000.0
+  },
+  "Config_E_Full_Orchestration_Pipeline": {
+    "description": "Ground + Tracking + Risk + PTZ + ROI + Temporal Confirmation",
+    "p50_ms": 27.649199997540563,
+    "p95_ms": 229.41286999339349,
+    "p99_ms": 259.3338010084699,
+    "throughput_fps": 36.16741171856515
+  },
+  "Config_F_Security_Item_Raw": {
+    "description": "Production Security Item detector (Profile A Perimeter)",
+    "p50_ms": 20.67825000267476,
+    "p95_ms": 23.266040002636146,
+    "p99_ms": 24.469104992458597,
+    "throughput_fps": 48.35999177254597
+  },
+  "Config_G_Security_Item_Verifier": {
+    "description": "Security Item detector + Threat Verifier (Profile B Logistics)",
+    "p50_ms": 20.504000000073574,
+    "p95_ms": 22.576439989643404,
+    "p99_ms": 23.553972000954673,
+    "throughput_fps": 48.77097151757763
+  }
+}

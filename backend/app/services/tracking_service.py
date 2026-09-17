@@ -1,17 +1,28 @@
 import time
 import logging
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any
 import numpy as np
 
 logger = logging.getLogger("TrackingService")
+
 
 class KalmanBoxTracker:
     """
     Lightweight 2D Kalman Filter for bounding box tracking and velocity prediction.
     State: [x_center, y_center, aspect_ratio, height, vx, vy, va, vh]
     """
+
     count = 0
-    def __init__(self, bbox: List[float], class_name: str, confidence: float):
+
+    def __init__(
+        self,
+        bbox: List[float],
+        class_name: str,
+        confidence: float,
+        track_num: int = 0,
+        domain: str = "GROUND",
+        prefix: str = "P",
+    ):
         # bbox: [x1, y1, x2, y2]
         x1, y1, x2, y2 = bbox
         w = max(1.0, x2 - x1)
@@ -22,12 +33,14 @@ class KalmanBoxTracker:
         self.h = h
         self.vx = 0.0
         self.vy = 0.0
-        
+
         self.class_name = class_name
         self.confidence = confidence
-        self.id = KalmanBoxTracker.count
-        KalmanBoxTracker.count += 1
-        
+        self.domain = domain
+        self.prefix = prefix
+        self.track_num = track_num
+        self.id = track_num
+
         self.time_since_update = 0
         self.hits = 1
         self.hit_streak = 1
@@ -44,7 +57,7 @@ class KalmanBoxTracker:
         if self.time_since_update > 0:
             self.hit_streak = 0
         self.time_since_update += 1
-        
+
         x1 = self.x - self.w / 2.0
         y1 = self.y - self.h / 2.0
         x2 = self.x + self.w / 2.0
@@ -58,7 +71,7 @@ class KalmanBoxTracker:
         new_h = max(1.0, y2 - y1)
         new_x = (x1 + x2) / 2.0
         new_y = (y1 + y2) / 2.0
-        
+
         # Exponential moving average velocity update
         if dt > 0.001:
             measured_vx = (new_x - self.x) / dt
@@ -79,7 +92,7 @@ class KalmanBoxTracker:
         self.hits += 1
         self.hit_streak += 1
         self.last_update_time = time.time()
-        
+
         # Store trajectory history (limit to 50 points)
         self.history.append((self.x, self.y + self.h / 2.0))
         if len(self.history) > 50:
@@ -91,7 +104,7 @@ class KalmanBoxTracker:
             self.x - self.w / 2.0,
             self.y - self.h / 2.0,
             self.x + self.w / 2.0,
-            self.y + self.h / 2.0
+            self.y + self.h / 2.0,
         ]
 
 
@@ -117,7 +130,14 @@ class CameraTracker:
     - Runs Kalman prediction on display frames at 30 FPS (smooth motion)
     - Associates new AI detections when available (8-10 FPS)
     """
-    def __init__(self, camera_id: str, max_age: int = 15, min_hits: int = 1, iou_threshold: float = 0.3):
+
+    def __init__(
+        self,
+        camera_id: str,
+        max_age: int = 15,
+        min_hits: int = 1,
+        iou_threshold: float = 0.3,
+    ):
         self.camera_id = camera_id
         self.max_age = max_age
         self.min_hits = min_hits
@@ -125,10 +145,12 @@ class CameraTracker:
         self.trackers: List[KalmanBoxTracker] = []
         self.frame_count = 0
         self.last_predict_time = time.time()
+        self.namespace_counters = {"P": 0, "V": 0, "A": 0, "W": 0, "I": 0, "U": 0}
 
     def reset(self):
         self.trackers.clear()
         self.frame_count = 0
+        self.namespace_counters = {"P": 0, "V": 0, "A": 0, "W": 0, "I": 0, "U": 0}
 
     def predict_tracks(self) -> List[Dict[str, Any]]:
         """
@@ -143,38 +165,48 @@ class CameraTracker:
         for trk in self.trackers:
             predicted_box = trk.predict(dt)
             if trk.time_since_update <= self.max_age:
-                prefix = self._get_prefix(trk.class_name)
-                track_id = f"{self.camera_id}:{prefix}-{trk.id:03d}"
-                active_tracks.append({
-                    "class": trk.class_name,
-                    "confidence": trk.confidence,
-                    "box": [round(v, 1) for v in predicted_box],
-                    "track_id": track_id,
-                    "trajectory": list(trk.history)
-                })
+                track_id = f"{self.camera_id}:{trk.prefix}-{trk.track_num:03d}"
+                state_box = [round(v, 1) for v in predicted_box]
+                active_tracks.append(
+                    {
+                        "class": trk.class_name,
+                        "class_name": trk.class_name,
+                        "confidence": trk.confidence,
+                        "box": state_box,
+                        "bbox": state_box,
+                        "track_id": track_id,
+                        "domain": trk.domain,
+                        "trajectory": list(trk.history),
+                    }
+                )
         return active_tracks
 
-    def update_detections(self, detections: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    def update_detections(
+        self, detections: List[Dict[str, Any]]
+    ) -> List[Dict[str, Any]]:
         """
         Associate newly arrived AI detections with existing tracks (called at AI FPS).
         """
         self.frame_count += 1
         now = time.time()
-        
+
         # Get predicted locations from existing trackers
         trks = [t.get_state() for t in self.trackers]
-        dets = [d["box"] for d in detections]
-        
+        dets = [d.get("bbox") or d["box"] for d in detections]
+
         matched_indices = []
         unmatched_dets = list(range(len(detections)))
         unmatched_trks = list(range(len(self.trackers)))
-        
+
         if len(trks) > 0 and len(dets) > 0:
             iou_matrix = np.zeros((len(dets), len(trks)), dtype=np.float32)
             for d_idx, det_box in enumerate(dets):
+                det_cls = detections[d_idx].get("class_name") or detections[d_idx].get(
+                    "class"
+                )
                 for t_idx, trk_box in enumerate(trks):
                     # Only match if same class or compatible
-                    if detections[d_idx]["class"] == self.trackers[t_idx].class_name:
+                    if det_cls == self.trackers[t_idx].class_name:
                         iou_matrix[d_idx, t_idx] = compute_iou(det_box, trk_box)
                     else:
                         iou_matrix[d_idx, t_idx] = 0.0
@@ -197,16 +229,39 @@ class CameraTracker:
         for d_idx, t_idx in matched_indices:
             det = detections[d_idx]
             dt = max(0.01, now - self.trackers[t_idx].last_update_time)
-            self.trackers[t_idx].update(det["box"], det["confidence"], dt)
+            self.trackers[t_idx].update(
+                det.get("bbox") or det["box"], det["confidence"], dt
+            )
 
-        # Create new trackers for unmatched detections
+        # Create new trackers for unmatched detections with domain namespace isolation
         for d_idx in unmatched_dets:
             det = detections[d_idx]
-            trk = KalmanBoxTracker(det["box"], det["class"], det["confidence"])
+            cname = det.get("class_name") or det.get("class", "unknown")
+            dom = det.get("domain")
+            if not dom:
+                if cname in ["person", "vehicle"]:
+                    dom = "GROUND"
+                elif cname in ["firearm", "gun", "pistol", "rifle", "weapon"]:
+                    dom = "SECURITY_ITEM"
+                else:
+                    dom = "AIR"
+            prefix = self._get_prefix(cname)
+            self.namespace_counters[prefix] = self.namespace_counters.get(prefix, 0) + 1
+            track_num = self.namespace_counters[prefix]
+            trk = KalmanBoxTracker(
+                det.get("bbox") or det["box"],
+                cname,
+                det["confidence"],
+                track_num=track_num,
+                domain=dom,
+                prefix=prefix,
+            )
             self.trackers.append(trk)
 
         # Remove dead trackers
-        self.trackers = [t for t in self.trackers if t.time_since_update <= self.max_age]
+        self.trackers = [
+            t for t in self.trackers if t.time_since_update <= self.max_age
+        ]
 
         # Format output detections
         return self.get_current_tracks()
@@ -215,31 +270,43 @@ class CameraTracker:
         results = []
         for trk in self.trackers:
             if trk.time_since_update <= 3:  # Only output recent tracks
-                prefix = self._get_prefix(trk.class_name)
-                track_id = f"{self.camera_id}:{prefix}-{trk.id:03d}"
-                results.append({
-                    "class": trk.class_name,
-                    "confidence": round(trk.confidence, 2),
-                    "box": [round(v, 1) for v in trk.get_state()],
-                    "track_id": track_id,
-                    "trajectory": list(trk.history)
-                })
+                track_id = f"{self.camera_id}:{trk.prefix}-{trk.track_num:03d}"
+                state_box = [round(v, 1) for v in trk.get_state()]
+                results.append(
+                    {
+                        "class": trk.class_name,
+                        "class_name": trk.class_name,
+                        "confidence": round(trk.confidence, 2),
+                        "box": state_box,
+                        "bbox": state_box,
+                        "track_id": track_id,
+                        "domain": trk.domain,
+                        "trajectory": list(trk.history),
+                    }
+                )
         return results
 
     @staticmethod
     def _get_prefix(class_name: str) -> str:
-        prefix_map = {
-            "person": "P", "car": "V", "motorcycle": "V", "bus": "V", "truck": "V",
-            "drone": "D", "weapon": "W", "knife": "W", "gun": "W",
-            "backpack": "I", "suitcase": "I", "handbag": "I", "cell phone": "I"
-        }
-        return prefix_map.get(class_name.lower(), "U")
+        c = (class_name or "").lower().strip()
+        if c == "person":
+            return "P"
+        elif c in ["vehicle", "car", "motorcycle", "bus", "truck"]:
+            return "V"
+        elif c in ["drone", "aircraft", "airplane"]:
+            return "A"
+        elif c in ["firearm", "gun", "pistol", "rifle", "weapon"]:
+            return "I"
+        elif c in ["backpack", "suitcase", "handbag", "cell phone"]:
+            return "I"
+        return "U"
 
 
 class TrackingService:
     """Singleton tracking manager maintaining independent trackers per camera."""
+
     _instance = None
-    
+
     def __new__(cls):
         if cls._instance is None:
             cls._instance = super().__new__(cls)
@@ -254,5 +321,6 @@ class TrackingService:
     def reset_camera(self, camera_id: str):
         if camera_id in self.trackers:
             self.trackers[camera_id].reset()
+
 
 tracking_service = TrackingService()

@@ -1,0 +1,111 @@
+{
+  "audit_date": "2026-09-02T16:02:03Z",
+  "overall_pass": true,
+  "datasets": {
+    "ground": {
+      "dataset": "ground",
+      "root": "data\\normalized\\ground_v2_exp002",
+      "splits": {
+        "train": {
+          "images": 986,
+          "labels_found": 986,
+          "labels_missing": 0,
+          "corrupt_images": 0,
+          "zero_byte_images": 0,
+          "invalid_boxes": 0,
+          "class_mismatches": 0,
+          "empty_label_files": 116
+        },
+        "val": {
+          "images": 250,
+          "labels_found": 250,
+          "labels_missing": 0,
+          "corrupt_images": 0,
+          "zero_byte_images": 0,
+          "invalid_boxes": 0,
+          "class_mismatches": 0,
+          "empty_label_files": 39
+        }
+      },
+      "duplicate_images": [],
+      "benchmark_contamination": [],
+      "total_images": 1236,
+      "total_labels": 1236,
+      "errors": [],
+      "duplicate_count": 0,
+      "contamination_count": 0,
+      "error_count": 0,
+      "passed": true
+    },
+    "airborne": {
+      "dataset": "airborne",
+      "root": "data\\normalized\\airborne_v1_1",
+      "splits": {
+        "train": {
+          "images": 4171,
+          "labels_found": 4171,
+          "labels_missing": 0,
+          "corrupt_images": 0,
+          "zero_byte_images": 0,
+          "invalid_boxes": 0,
+          "class_mismatches": 0,
+          "empty_label_files": 1439
+        },
+        "val": {
+          "images": 1046,
+          "labels_found": 1046,
+          "labels_missing": 0,
+          "corrupt_images": 0,
+          "zero_byte_images": 0,
+          "invalid_boxes": 0,
+          "class_mismatches": 0,
+          "empty_label_files": 361
+        }
+      },
+      "duplicate_images": [],
+      "benchmark_contamination": [],
+      "total_images": 5217,
+      "total_labels": 5217,
+      "errors": [],
+      "duplicate_count": 0,
+      "contamination_count": 0,
+      "error_count": 0,
+      "passed": true
+    },
+    "security_item": {
+      "dataset": "security_item",
+      "root": "data\\normalized\\security_item_v2_1",
+      "splits": {
+        "train": {
+          "images": 1147,
+          "labels_found": 1147,
+          "labels_missing": 0,
+          "corrupt_images": 0,
+          "zero_byte_images": 0,
+          "invalid_boxes": 0,
+          "class_mismatches": 0,
+          "empty_label_files": 400
+        },
+        "val": {
+          "images": 288,
+          "labels_found": 288,
+          "labels_missing": 0,
+          "corrupt_images": 0,
+          "zero_byte_images": 0,
+          "invalid_boxes": 0,
+          "class_mismatches": 0,
+          "empty_label_files": 100
+        }
+      },
+      "duplicate_images": [],
+      "benchmark_contamination": [],
+      "total_images": 1435,
+      "total_labels": 1435,
+      "errors": [],
+      "duplicate_count": 0,
+      "contamination_count": 0,
+      "error_count": 0,
+      "passed": true
+    }
+  }
+}

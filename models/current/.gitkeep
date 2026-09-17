@@ -1,0 +1,1 @@
+# Keep models/current directory in git tracking while model weights (*.pt, *.onnx) are ignored

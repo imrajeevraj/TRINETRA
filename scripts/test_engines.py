@@ -11,7 +11,7 @@ def test_engines():
     print(f"Device: {device}", flush=True)
     from ultralytics import YOLO
     
-    model = YOLO("border_threat_yolo.pt")
+    model = YOLO("yolo11n.pt")
     model.to(device)
     
     dummy_input = torch.zeros((1, 3, 640, 640), dtype=torch.float32, device=device)

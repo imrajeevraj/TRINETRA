@@ -44,7 +44,9 @@ def verify_password(password: str, password_hash: str) -> bool:
 
 
 def create_access_token(username: str, role: str) -> str:
-    expires = datetime.now(timezone.utc) + timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
+    expires = datetime.now(timezone.utc) + timedelta(
+        minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES
+    )
     payload = {"sub": username, "role": role, "exp": expires}
     return jwt.encode(payload, _secret(), algorithm=ALGORITHM)
 
@@ -54,14 +56,25 @@ def get_current_user(
     credentials: HTTPAuthorizationCredentials | None = Depends(bearer_scheme),
     db: Session = Depends(get_db),
 ) -> User:
-    token = credentials.credentials if credentials else request.cookies.get("ibvap_access_token")
+    token = (
+        credentials.credentials
+        if credentials
+        else request.cookies.get("ibvap_access_token")
+    )
     if not token:
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Authentication required")
+        token = request.query_params.get("token")
+    if not token:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED, detail="Authentication required"
+        )
     return _decode_user(token, db)
 
 
 def _decode_user(token: str, db: Session) -> User:
-    credentials_error = HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid or expired credentials")
+    credentials_error = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Invalid or expired credentials",
+    )
     try:
         payload = jwt.decode(token, _secret(), algorithms=[ALGORITHM])
         username = payload.get("sub")
@@ -95,12 +108,20 @@ def bootstrap_admin(db: Session) -> None:
             raise RuntimeError(f"{role}_PASSWORD must be at least 8 characters")
         existing = db.query(User).filter(User.username == username).first()
         if existing is None:
-            db.add(User(username=username, hashed_password=hash_password(password), role=role))
+            db.add(
+                User(
+                    username=username,
+                    hashed_password=hash_password(password),
+                    role=role,
+                )
+            )
 
     username = settings.ADMIN_USERNAME
     password = settings.ADMIN_PASSWORD
     if bool(username) != bool(password):
-        raise RuntimeError("ADMIN_USERNAME and ADMIN_PASSWORD must be configured together")
+        raise RuntimeError(
+            "ADMIN_USERNAME and ADMIN_PASSWORD must be configured together"
+        )
     if username:
         seed_user(username, password, "ADMIN")
 

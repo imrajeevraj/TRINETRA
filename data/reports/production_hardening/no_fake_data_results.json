@@ -1,0 +1,36 @@
+{
+  "test_timestamp": "2026-09-02T20:01:37Z",
+  "tests": {
+    "detection_provenance": {
+      "scenario": "detection_schema_provenance",
+      "provenance_fields": [
+        "detector_version",
+        "detector_id",
+        "frame_id",
+        "timestamp",
+        "camera_id"
+      ],
+      "missing": [],
+      "pass": true
+    },
+    "no_fabricated_coordinates": {
+      "scenario": "no_fabricated_coordinates",
+      "detections_on_blank": 0,
+      "fabricated_bbox": false,
+      "pass": true
+    },
+    "demo_labeled": {
+      "scenario": "demo_labeled_explicitly",
+      "demo_file_exists": true,
+      "has_demo_label": true,
+      "pass": true
+    },
+    "no_hardcoded_counts": {
+      "scenario": "no_hardcoded_event_counts",
+      "fake_found": [],
+      "pass": true
+    }
+  },
+  "all_pass": true,
+  "verdict": "PASS"
+}

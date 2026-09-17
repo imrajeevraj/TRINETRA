@@ -1,0 +1,55 @@
+{
+  "1_cameras": {
+    "num_cameras": 1,
+    "total_throughput_fps": 13.927245296145172,
+    "per_camera_fps": 13.927245296145172,
+    "p50_ms": 63.113299998803996,
+    "p95_ms": 82.757759996457,
+    "p99_ms": 206.93395599315377,
+    "vram_mb": 102.201171875,
+    "ram_mb": 898.7421875,
+    "cpu_percent": 0.0,
+    "dropped_frames": 0,
+    "queue_depth": 0
+  },
+  "4_cameras": {
+    "num_cameras": 4,
+    "total_throughput_fps": 14.921180727957223,
+    "per_camera_fps": 3.7302951819893058,
+    "p50_ms": 63.20830000913702,
+    "p95_ms": 74.88363500378905,
+    "p99_ms": 130.9666509872483,
+    "vram_mb": 102.201171875,
+    "ram_mb": 898.75390625,
+    "cpu_percent": 0.0,
+    "dropped_frames": 0,
+    "queue_depth": 0
+  },
+  "8_cameras": {
+    "num_cameras": 8,
+    "total_throughput_fps": 15.899496484418973,
+    "per_camera_fps": 1.9874370605523717,
+    "p50_ms": 61.29174999659881,
+    "p95_ms": 71.0248550043616,
+    "p99_ms": 99.61074599137646,
+    "vram_mb": 102.201171875,
+    "ram_mb": 899.0234375,
+    "cpu_percent": 0.0,
+    "dropped_frames": 0,
+    "queue_depth": 0
+  },
+  "mixed_workload_profile": {
+    "workload_types": [
+      "CAM_A_Normal_Perimeter",
+      "CAM_B_Crowded_Border",
+      "CAM_C_Distant_Boundary",
+      "CAM_D_Vehicle_Highway",
+      "CAM_E_Airborne_Airspace",
+      "CAM_F_Cargo_Security_Gate"
+    ],
+    "p50_ms": 20.777300000190735,
+    "p95_ms": 23.65069500156096,
+    "effective_fps": 48.12944896549696,
+    "status": "PASS_MIXED_CONCURRENCY"
+  }
+}

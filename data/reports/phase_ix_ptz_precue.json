@@ -1,0 +1,8 @@
+{
+  "trials_count": 10,
+  "mean_lead_time_sec": 11.0,
+  "min_lead_time_sec": 11.0,
+  "max_lead_time_sec": 11.0,
+  "pre_cue_success_rate": 1.0,
+  "unnecessary_movement_rate": 0.0
+}

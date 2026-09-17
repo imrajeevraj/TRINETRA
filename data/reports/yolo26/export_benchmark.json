@@ -1,0 +1,80 @@
+{
+  "ground_yolo11": {
+    "status": "COMPLETED",
+    "pt_path": "models\\production\\ground\\ibvap_ground_v2_production.pt",
+    "pt_size_mb": 5.23,
+    "pt_latency": {
+      "p50_ms": 45.17,
+      "p95_ms": 102.58,
+      "fps": 22.1
+    },
+    "onnx_path": "C:\\Users\\rajee\\Downloads\\SIH 2026\\IBVAP\\models\\production\\ground\\ibvap_ground_v2_production.onnx",
+    "onnx_size_mb": 10.18,
+    "onnx_status": "SUCCESS"
+  },
+  "ground_yolo26": {
+    "status": "COMPLETED",
+    "pt_path": "models\\candidates\\yolo26\\ground\\best.pt",
+    "pt_size_mb": 5.16,
+    "pt_latency": {
+      "p50_ms": 48.28,
+      "p95_ms": 129.33,
+      "fps": 20.7
+    },
+    "onnx_path": "C:\\Users\\rajee\\Downloads\\SIH 2026\\IBVAP\\models\\candidates\\yolo26\\ground\\best.onnx",
+    "onnx_size_mb": 9.42,
+    "onnx_status": "SUCCESS"
+  },
+  "airborne_yolo11": {
+    "status": "COMPLETED",
+    "pt_path": "models\\production\\airborne\\ibvap_airborne_v1_production.pt",
+    "pt_size_mb": 5.22,
+    "pt_latency": {
+      "p50_ms": 41.44,
+      "p95_ms": 49.86,
+      "fps": 24.1
+    },
+    "onnx_path": "C:\\Users\\rajee\\Downloads\\SIH 2026\\IBVAP\\models\\production\\airborne\\ibvap_airborne_v1_production.onnx",
+    "onnx_size_mb": 10.11,
+    "onnx_status": "SUCCESS"
+  },
+  "airborne_yolo26": {
+    "status": "COMPLETED",
+    "pt_path": "models\\candidates\\yolo26\\airborne\\best.pt",
+    "pt_size_mb": 5.14,
+    "pt_latency": {
+      "p50_ms": 46.5,
+      "p95_ms": 75.5,
+      "fps": 21.5
+    },
+    "onnx_path": "C:\\Users\\rajee\\Downloads\\SIH 2026\\IBVAP\\models\\candidates\\yolo26\\airborne\\best.onnx",
+    "onnx_size_mb": 9.35,
+    "onnx_status": "SUCCESS"
+  },
+  "security_item_yolo11": {
+    "status": "COMPLETED",
+    "pt_path": "models\\production\\security_item\\ibvap_security_item_v2_1_production.pt",
+    "pt_size_mb": 5.21,
+    "pt_latency": {
+      "p50_ms": 43.62,
+      "p95_ms": 84.95,
+      "fps": 22.9
+    },
+    "onnx_path": "C:\\Users\\rajee\\Downloads\\SIH 2026\\IBVAP\\models\\production\\security_item\\ibvap_security_item_v2_1_production.onnx",
+    "onnx_size_mb": 10.11,
+    "onnx_status": "SUCCESS"
+  },
+  "security_item_yolo26": {
+    "status": "COMPLETED",
+    "pt_path": "models\\candidates\\yolo26\\security_item\\best.pt",
+    "pt_size_mb": 5.13,
+    "pt_latency": {
+      "p50_ms": 55.11,
+      "p95_ms": 175.02,
+      "fps": 18.1
+    },
+    "onnx_path": "C:\\Users\\rajee\\Downloads\\SIH 2026\\IBVAP\\models\\candidates\\yolo26\\security_item\\best.onnx",
+    "onnx_size_mb": 9.35,
+    "onnx_status": "SUCCESS"
+  }
+}

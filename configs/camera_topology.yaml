@@ -1,0 +1,283 @@
+# IBVAP — Camera Topology & Spatial-Temporal Adjacency Graph (Phase XI)
+# Distinguishes LOGICAL_TOPOLOGY from GEOREFERENCED or SIMULATED.
+# Models travel time feasibility windows (min_time_sec, max_time_sec) to reject impossible cross-camera transitions.
+# Extended for 8-Camera Distributed Mesh and Thermal-Optical Cross-Spectral Capabilities.
+
+topology_metadata:
+  mode: "LOGICAL_TOPOLOGY"           # "LOGICAL_TOPOLOGY", "GEOREFERENCED", "SIMULATED"
+  version: "2.0.0"
+  description: "SSB/MHA Border Sentry 8-Camera Distributed Mesh Topology"
+
+nodes:
+  CAM-001:
+    name: "Perimeter North Sentry PTZ"
+    zone_id: "ZONE-PERIMETER-NORTH"
+    type: "PTZ_DOME"
+    sensor_type: "OPTICAL"
+    ptz: true
+    thermal: false
+    optical: true
+    fixed: false
+    night_capable: true
+    resolution: "1920x1080"
+    fps: 30
+    supported_operations: ["DETECT", "TRACK", "PTZ_SLEW", "PRE_CUE", "PEER_HANDOVER"]
+    coordinates: null                # null indicates logical topology, not georeferenced GPS
+
+  CAM-002:
+    name: "Logistics & Cargo Gate"
+    zone_id: "ZONE-CARGO-BAY"
+    type: "FIXED_BULLET"
+    sensor_type: "OPTICAL"
+    ptz: false
+    thermal: false
+    optical: true
+    fixed: true
+    night_capable: false
+    resolution: "1920x1080"
+    fps: 30
+    supported_operations: ["DETECT", "TRACK", "PEER_HANDOVER"]
+    coordinates: null
+
+  CAM-003:
+    name: "Perimeter South Border Sentry"
+    zone_id: "ZONE-PERIMETER-SOUTH"
+    type: "PTZ_DOME"
+    sensor_type: "OPTICAL"
+    ptz: true
+    thermal: false
+    optical: true
+    fixed: false
+    night_capable: true
+    resolution: "1920x1080"
+    fps: 30
+    supported_operations: ["DETECT", "TRACK", "PTZ_SLEW", "PRE_CUE", "PEER_HANDOVER"]
+    coordinates: null
+
+  CAM-004:
+    name: "Radar & Airspace Tower"
+    zone_id: "ZONE-AIRSPACE"
+    type: "AIRSPACE_MAST"
+    sensor_type: "OPTICAL"
+    ptz: false
+    thermal: false
+    optical: true
+    fixed: true
+    night_capable: true
+    resolution: "3840x2160"
+    fps: 60
+    supported_operations: ["DETECT", "TRACK", "AIRBORNE_FENCE", "PEER_HANDOVER"]
+    coordinates: null
+
+  CAM-005:
+    name: "North Outpost Thermal Sentry"
+    zone_id: "ZONE-PERIMETER-NORTH-T"
+    type: "FIXED_THERMAL"
+    sensor_type: "THERMAL"
+    ptz: false
+    thermal: true
+    optical: false
+    fixed: true
+    night_capable: true
+    resolution: "640x512"
+    fps: 30
+    supported_operations: ["DETECT_THERMAL", "TRACK", "CROSS_SPECTRAL_HANDOVER", "PEER_HANDOVER"]
+    coordinates: null
+
+  CAM-006:
+    name: "East Corridor Thermal Sentry"
+    zone_id: "ZONE-CORRIDOR-EAST-T"
+    type: "FIXED_THERMAL"
+    sensor_type: "THERMAL"
+    ptz: false
+    thermal: true
+    optical: false
+    fixed: true
+    night_capable: true
+    resolution: "640x512"
+    fps: 30
+    supported_operations: ["DETECT_THERMAL", "TRACK", "PEER_HANDOVER"]
+    coordinates: null
+
+  CAM-007:
+    name: "South Sector Dual PTZ"
+    zone_id: "ZONE-PERIMETER-SOUTH-T"
+    type: "PTZ_DUAL"
+    sensor_type: "THERMAL"
+    ptz: true
+    thermal: true
+    optical: true
+    fixed: false
+    night_capable: true
+    resolution: "1920x1080"
+    fps: 30
+    supported_operations: ["DETECT", "DETECT_THERMAL", "TRACK", "PTZ_SLEW", "PRE_CUE", "CROSS_SPECTRAL_HANDOVER", "PEER_HANDOVER"]
+    coordinates: null
+
+  CAM-008:
+    name: "Airbase Boundary Mast"
+    zone_id: "ZONE-AIRBASE-BOUNDARY"
+    type: "FIXED_BULLET"
+    sensor_type: "OPTICAL"
+    ptz: false
+    thermal: false
+    optical: true
+    fixed: true
+    night_capable: false
+    resolution: "1920x1080"
+    fps: 30
+    supported_operations: ["DETECT", "TRACK", "PEER_HANDOVER"]
+    coordinates: null
+
+transitions:
+  # CAM-001 Corridor
+  - from_camera: "CAM-001"
+    to_camera: "CAM-002"
+    min_travel_time_sec: 5.0
+    max_travel_time_sec: 30.0
+    typical_travel_time_sec: 12.0
+    direction: "SOUTHWARD"
+    zone_boundary: "ZONE-BORDER-ROAD-A"
+
+  - from_camera: "CAM-001"
+    to_camera: "CAM-005"
+    min_travel_time_sec: 2.0
+    max_travel_time_sec: 20.0
+    typical_travel_time_sec: 8.0
+    direction: "NORTH-WEST"
+    zone_boundary: "ZONE-CROSS-SPECTRAL-NORTH"
+
+  # CAM-002 Corridor
+  - from_camera: "CAM-002"
+    to_camera: "CAM-001"
+    min_travel_time_sec: 5.0
+    max_travel_time_sec: 30.0
+    typical_travel_time_sec: 12.0
+    direction: "NORTHWARD"
+    zone_boundary: "ZONE-BORDER-ROAD-A"
+
+  - from_camera: "CAM-002"
+    to_camera: "CAM-003"
+    min_travel_time_sec: 10.0
+    max_travel_time_sec: 45.0
+    typical_travel_time_sec: 20.0
+    direction: "SOUTHWARD"
+    zone_boundary: "ZONE-PERIMETER-INTERIOR"
+
+  # CAM-003 Corridor
+  - from_camera: "CAM-003"
+    to_camera: "CAM-002"
+    min_travel_time_sec: 10.0
+    max_travel_time_sec: 45.0
+    typical_travel_time_sec: 20.0
+    direction: "NORTHWARD"
+    zone_boundary: "ZONE-PERIMETER-INTERIOR"
+
+  - from_camera: "CAM-003"
+    to_camera: "CAM-004"
+    min_travel_time_sec: 15.0
+    max_travel_time_sec: 60.0
+    typical_travel_time_sec: 28.0
+    direction: "EASTWARD"
+    zone_boundary: "ZONE-TOWER-APPROACH"
+
+  - from_camera: "CAM-003"
+    to_camera: "CAM-007"
+    min_travel_time_sec: 3.0
+    max_travel_time_sec: 25.0
+    typical_travel_time_sec: 10.0
+    direction: "SOUTH-WEST"
+    zone_boundary: "ZONE-CROSS-SPECTRAL-SOUTH"
+
+  # CAM-004 Corridor
+  - from_camera: "CAM-004"
+    to_camera: "CAM-003"
+    min_travel_time_sec: 15.0
+    max_travel_time_sec: 60.0
+    typical_travel_time_sec: 28.0
+    direction: "WESTWARD"
+    zone_boundary: "ZONE-TOWER-APPROACH"
+
+  - from_camera: "CAM-004"
+    to_camera: "CAM-008"
+    min_travel_time_sec: 12.0
+    max_travel_time_sec: 50.0
+    typical_travel_time_sec: 22.0
+    direction: "SOUTHWARD"
+    zone_boundary: "ZONE-TOWER-AIRBASE"
+
+  # CAM-005 (Thermal Branch)
+  - from_camera: "CAM-005"
+    to_camera: "CAM-001"
+    min_travel_time_sec: 2.0
+    max_travel_time_sec: 20.0
+    typical_travel_time_sec: 8.0
+    direction: "SOUTH-EAST"
+    zone_boundary: "ZONE-CROSS-SPECTRAL-NORTH"
+
+  - from_camera: "CAM-005"
+    to_camera: "CAM-006"
+    min_travel_time_sec: 8.0
+    max_travel_time_sec: 35.0
+    typical_travel_time_sec: 16.0
+    direction: "EASTWARD"
+    zone_boundary: "ZONE-THERMAL-CORRIDOR-1"
+
+  # CAM-006 (Thermal Branch)
+  - from_camera: "CAM-006"
+    to_camera: "CAM-005"
+    min_travel_time_sec: 8.0
+    max_travel_time_sec: 35.0
+    typical_travel_time_sec: 16.0
+    direction: "WESTWARD"
+    zone_boundary: "ZONE-THERMAL-CORRIDOR-1"
+
+  - from_camera: "CAM-006"
+    to_camera: "CAM-007"
+    min_travel_time_sec: 10.0
+    max_travel_time_sec: 40.0
+    typical_travel_time_sec: 18.0
+    direction: "SOUTHWARD"
+    zone_boundary: "ZONE-THERMAL-CORRIDOR-2"
+
+  # CAM-007 (Thermal Dual Branch)
+  - from_camera: "CAM-007"
+    to_camera: "CAM-006"
+    min_travel_time_sec: 10.0
+    max_travel_time_sec: 40.0
+    typical_travel_time_sec: 18.0
+    direction: "NORTHWARD"
+    zone_boundary: "ZONE-THERMAL-CORRIDOR-2"
+
+  - from_camera: "CAM-007"
+    to_camera: "CAM-003"
+    min_travel_time_sec: 3.0
+    max_travel_time_sec: 25.0
+    typical_travel_time_sec: 10.0
+    direction: "NORTH-EAST"
+    zone_boundary: "ZONE-CROSS-SPECTRAL-SOUTH"
+
+  - from_camera: "CAM-007"
+    to_camera: "CAM-008"
+    min_travel_time_sec: 10.0
+    max_travel_time_sec: 45.0
+    typical_travel_time_sec: 19.0
+    direction: "EASTWARD"
+    zone_boundary: "ZONE-SOUTH-AIRBASE"
+
+  # CAM-008 (Boundary Mast)
+  - from_camera: "CAM-008"
+    to_camera: "CAM-007"
+    min_travel_time_sec: 10.0
+    max_travel_time_sec: 45.0
+    typical_travel_time_sec: 19.0
+    direction: "WESTWARD"
+    zone_boundary: "ZONE-SOUTH-AIRBASE"
+
+  - from_camera: "CAM-008"
+    to_camera: "CAM-004"
+    min_travel_time_sec: 12.0
+    max_travel_time_sec: 50.0
+    typical_travel_time_sec: 22.0
+    direction: "NORTHWARD"
+    zone_boundary: "ZONE-TOWER-AIRBASE"

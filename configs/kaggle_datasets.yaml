@@ -1,0 +1,35 @@
+# ==============================================================================
+# IBVAP — Kaggle Dataset Configuration
+# Declares verified external datasets for surveillance model fine-tuning
+# ==============================================================================
+
+version: "1.0"
+default_destination: "data/external/kaggle/"
+
+datasets:
+  - id: "constantinwerner/human-detection-dataset"
+    name: "Human Detection in CCTV & Surveillance"
+    purpose: "person_detection"
+    enabled: true
+    format: "yolo"
+    destination: "data/external/kaggle/human_detection"
+    license: "CC0: Public Domain"
+    target_classes: ["person"]
+
+  - id: "prateekmaj21/cctv-surveillance-dataset"
+    name: "CCTV Surveillance Person and Vehicle Dataset"
+    purpose: "person_vehicle_detection"
+    enabled: true
+    format: "yolo"
+    destination: "data/training/raw/cctv_surveillance"
+    license: "Open Data Commons Open Database License (ODbL)"
+    target_classes: ["person", "vehicle"]
+
+  - id: "farzadnekouei/top-view-vehicle-detection-image-dataset"
+    name: "Top-View Perimeter Vehicle Detection"
+    purpose: "vehicle_detection"
+    enabled: false
+    format: "yolo"
+    destination: "data/training/raw/top_view_vehicles"
+    license: "Attribution 4.0 International (CC BY 4.0)"
+    target_classes: ["vehicle"]

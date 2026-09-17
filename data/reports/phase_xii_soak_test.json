@@ -1,0 +1,14 @@
+{
+  "total_cycles_completed": 100,
+  "failed_cycles": 0,
+  "total_duration_sec": 0.793,
+  "mean_cycle_time_ms": 7.921,
+  "min_cycle_time_ms": 7.307,
+  "max_cycle_time_ms": 12.338,
+  "initial_memory_mb": 55.73,
+  "final_memory_mb": 59.84,
+  "memory_growth_mb": 4.11,
+  "memory_growth_per_cycle_kb": 42.08,
+  "leak_detected": false,
+  "verdict": "PASSED_STABLE_ZERO_CORRUPTION"
+}

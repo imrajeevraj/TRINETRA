@@ -18,7 +18,9 @@ export const CameraDirectory: React.FC<CameraDirectoryProps> = ({
   const [filter, setFilter] = useState<CameraFilter>('ALL');
   const [search, setSearch] = useState('');
 
-  const filtered = cameras.filter(cam => {
+  const sortedCameras = [...cameras].sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
+
+  const filtered = sortedCameras.filter(cam => {
     if (search) {
       const q = search.toLowerCase();
       if (!cam.name.toLowerCase().includes(q) && !cam.id.toLowerCase().includes(q)) return false;

@@ -14,6 +14,8 @@ from backend.app.services.camera_manager import camera_manager
 from backend.app.services.ai_scheduler import ai_scheduler
 from backend.app.services.anpr.anpr_service import anpr_service
 from backend.app.services.system_health_service import SystemHealthService
+from backend.app.services.detection_service import detection_service
+from backend.app.services.border_rules_service import border_rules_service
 
 router = APIRouter(prefix="/system", tags=["system"])
 
@@ -21,7 +23,7 @@ router = APIRouter(prefix="/system", tags=["system"])
 @router.get("/health/detailed")
 async def get_system_health(_user=Depends(get_current_user)):
     """Get detailed system health metrics.
-    
+
     Returns:
         {
             "status": "HEALTHY" | "DEGRADED" | "CRITICAL",
@@ -64,9 +66,11 @@ async def get_system_health(_user=Depends(get_current_user)):
     finally:
         if db is not None:
             db.close()
-    
+
     return {
-        "status": "DEGRADED" if database_status != "HEALTHY" else SystemHealthService.get_status_string(health),
+        "status": "DEGRADED"
+        if database_status != "HEALTHY"
+        else SystemHealthService.get_status_string(health),
         "cpu": {
             "percent": round(health.cpu_percent, 1),
             "warning": health.cpu_percent > SystemHealthService.CPU_WARNING,
@@ -87,19 +91,117 @@ async def get_system_health(_user=Depends(get_current_user)):
         },
         "gpu": {
             "available": health.gpu_available,
-            "percent": round(health.gpu_percent, 1) if health.gpu_percent is not None else None,
-            "memory_percent": round(health.gpu_memory_percent, 1) if health.gpu_memory_percent is not None else None,
-            "memory_used_mb": round(health.gpu_memory_used_mb, 1) if health.gpu_memory_used_mb is not None else None,
-            "memory_total_mb": round(health.gpu_memory_total_mb, 1) if health.gpu_memory_total_mb is not None else None,
-        } if health.gpu_available else None,
+            "percent": round(health.gpu_percent, 1)
+            if health.gpu_percent is not None
+            else None,
+            "memory_percent": round(health.gpu_memory_percent, 1)
+            if health.gpu_memory_percent is not None
+            else None,
+            "memory_used_mb": round(health.gpu_memory_used_mb, 1)
+            if health.gpu_memory_used_mb is not None
+            else None,
+            "memory_total_mb": round(health.gpu_memory_total_mb, 1)
+            if health.gpu_memory_total_mb is not None
+            else None,
+        }
+        if health.gpu_available
+        else None,
         "database_status": database_status,
         "cameras": {
             "online": sum(1 for camera in cameras if camera.status == "ONLINE"),
             "total": len(cameras),
-            "inference_fps": round(sum(ai_scheduler.get_metrics(c.camera_id).get("detector_fps", 0.0) for c in cameras), 1),
-            "stale": [c.camera_id for c in cameras if (ai_scheduler.get_metrics(c.camera_id).get("age_seconds") or 0) > 5],
+            "inference_fps": round(
+                sum(
+                    ai_scheduler.get_metrics(c.camera_id).get("detector_fps", 0.0)
+                    for c in cameras
+                ),
+                1,
+            ),
+            "stale": [
+                c.camera_id
+                for c in cameras
+                if (ai_scheduler.get_metrics(c.camera_id).get("age_seconds") or 0) > 5
+            ],
+        },
+        "stage_profiling_ms": {
+            "avg_inference_ms": round(
+                sum(
+                    ai_scheduler.get_metrics(c.camera_id).get("inference_ms", 0.0)
+                    for c in cameras
+                )
+                / max(len(cameras), 1),
+                2,
+            ),
+            "avg_tracking_ms": round(
+                sum(
+                    ai_scheduler.get_metrics(c.camera_id).get("tracking_ms", 0.0)
+                    for c in cameras
+                )
+                / max(len(cameras), 1),
+                2,
+            ),
+            "avg_zone_ms": round(
+                sum(
+                    ai_scheduler.get_metrics(c.camera_id).get("zone_ms", 0.0)
+                    for c in cameras
+                )
+                / max(len(cameras), 1),
+                2,
+            ),
+            "avg_anpr_ms": round(
+                sum(
+                    ai_scheduler.get_metrics(c.camera_id).get("anpr_ms", 0.0)
+                    for c in cameras
+                )
+                / max(len(cameras), 1),
+                2,
+            ),
+            "avg_total_pipeline_ms": round(
+                sum(
+                    ai_scheduler.get_metrics(c.camera_id).get("total_pipeline_ms", 0.0)
+                    for c in cameras
+                )
+                / max(len(cameras), 1),
+                2,
+            ),
+            "per_camera": {
+                c.camera_id: ai_scheduler.get_metrics(c.camera_id) for c in cameras
+            },
         },
         "anpr": {"queue_depth": anpr_service.queue_depth()},
+        "ground_ai": {
+            "status": detection_service.ground_status,
+            "fps": detection_service.ground_fps,
+            "persons": detection_service.ground_counts["person"],
+            "vehicles": detection_service.ground_counts["vehicle"],
+        },
+        "air_ai": {
+            "status": detection_service.airborne_status,
+            "fps": detection_service.airborne_fps,
+            "drones": detection_service.airborne_counts["drone"],
+            "aircraft": detection_service.airborne_counts["aircraft"],
+        },
+        "security_item_ai": {
+            "status": detection_service.security_item_status,
+            "fps": detection_service.security_item_fps,
+            "firearms": detection_service.security_item_counts["firearm"],
+            "model": "YOLO11n",
+            "version": "v1.0",
+        },
+        "virtual_fence": {
+            "ground_zones": sum(
+                len(c.get("restricted_zones", []))
+                for c in border_rules_service.zones_config.values()
+            ),
+            "air_zones": sum(
+                len(c.get("airborne_zones", []))
+                for c in border_rules_service.zones_config.values()
+            ),
+            "tripwires": sum(
+                len(c.get("virtual_fences", [])) + len(c.get("air_fences", []))
+                for c in border_rules_service.zones_config.values()
+            ),
+        },
         "timestamp": datetime.utcnow().isoformat() + "Z",
     }
 
@@ -107,7 +209,7 @@ async def get_system_health(_user=Depends(get_current_user)):
 @router.get("/health/quick")
 async def get_quick_health(_user=Depends(get_current_user)):
     """Get quick system status (HEALTHY/DEGRADED/CRITICAL only).
-    
+
     Returns:
         {
             "status": "HEALTHY" | "DEGRADED" | "CRITICAL",

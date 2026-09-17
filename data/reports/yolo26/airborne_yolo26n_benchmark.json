@@ -1,0 +1,244 @@
+{
+  "experiment_id": "IBVAP-AIR-Y26-001",
+  "model": "models\\candidates\\yolo26\\airborne\\best.pt",
+  "benchmark": "airborne_v1_val",
+  "benchmark_images": 1046,
+  "imgsz": 640,
+  "primary_conf": 0.4,
+  "evaluated_at": "2026-09-02T17:41:56Z",
+  "official_map50": 0.7846,
+  "official_map50_95": 0.5529,
+  "primary_eval": {
+    "per_class": {
+      "drone": {
+        "TP": 521,
+        "FP": 84,
+        "FN": 170,
+        "GT": 691,
+        "precision": 0.8612,
+        "recall": 0.754,
+        "f1": 0.804
+      },
+      "aircraft": {
+        "TP": 87,
+        "FP": 12,
+        "FN": 15,
+        "GT": 102,
+        "precision": 0.8788,
+        "recall": 0.8529,
+        "f1": 0.8657
+      }
+    },
+    "fp_taxonomy": {
+      "0": {
+        "bird": 0,
+        "cloud": 0,
+        "infrastructure": 0,
+        "other": 84
+      },
+      "1": {
+        "bird": 0,
+        "cloud": 0,
+        "infrastructure": 0,
+        "other": 12
+      }
+    }
+  },
+  "confidence_sweep": {
+    "0.1": {
+      "per_class": {
+        "drone": {
+          "TP": 644,
+          "FP": 621,
+          "FN": 47,
+          "GT": 691,
+          "precision": 0.5091,
+          "recall": 0.932,
+          "f1": 0.6585
+        },
+        "aircraft": {
+          "TP": 96,
+          "FP": 56,
+          "FN": 6,
+          "GT": 102,
+          "precision": 0.6316,
+          "recall": 0.9412,
+          "f1": 0.7559
+        }
+      },
+      "fp_taxonomy": {
+        "0": {
+          "bird": 0,
+          "cloud": 0,
+          "infrastructure": 0,
+          "other": 621
+        },
+        "1": {
+          "bird": 0,
+          "cloud": 0,
+          "infrastructure": 0,
+          "other": 56
+        }
+      }
+    },
+    "0.2": {
+      "per_class": {
+        "drone": {
+          "TP": 624,
+          "FP": 350,
+          "FN": 67,
+          "GT": 691,
+          "precision": 0.6407,
+          "recall": 0.903,
+          "f1": 0.7495
+        },
+        "aircraft": {
+          "TP": 95,
+          "FP": 32,
+          "FN": 7,
+          "GT": 102,
+          "precision": 0.748,
+          "recall": 0.9314,
+          "f1": 0.8297
+        }
+      },
+      "fp_taxonomy": {
+        "0": {
+          "bird": 0,
+          "cloud": 0,
+          "infrastructure": 0,
+          "other": 350
+        },
+        "1": {
+          "bird": 0,
+          "cloud": 0,
+          "infrastructure": 0,
+          "other": 32
+        }
+      }
+    },
+    "0.3": {
+      "per_class": {
+        "drone": {
+          "TP": 589,
+          "FP": 194,
+          "FN": 102,
+          "GT": 691,
+          "precision": 0.7522,
+          "recall": 0.8524,
+          "f1": 0.7992
+        },
+        "aircraft": {
+          "TP": 91,
+          "FP": 19,
+          "FN": 11,
+          "GT": 102,
+          "precision": 0.8273,
+          "recall": 0.8922,
+          "f1": 0.8585
+        }
+      },
+      "fp_taxonomy": {
+        "0": {
+          "bird": 0,
+          "cloud": 0,
+          "infrastructure": 0,
+          "other": 194
+        },
+        "1": {
+          "bird": 0,
+          "cloud": 0,
+          "infrastructure": 0,
+          "other": 19
+        }
+      }
+    },
+    "0.4": {
+      "per_class": {
+        "drone": {
+          "TP": 521,
+          "FP": 84,
+          "FN": 170,
+          "GT": 691,
+          "precision": 0.8612,
+          "recall": 0.754,
+          "f1": 0.804
+        },
+        "aircraft": {
+          "TP": 87,
+          "FP": 12,
+          "FN": 15,
+          "GT": 102,
+          "precision": 0.8788,
+          "recall": 0.8529,
+          "f1": 0.8657
+        }
+      },
+      "fp_taxonomy": {
+        "0": {
+          "bird": 0,
+          "cloud": 0,
+          "infrastructure": 0,
+          "other": 84
+        },
+        "1": {
+          "bird": 0,
+          "cloud": 0,
+          "infrastructure": 0,
+          "other": 12
+        }
+      }
+    },
+    "0.5": {
+      "per_class": {
+        "drone": {
+          "TP": 428,
+          "FP": 43,
+          "FN": 263,
+          "GT": 691,
+          "precision": 0.9087,
+          "recall": 0.6194,
+          "f1": 0.7367
+        },
+        "aircraft": {
+          "TP": 82,
+          "FP": 10,
+          "FN": 20,
+          "GT": 102,
+          "precision": 0.8913,
+          "recall": 0.8039,
+          "f1": 0.8454
+        }
+      },
+      "fp_taxonomy": {
+        "0": {
+          "bird": 0,
+          "cloud": 0,
+          "infrastructure": 0,
+          "other": 43
+        },
+        "1": {
+          "bird": 0,
+          "cloud": 0,
+          "infrastructure": 0,
+          "other": 10
+        }
+      }
+    }
+  },
+  "latency": {
+    "p50_ms": 50.7,
+    "p95_ms": 149.027,
+    "p99_ms": 234.958,
+    "fps": 19.7,
+    "std_ms": 50.51
+  },
+  "yolo11_baseline": {
+    "map50": 0.784,
+    "p50_ms": 9.3,
+    "p95_ms": 13.5
+  },
+  "delta": {
+    "map50": 0.0006
+  }
+}

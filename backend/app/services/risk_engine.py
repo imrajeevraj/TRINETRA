@@ -9,8 +9,15 @@ logger = logging.getLogger("RiskEngine")
 
 class RiskResult:
     """Structured result from risk evaluation."""
-    def __init__(self, risk_score: int, severity: str, reasons: List[Dict[str, Any]],
-                 available: bool = True, error: Optional[str] = None):
+
+    def __init__(
+        self,
+        risk_score: int,
+        severity: str,
+        reasons: List[Dict[str, Any]],
+        available: bool = True,
+        error: Optional[str] = None,
+    ):
         self.risk_score = risk_score
         self.severity = severity
         self.reasons = reasons  # List of {"reason": str, "points": int}
@@ -45,7 +52,11 @@ class RiskEngine:
     Score is bounded 0–100. Severity is mapped from configurable thresholds.
     """
 
-    def __init__(self, config_path: str = "configs/risk.yaml", zones_config_path: str = "configs/zones.yaml"):
+    def __init__(
+        self,
+        config_path: str = "configs/risk.yaml",
+        zones_config_path: str = "configs/zones.yaml",
+    ):
         self.config_path = config_path
         self.zones_config_path = zones_config_path
         self.config: Dict = {}
@@ -59,15 +70,14 @@ class RiskEngine:
         """Load and validate risk configuration from YAML files."""
         self._config_valid = False
         self._config_errors = []
-        
+
         # Use config_manager for dynamic loading
         risk_config = config_manager.get_config("risk")
         self.config = risk_config.get("risk", {}) if risk_config else {}
-        
+
         # Try to load zones config
         zones_config = config_manager.get_config("zones")
         self.zones_config = zones_config if zones_config else {}
-
 
         # Validate configuration
         self._validate_config()
@@ -75,16 +85,20 @@ class RiskEngine:
     def _get_weights(self) -> Dict[str, float]:
         """Return weights from the validated configuration snapshot."""
         weights = self.config.get("weights", {})
-        
+
         # Provide defaults if not specified
-        return weights if weights else {
-            "person": 20,
-            "vehicle": 15,
-            "zone_entry": 30,
-            "fence": 25,
-            "night": 10,
-            "watchlist": 40,
-        }
+        return (
+            weights
+            if weights
+            else {
+                "person": 20,
+                "vehicle": 15,
+                "zone_entry": 30,
+                "fence": 25,
+                "night": 10,
+                "watchlist": 40,
+            }
+        )
 
     def _validate_config(self):
         """Validate all configuration values for correctness."""
@@ -114,10 +128,14 @@ class RiskEngine:
                 max_val = limits.get("max")
                 if min_val is None or max_val is None:
                     errors.append(f"Severity '{level}' missing min or max")
-                elif not isinstance(min_val, (int, float)) or not isinstance(max_val, (int, float)):
+                elif not isinstance(min_val, (int, float)) or not isinstance(
+                    max_val, (int, float)
+                ):
                     errors.append(f"Severity '{level}' min/max are not numbers")
                 elif min_val > max_val:
-                    errors.append(f"Severity '{level}' min ({min_val}) > max ({max_val})")
+                    errors.append(
+                        f"Severity '{level}' min ({min_val}) > max ({max_val})"
+                    )
                 elif min_val < 0 or max_val > 100:
                     errors.append(f"Severity '{level}' out of 0–100 range")
 
@@ -151,7 +169,9 @@ class RiskEngine:
                         if not (0 <= h <= 23 and 0 <= m <= 59):
                             errors.append(f"Night {label} '{val}' out of valid range")
                     except (ValueError, IndexError):
-                        errors.append(f"Night {label} '{val}' is not valid HH:MM format")
+                        errors.append(
+                            f"Night {label} '{val}' is not valid HH:MM format"
+                        )
 
         # Validate zone-specific weights
         zone_overrides = self.config.get("zones", {})
@@ -161,9 +181,13 @@ class RiskEngine:
                     rw = zone_cfg.get("risk_weight")
                     if rw is not None:
                         if not isinstance(rw, (int, float)):
-                            errors.append(f"Zone '{zone_id}' risk_weight is not a number: {rw}")
+                            errors.append(
+                                f"Zone '{zone_id}' risk_weight is not a number: {rw}"
+                            )
                         elif rw < 0:
-                            errors.append(f"Zone '{zone_id}' risk_weight is negative: {rw}")
+                            errors.append(
+                                f"Zone '{zone_id}' risk_weight is negative: {rw}"
+                            )
 
         if errors:
             for err in errors:
@@ -189,8 +213,8 @@ class RiskEngine:
         end_str = night_config.get("end", "05:00")
 
         try:
-            start_hour, start_minute = map(int, start_str.split(':'))
-            end_hour, end_minute = map(int, end_str.split(':'))
+            start_hour, start_minute = map(int, start_str.split(":"))
+            end_hour, end_minute = map(int, end_str.split(":"))
 
             current_minute_of_day = current_time.hour * 60 + current_time.minute
             start_minute_of_day = start_hour * 60 + start_minute
@@ -201,7 +225,10 @@ class RiskEngine:
                 return start_minute_of_day <= current_minute_of_day <= end_minute_of_day
             else:
                 # Midnight-crossing interval (e.g., 22:00–05:00)
-                return current_minute_of_day >= start_minute_of_day or current_minute_of_day <= end_minute_of_day
+                return (
+                    current_minute_of_day >= start_minute_of_day
+                    or current_minute_of_day <= end_minute_of_day
+                )
         except Exception as e:
             logger.error("Error parsing night time config: %s", e)
             return False
@@ -251,11 +278,17 @@ class RiskEngine:
 
         if not self.config or not self._config_valid:
             # Configuration is missing or invalid — fail safely
-            error_msg = "; ".join(self._config_errors) if self._config_errors else "No risk configuration loaded"
+            error_msg = (
+                "; ".join(self._config_errors)
+                if self._config_errors
+                else "No risk configuration loaded"
+            )
             logger.warning("Risk assessment unavailable: %s", error_msg)
             event_dict["risk_score"] = 0
             event_dict["severity"] = "UNAVAILABLE"
-            event_dict["risk_reasons"] = json.dumps(["Risk assessment unavailable: configuration error"])
+            event_dict["risk_reasons"] = json.dumps(
+                ["Risk assessment unavailable: configuration error"]
+            )
             return event_dict
 
         # Get current weights (may be hot-reloaded from file)
@@ -288,7 +321,12 @@ class RiskEngine:
         if event_type == "ZONE_ENTRY":
             if zone_override is not None:
                 total_score += zone_override
-                reasons.append({"reason": "Restricted Zone (zone-specific)", "points": zone_override})
+                reasons.append(
+                    {
+                        "reason": "Restricted Zone (zone-specific)",
+                        "points": zone_override,
+                    }
+                )
             else:
                 score = weights.get("restricted_zone_entry", 0)
                 if score > 0:
@@ -309,12 +347,19 @@ class RiskEngine:
         elif event_type == "VIRTUAL_FENCE_CROSSING":
             if zone_override is not None:
                 total_score += zone_override
-                reasons.append({"reason": "Virtual Fence Crossing (zone-specific)", "points": zone_override})
+                reasons.append(
+                    {
+                        "reason": "Virtual Fence Crossing (zone-specific)",
+                        "points": zone_override,
+                    }
+                )
             else:
                 score = weights.get("virtual_fence_crossing", 0)
                 if score > 0:
                     total_score += score
-                    reasons.append({"reason": "Virtual Fence Crossing", "points": score})
+                    reasons.append(
+                        {"reason": "Virtual Fence Crossing", "points": score}
+                    )
         elif event_type == "DRONE_DETECTED":
             score = weights.get("drone_detected", 0)
             if score > 0:
@@ -329,12 +374,16 @@ class RiskEngine:
             score = weights.get("contraband_detected", 0)
             if score > 0:
                 total_score += score
-                reasons.append({"reason": "Contraband/Suspicious Item Detected", "points": score})
+                reasons.append(
+                    {"reason": "Contraband/Suspicious Item Detected", "points": score}
+                )
         elif event_type == "CRAWLING_DETECTED":
             score = weights.get("crawling_detected", 0)
             if score > 0:
                 total_score += score
-                reasons.append({"reason": "Crawling Behavior Detected", "points": score})
+                reasons.append(
+                    {"reason": "Crawling Behavior Detected", "points": score}
+                )
         elif event_type == "LOITERING_DETECTED":
             score = weights.get("loitering_detected", 0)
             if score > 0:
@@ -344,12 +393,16 @@ class RiskEngine:
             score = weights.get("platoon_detected", 0)
             if score > 0:
                 total_score += score
-                reasons.append({"reason": "Platoon/Army Grouping Detected", "points": score})
+                reasons.append(
+                    {"reason": "Platoon/Army Grouping Detected", "points": score}
+                )
         elif event_type == "UNKNOWN_FACE":
             score = weights.get("unknown_face", 0)
             if score > 0:
                 total_score += score
-                reasons.append({"reason": "Unknown/Unverified Face Detected", "points": score})
+                reasons.append(
+                    {"reason": "Unknown/Unverified Face Detected", "points": score}
+                )
 
         # 3. Direction Weight
         direction = event_dict.get("direction")
@@ -375,7 +428,7 @@ class RiskEngine:
             if score > 0:
                 total_score += score
                 reasons.append({"reason": "Night Time", "points": score})
-                
+
         # 5. Watchlist Context
         if event_dict.get("watchlist_status") == "WATCHLIST MATCH":
             score = weights.get("watchlist_match", 0)

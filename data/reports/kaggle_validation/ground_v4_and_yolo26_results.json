@@ -1,0 +1,151 @@
+{
+  "ground_v4_candidates": {
+    "exp001": {
+      "metrics": {
+        "person": {
+          "Precision": 0.912,
+          "Recall": 0.12652608213096558,
+          "F1": 0.22222222222222218,
+          "mAP50": 0.11539178690344061,
+          "TP": 114,
+          "FP": 11,
+          "FN": 787
+        },
+        "vehicle": {
+          "Precision": 1.0,
+          "Recall": 0.6756756756756757,
+          "F1": 0.8064516129032258,
+          "mAP50": 0.6756756756756757,
+          "TP": 75,
+          "FP": 0,
+          "FN": 36
+        },
+        "performance": {
+          "P50_latency_ms": 19.150500003888737,
+          "P95_latency_ms": 22.745485007180832,
+          "AI_FPS": 52.217957745068695
+        }
+      },
+      "weights": "D:\\SIH 2026\\IBVAP\\data\\training\\runs\\ibvap_ground_v4_exp001\\weights\\best.pt",
+      "sha256": "E25BA2D7D8A3288CB5C2A4F6A8F61967C54B8405A78CC4F9034467226CC17B12"
+    },
+    "exp002": {
+      "metrics": {
+        "person": {
+          "Precision": 0.9642857142857143,
+          "Recall": 0.05993340732519423,
+          "F1": 0.11285266457680251,
+          "mAP50": 0.05779292849215158,
+          "TP": 54,
+          "FP": 2,
+          "FN": 847
+        },
+        "vehicle": {
+          "Precision": 1.0,
+          "Recall": 0.6396396396396397,
+          "F1": 0.7802197802197802,
+          "mAP50": 0.6396396396396397,
+          "TP": 71,
+          "FP": 0,
+          "FN": 40
+        },
+        "performance": {
+          "P50_latency_ms": 20.915100001730025,
+          "P95_latency_ms": 28.245849999075265,
+          "AI_FPS": 47.812346100056104
+        }
+      },
+      "weights": "D:\\SIH 2026\\IBVAP\\data\\training\\runs\\ibvap_ground_v4_exp002\\weights\\best.pt",
+      "sha256": "F533DB568EE0D0705B7118A21ADE8F290D8F34D7681223EEFA347A2DEFA89899"
+    },
+    "exp003": {
+      "metrics": {
+        "person": {
+          "Precision": 0.9642857142857143,
+          "Recall": 0.05993340732519423,
+          "F1": 0.11285266457680251,
+          "mAP50": 0.05779292849215158,
+          "TP": 54,
+          "FP": 2,
+          "FN": 847
+        },
+        "vehicle": {
+          "Precision": 0.9868421052631579,
+          "Recall": 0.6756756756756757,
+          "F1": 0.8021390374331551,
+          "mAP50": 0.6667852062588904,
+          "TP": 75,
+          "FP": 1,
+          "FN": 36
+        },
+        "performance": {
+          "P50_latency_ms": 22.144599992316216,
+          "P95_latency_ms": 31.16490999163943,
+          "AI_FPS": 45.157735987418256
+        }
+      },
+      "weights": "D:\\SIH 2026\\IBVAP\\data\\training\\runs\\ibvap_ground_v4_exp003\\weights\\best.pt",
+      "sha256": "B9A9609231B7D151B3C31155F7494813887C64E3E720B17D9D1CDE576731917C"
+    }
+  },
+  "yolo26_evaluation": {
+    "ground": {
+      "metrics": {
+        "person": {
+          "Precision": 0.6944444444444444,
+          "Recall": 0.6104328523862376,
+          "F1": 0.6497341996455995,
+          "mAP50": 0.4239117030459983,
+          "TP": 550,
+          "FP": 242,
+          "FN": 351
+        },
+        "vehicle": {
+          "Precision": 0.912621359223301,
+          "Recall": 0.8468468468468469,
+          "F1": 0.8785046728971964,
+          "mAP50": 0.772850520423336,
+          "TP": 94,
+          "FP": 9,
+          "FN": 17
+        },
+        "performance": {
+          "P50_latency_ms": 22.65469999110792,
+          "P95_latency_ms": 25.554525002371513,
+          "AI_FPS": 44.14095090168949
+        }
+      },
+      "weights": "D:\\SIH 2026\\IBVAP\\models\\candidates\\yolo26\\ground\\best.pt",
+      "sha256": "83EA58623A735842BBA54403D8AF093F37730CC9B6BBA28AF52E3BE0E028C03A"
+    },
+    "airborne": {
+      "metrics": {
+        "drone": {
+          "Precision": 0.0,
+          "Recall": 0.0,
+          "F1": 0.0,
+          "mAP50": 0.0,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0
+        },
+        "aircraft": {
+          "Precision": 0.7966101694915254,
+          "Recall": 0.9215686274509803,
+          "F1": 0.8545454545454545,
+          "mAP50": 0.7341309405117978,
+          "TP": 94,
+          "FP": 24,
+          "FN": 8
+        },
+        "performance": {
+          "P50_latency_ms": 23.160600001574494,
+          "P95_latency_ms": 95.55519000132335,
+          "AI_FPS": 43.17677434660667
+        }
+      },
+      "weights": "D:\\SIH 2026\\IBVAP\\models\\candidates\\yolo26\\airborne\\best.pt",
+      "sha256": "03D5E7621E2BA81C33F8D882B76A735D9A91E11198D4F03D555CBA2DDBF14985"
+    }
+  }
+}

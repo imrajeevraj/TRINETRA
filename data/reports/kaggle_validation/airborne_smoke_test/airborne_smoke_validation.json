@@ -1,0 +1,63 @@
+{
+  "step_a1_checkpoint": "D:\\SIH 2026\\IBVAP\\data\\training\\runs\\ibvap_airborne_v2_exp002\\weights\\best.pt",
+  "step_a2_sha256": "5229632C3D7A12A279A45032D558FB4712BF9DB43667828D30367D2354106384",
+  "step_a3_registry_match": true,
+  "step_a5_classes": {
+    "0": "drone",
+    "1": "aircraft"
+  },
+  "step_a6_smoke_tests": {
+    "drone": {
+      "image": "aircraft_a--105-_jpg.rf.3a95e60c7134180b39a850faf1ed2772.jpg",
+      "detections": 1,
+      "classes": [
+        "aircraft"
+      ]
+    },
+    "aircraft": {
+      "image": "aircraft_a--105-_jpg.rf.3a95e60c7134180b39a850faf1ed2772.jpg",
+      "detections": 1,
+      "classes": [
+        "aircraft"
+      ]
+    },
+    "empty_sky": {
+      "image": "smoke_empty_sky.jpg",
+      "detections": 0,
+      "classes": []
+    }
+  },
+  "step_a8_eval_metrics": {
+    "drone": {
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1": 0.0,
+      "mAP50": 0.0,
+      "TP": 0,
+      "FP": 1,
+      "FN": 0
+    },
+    "aircraft": {
+      "Precision": 0.8347107438016529,
+      "Recall": 0.9901960784313726,
+      "F1": 0.905829596412556,
+      "mAP50": 0.8265273051369308,
+      "TP": 101,
+      "FP": 20,
+      "FN": 1
+    },
+    "performance": {
+      "P50_latency_ms": 11.97939999110531,
+      "P95_latency_ms": 50.90111999888904,
+      "AI_FPS": 83.47663495187561
+    }
+  },
+  "step_a9_hardware": {
+    "device": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "fps": 96.14892160272832,
+    "p50_latency_ms": 9.636199996748473,
+    "p95_latency_ms": 14.561329993011881,
+    "vram_allocated_mb": 51.78759765625,
+    "vram_reserved_mb": 98.0
+  }
+}

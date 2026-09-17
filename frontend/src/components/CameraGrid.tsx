@@ -15,8 +15,10 @@ export const CameraGrid: React.FC<CameraGridProps> = ({
   onSelectCamera,
   onFocusCamera,
 }) => {
-  const [refreshKeys] = useState<Record<string, number>>({});
+  const [retryCounts, setRetryCounts] = useState<Record<string, number>>({});
   const apiBase = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+  const token = localStorage.getItem('trinetra_token') || localStorage.getItem('ibvap_token') || sessionStorage.getItem('trinetra_token') || sessionStorage.getItem('ibvap_token') || '';
+  const tokenParam = token ? `&token=${encodeURIComponent(token)}` : '';
 
   if (cameras.length === 0) {
     return (
@@ -28,12 +30,14 @@ export const CameraGrid: React.FC<CameraGridProps> = ({
     );
   }
 
+  const sortedCameras = [...cameras].sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
+
   return (
     <div className="camera-grid">
-      {cameras.map(camera => {
+      {sortedCameras.map(camera => {
         const isSelected = selectedCamera?.id === camera.id;
-        const key = refreshKeys[camera.id] || 0;
-        const streamUrl = `${apiBase}/api/cameras/${camera.id}/stream?k=${key}`;
+        const retry = retryCounts[camera.id] || 0;
+        const streamUrl = `${apiBase}/api/cameras/${camera.id}/stream?k=${retry}${tokenParam}`;
         const personCount = new Set(camera.detections?.filter(d => d.class === 'person' && d.track_id).map(d => d.track_id)).size;
         const vehicleCount = new Set(camera.detections?.filter(d => d.class !== 'person' && d.track_id).map(d => d.track_id)).size;
         const statusClass = camera.status.toLowerCase();
@@ -63,7 +67,17 @@ export const CameraGrid: React.FC<CameraGridProps> = ({
             {/* Video */}
             <div className="grid-tile-viewer">
               {camera.status === 'ONLINE' || camera.status === 'DEGRADED' ? (
-                <img src={streamUrl} alt={camera.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
+                <img
+                  src={streamUrl}
+                  alt={camera.name}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  loading="eager"
+                  onError={() => {
+                    setTimeout(() => {
+                      setRetryCounts(prev => ({ ...prev, [camera.id]: (prev[camera.id] || 0) + 1 }));
+                    }, 2500);
+                  }}
+                />
               ) : (
                 <div className="grid-offline">
                   <VideoOff size={28} style={{ color: 'var(--status-offline)', opacity: 0.5 }} />

@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-09-02T18:05:03Z",
+  "gates": {
+    "ground_accuracy": {
+      "domain": "Ground",
+      "metric": "mAP50",
+      "baseline": 0.6599,
+      "candidate": 0.6242,
+      "delta": -0.0357,
+      "passed": false,
+      "reason": "mAP50 degraded by -0.0357"
+    },
+    "airborne_gate": {
+      "domain": "Airborne",
+      "metric": "mAP50 & Latency",
+      "baseline": "0.784 (P50: 9.3ms)",
+      "candidate": "0.7846 (P50: 50.7ms)",
+      "delta": "+0.0006 mAP, +41.4ms",
+      "passed": false,
+      "reason": "Marginal mAP (+0.0006) but severe latency regression (50.7ms > 25ms threshold)"
+    },
+    "security_item_accuracy": {
+      "domain": "Security Item",
+      "metric": "mAP50",
+      "baseline": 0.8579,
+      "candidate": 0.3054,
+      "delta": -0.5525,
+      "passed": false,
+      "reason": "mAP50 degraded by -0.5525"
+    },
+    "pipeline_performance": {
+      "domain": "Integrated Pipeline",
+      "metric": "FPS (1-cam)",
+      "threshold": ">= 28.0 FPS, P50 <= 35.0 ms",
+      "achieved_fps": 4.28,
+      "achieved_p50_ms": 233.47,
+      "passed": false,
+      "reason": "4.28 FPS below 28.0 FPS production gate"
+    },
+    "security_limitation_preserved": {
+      "domain": "Security Item Governance",
+      "metric": "Limitation Notice Integrity",
+      "passed": true,
+      "reason": "Contract verified: 'REAL-FIREARM-VIDEO VALIDATION NOT AVAILABLE' preserved across all metadata"
+    }
+  },
+  "promoted": [],
+  "rejected": [
+    "ground",
+    "airborne",
+    "security_item"
+  ]
+}

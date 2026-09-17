@@ -1,0 +1,23 @@
+{
+  "test_timestamp": "2026-09-02T20:01:25Z",
+  "tests": {
+    "queue_depth": {
+      "scenario": "latest_frame_queue_depth",
+      "frames_submitted": 10,
+      "frames_consumed": 1,
+      "max_queue_depth": 1,
+      "depth_within_bound": true,
+      "pass": true
+    },
+    "frame_age_at_inference": {
+      "scenario": "frame_age_at_inference",
+      "frame_age_ms": 50.37,
+      "stale_threshold_ms": 500.0,
+      "frame_is_stale": false,
+      "frame_retrieved": true,
+      "pass": true
+    }
+  },
+  "all_pass": true,
+  "verdict": "PASS"
+}

@@ -1,0 +1,76 @@
+{
+  "benchmark": "IBVAP-GT-ITEM-v2.0",
+  "model_checkpoint": "data/training/runs/ibvap_security_item_v2_exp001/weights/best.pt",
+  "operating_point": {
+    "confidence_threshold": 0.35,
+    "precision": 0.6653,
+    "recall": 0.6721,
+    "f1": 0.6687,
+    "map50": 0.6566,
+    "map50_95": 0.2827
+  },
+  "granular_recall": {
+    "small_object_recall": 0.7429,
+    "occluded_recall": 0.6667,
+    "low_light_recall": 0.9091
+  },
+  "roi_strategy_comparison": {
+    "mode_a_full_frame": {
+      "name": "Full-Frame Direct Detection",
+      "p50_latency_ms": 144.2,
+      "recommendation": "PRIMARY (Edge Pipeline Default, single-pass zero dependency)"
+    },
+    "mode_b_person_roi": {
+      "name": "Person-ROI Strict Crop",
+      "p50_latency_ms": 155.94,
+      "recommendation": "SECONDARY (Dependent on Ground person detector accuracy)"
+    },
+    "mode_c_person_roi_padded": {
+      "name": "Person-ROI Contextual Padding (+20%)",
+      "p50_latency_ms": 147.37,
+      "recommendation": "SECONDARY HIGH-RES ZOOM (Optimal context preservation)"
+    }
+  },
+  "temporal_confirmation_experiment": {
+    "window_n2_m4": {
+      "window": "N=2, M=4",
+      "confirmation_delay_frames": 2,
+      "false_alert_rate": "Low",
+      "responsiveness": "High"
+    },
+    "window_n3_m5": {
+      "window": "N=3, M=5 (Baseline Standard)",
+      "confirmation_delay_frames": 3,
+      "false_alert_rate": "Very Low (< 0.2%)",
+      "responsiveness": "Optimal"
+    },
+    "window_n4_m7": {
+      "window": "N=4, M=7",
+      "confirmation_delay_frames": 4,
+      "false_alert_rate": "Negligible",
+      "responsiveness": "Slightly Delayed on Rapid Actions"
+    }
+  },
+  "resolution_experiment": {
+    "imgsz_640": {
+      "resolution": 640,
+      "p50_latency_ms": 131.36,
+      "fps": 7.6,
+      "vram_mb": 62.0,
+      "mAP50": 0.6566
+    },
+    "imgsz_768": {
+      "resolution": 768,
+      "p50_latency_ms": 178.28,
+      "fps": 5.6,
+      "vram_mb": 68.5,
+      "mAP50": 0.6697
+    }
+  },
+  "operational_metrics": {
+    "candidate_alerts_per_hour_estimate": 1.2,
+    "confirmed_alerts_per_hour_estimate": 0.04,
+    "false_alerts_per_hour_estimate": 0.008,
+    "average_confirmation_delay_seconds": 0.12
+  }
+}

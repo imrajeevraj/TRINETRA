@@ -1,0 +1,38 @@
+{
+  "100_events": {
+    "burst_size": 100,
+    "total_duration_sec": 0.024084000004222617,
+    "throughput_events_per_sec": 4152.134196249258,
+    "mean_processing_latency_ms": 0.24023299949476495,
+    "p50_latency_ms": 0.27254999440629035,
+    "p95_latency_ms": 0.3027500024472829,
+    "p99_latency_ms": 0.3511900096782484,
+    "event_loss_rate": 0.0,
+    "incident_explosion_prevented": true,
+    "active_incidents": 10
+  },
+  "500_events": {
+    "burst_size": 500,
+    "total_duration_sec": 0.203090399998473,
+    "throughput_events_per_sec": 2461.9578276657066,
+    "mean_processing_latency_ms": 0.4054470006376505,
+    "p50_latency_ms": 0.3164999943692237,
+    "p95_latency_ms": 0.8176049974281341,
+    "p99_latency_ms": 1.0368109900446139,
+    "event_loss_rate": 0.0,
+    "incident_explosion_prevented": true,
+    "active_incidents": 10
+  },
+  "1000_events": {
+    "burst_size": 1000,
+    "total_duration_sec": 0.5186333000019658,
+    "throughput_events_per_sec": 1928.1446062106108,
+    "mean_processing_latency_ms": 0.5176991001499118,
+    "p50_latency_ms": 0.48740000056568533,
+    "p95_latency_ms": 0.8913500038033815,
+    "p99_latency_ms": 1.0967660123424139,
+    "event_loss_rate": 0.0,
+    "incident_explosion_prevented": true,
+    "active_incidents": 10
+  }
+}

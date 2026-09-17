@@ -1,0 +1,14 @@
+{
+  "iterations": 100,
+  "mean_latency_ms": 22.847647000016877,
+  "p50_latency_ms": 21.544650000578258,
+  "p95_latency_ms": 27.35425499340635,
+  "p99_latency_ms": 32.62750700465433,
+  "memory_drift_mb": 0.48,
+  "crashes": 0,
+  "dropped_frames": 0,
+  "deadlocks": 0,
+  "queue_runaway": false,
+  "ptz_command_storm": false,
+  "stability_verdict": "PASS_CERTIFIED"
+}

@@ -1,0 +1,107 @@
+{
+  "exp001": {
+    "experiment": {
+      "exp_id": "ibvap_security_item_v3_exp001",
+      "best_weights": "D:\\SIH 2026\\IBVAP\\data\\training\\runs\\ibvap_security_item_v3_exp001\\weights\\best.pt",
+      "sha256": "9A4D3C61223B897DF91B3EA2C689FB8824648C920029BB70216D711AA7A279AB",
+      "duration_s": 237.48842549324036,
+      "imgsz": 640,
+      "epochs": 12
+    },
+    "benchmark_metrics": {
+      "firearm": {
+        "Precision": 0.8235294117647058,
+        "Recall": 0.45901639344262296,
+        "F1": 0.5894736842105264,
+        "mAP50": 0.5804536687541615,
+        "mAP50_95": 0.24488272728577512,
+        "TP": 28,
+        "FP": 6,
+        "FN": 33,
+        "total_gts": 61
+      },
+      "performance": {
+        "P50_latency_ms": 10.35339999361895,
+        "P95_latency_ms": 48.639219999313326,
+        "AI_FPS": 96.5866286066726
+      }
+    }
+  },
+  "exp002": {
+    "experiment": {
+      "exp_id": "ibvap_security_item_v3_exp002",
+      "best_weights": "D:\\SIH 2026\\IBVAP\\data\\training\\runs\\ibvap_security_item_v3_exp002\\weights\\best.pt",
+      "sha256": "067A2991363EF1DA7776AFD8830356F35E977BC29B0F7400A5DC0B9A83FF7FFE",
+      "duration_s": 413.8636620044708,
+      "imgsz": 768,
+      "epochs": 15
+    },
+    "benchmark_metrics": {
+      "firearm": {
+        "Precision": 0.7647058823529411,
+        "Recall": 0.639344262295082,
+        "F1": 0.6964285714285714,
+        "mAP50": 0.5670696736925939,
+        "mAP50_95": 0.250448533591483,
+        "TP": 39,
+        "FP": 12,
+        "FN": 22,
+        "total_gts": 61
+      },
+      "performance": {
+        "P50_latency_ms": 12.029499994241633,
+        "P95_latency_ms": 50.90158000239164,
+        "AI_FPS": 83.12897464389103
+      }
+    }
+  },
+  "exp003": {
+    "experiment": {
+      "exp_id": "ibvap_security_item_v3_exp003",
+      "best_weights": "D:\\SIH 2026\\IBVAP\\data\\training\\runs\\ibvap_security_item_v3_exp003\\weights\\best.pt",
+      "sha256": "447AD2B6ED7E4DD1F41DAF23940CF899FF64E38FAA6F25921E468C5C8DC118CB",
+      "duration_s": 285.8167223930359,
+      "imgsz": 640,
+      "epochs": 15
+    },
+    "benchmark_metrics": {
+      "firearm": {
+        "Precision": 0.75,
+        "Recall": 0.5409836065573771,
+        "F1": 0.6285714285714287,
+        "mAP50": 0.5192967829272177,
+        "mAP50_95": 0.22101815648505946,
+        "TP": 33,
+        "FP": 11,
+        "FN": 28,
+        "total_gts": 61
+      },
+      "performance": {
+        "P50_latency_ms": 10.287099998095073,
+        "P95_latency_ms": 15.633920000982469,
+        "AI_FPS": 97.20912601074903
+      }
+    }
+  },
+  "current_production": {
+    "model": "models/production/security_item/ibvap_security_item_v2_1_production.pt",
+    "benchmark_metrics": {
+      "firearm": {
+        "Precision": 0.8360655737704918,
+        "Recall": 0.8360655737704918,
+        "F1": 0.8360655737704918,
+        "mAP50": 0.857883357011066,
+        "mAP50_95": 0.34468295434028023,
+        "TP": 51,
+        "FP": 10,
+        "FN": 10,
+        "total_gts": 61
+      },
+      "performance": {
+        "P50_latency_ms": 9.50610000290908,
+        "P95_latency_ms": 14.296060000197027,
+        "AI_FPS": 105.19561120690689
+      }
+    }
+  }
+}

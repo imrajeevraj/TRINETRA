@@ -1,0 +1,32 @@
+{
+  "total_gt": 83,
+  "total_tp": 49,
+  "total_fn": 34,
+  "total_fp": 40,
+  "fn_categories": {
+    "small firearm": 1,
+    "distant firearm": 0,
+    "occluded firearm": 25,
+    "firearm in hand": 0,
+    "poor lighting": 5,
+    "motion blur": 0,
+    "image compression": 0,
+    "unusual orientation": 3,
+    "background confusion": 0,
+    "annotation ambiguity": 0,
+    "unknown": 0
+  },
+  "fp_categories": {
+    "phone": 0,
+    "radio": 0,
+    "flashlight": 0,
+    "tool": 0,
+    "object held in hand": 0,
+    "belt": 0,
+    "bag": 0,
+    "dark object": 0,
+    "firearm-like object": 0,
+    "background": 40,
+    "unknown": 0
+  }
+}

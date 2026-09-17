@@ -1,0 +1,38 @@
+{
+  "100_messages": {
+    "message_count": 100,
+    "total_duration_sec": 0.0018,
+    "throughput_messages_per_sec": 54484.0,
+    "mean_latency_ms": 0.018,
+    "p50_latency_ms": 0.019,
+    "p95_latency_ms": 0.022,
+    "message_loss_rate": 0.0
+  },
+  "500_messages": {
+    "message_count": 500,
+    "total_duration_sec": 0.0086,
+    "throughput_messages_per_sec": 58472.0,
+    "mean_latency_ms": 0.017,
+    "p50_latency_ms": 0.018,
+    "p95_latency_ms": 0.02,
+    "message_loss_rate": 0.0
+  },
+  "1000_messages": {
+    "message_count": 1000,
+    "total_duration_sec": 0.0132,
+    "throughput_messages_per_sec": 75801.8,
+    "mean_latency_ms": 0.013,
+    "p50_latency_ms": 0.012,
+    "p95_latency_ms": 0.019,
+    "message_loss_rate": 0.0
+  },
+  "5000_messages": {
+    "message_count": 5000,
+    "total_duration_sec": 0.0782,
+    "throughput_messages_per_sec": 63911.0,
+    "mean_latency_ms": 0.015,
+    "p50_latency_ms": 0.013,
+    "p95_latency_ms": 0.022,
+    "message_loss_rate": 0.0
+  }
+}

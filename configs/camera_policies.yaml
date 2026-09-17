@@ -1,0 +1,80 @@
+# IBVAP — Master Camera Policy Configuration (Phase VII)
+# Controls per-camera PTZ capability, Adaptive ROI escalation, Threat Verifier profiles, and alert thresholds.
+
+default_policy:
+  ptz:
+    enabled: true
+    controller_type: "MOCK"            # "MOCK", "ONVIF", "DISABLED"
+    auto_cue: true
+    min_cue_priority: "HIGH"           # "HIGH" or "CRITICAL"
+    cooldown_seconds: 4.0
+    max_slew_speed: 60.0               # deg/sec
+    max_zoom_level: 15.0               # 1.0x to 30.0x
+    return_to_home: true
+    target_timeout_seconds: 6.0
+  roi:
+    enabled: true
+    max_escalation_level: 3            # 0=FullFrame, 1=TrackROI, 2=DynamicCrop, 3=SAHI
+    sahi_enabled_on_ptz_stable: true
+  threat_verifier:
+    profile: "PROFILE_A"               # PROFILE_A (Perimeter Raw), PROFILE_B (Logistics Tool-Filter), PROFILE_C (Investigation)
+  alert_policy:
+    min_confidence_tier: "LOW"
+    human_review_required: false
+
+cameras:
+  CAM-001:
+    name: "Perimeter North Sentry PTZ"
+    zone_id: "ZONE-PERIMETER-NORTH"
+    ptz:
+      enabled: true
+      controller_type: "MOCK"
+      auto_cue: true
+      min_cue_priority: "HIGH"
+      max_zoom_level: 15.0
+    roi:
+      enabled: true
+      max_escalation_level: 3
+      sahi_enabled_on_ptz_stable: true
+    threat_verifier:
+      profile: "PROFILE_A"             # Maximum recall, raw detector
+
+  CAM-002:
+    name: "Logistics & Cargo Gate"
+    zone_id: "ZONE-CARGO-BAY"
+    ptz:
+      enabled: false                   # Fixed camera
+      controller_type: "DISABLED"
+      auto_cue: false
+    roi:
+      enabled: true
+      max_escalation_level: 2          # Up to dynamic crop
+      sahi_enabled_on_ptz_stable: false
+    threat_verifier:
+      profile: "PROFILE_B"             # Suppresses drills & handheld power tools
+
+  CAM-003:
+    name: "Perimeter South Border Sentry"
+    zone_id: "ZONE-PERIMETER-SOUTH"
+    ptz:
+      enabled: true
+      controller_type: "MOCK"
+      auto_cue: true
+      min_cue_priority: "HIGH"
+      max_zoom_level: 20.0
+    roi:
+      enabled: true
+      max_escalation_level: 3
+    threat_verifier:
+      profile: "PROFILE_A"
+
+  CAM-004:
+    name: "Radar & Airspace Tower"
+    zone_id: "ZONE-AIRSPACE"
+    ptz:
+      enabled: false
+      controller_type: "DISABLED"
+    roi:
+      enabled: false                   # Airborne runs full frame at 640px
+    threat_verifier:
+      profile: "PROFILE_A"

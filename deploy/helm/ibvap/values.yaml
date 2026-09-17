@@ -1,0 +1,83 @@
+# ==============================================================================
+# IBVAP — Helm Chart Values (I-04 Production Kubernetes Deployment)
+# ==============================================================================
+
+global:
+  environment: production
+
+backend:
+  replicaCount: 2
+  image:
+    repository: ibvap-backend
+    pullPolicy: IfNotPresent
+    tag: "2.0.0"
+  service:
+    type: ClusterIP
+    port: 8000
+  resources:
+    limits:
+      cpu: "4000m"
+      memory: "8Gi"
+      nvidia.com/gpu: 1
+    requests:
+      cpu: "1000m"
+      memory: "2Gi"
+  env:
+    ENV: "production"
+    ACCESS_TOKEN_EXPIRE_MINUTES: 30
+    CORS_ORIGINS: "https://ibvap.internal,https://command.ssb.gov.in"
+
+frontend:
+  replicaCount: 2
+  image:
+    repository: ibvap-frontend
+    pullPolicy: IfNotPresent
+    tag: "2.0.0"
+  service:
+    type: ClusterIP
+    port: 80
+  resources:
+    limits:
+      cpu: "500m"
+      memory: "256Mi"
+    requests:
+      cpu: "100m"
+      memory: "64Mi"
+
+database:
+  host: "ibvap-postgres"
+  port: 5432
+  name: "ibvap_db"
+  user: "ibvap_user"
+  # Set via secrets in production
+
+redis:
+  host: "ibvap-redis"
+  port: 6379
+
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+  hosts:
+    - host: ibvap.internal
+      paths:
+        - path: /
+          pathType: Prefix
+          service: frontend
+        - path: /api
+          pathType: Prefix
+          service: backend
+        - path: /ws
+          pathType: Prefix
+          service: backend
+        - path: /metrics
+          pathType: Prefix
+          service: backend
+  tls:
+    - secretName: ibvap-tls-cert
+      hosts:
+        - ibvap.internal

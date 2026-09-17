@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { Alert, Camera } from '../types';
+import type { Alert, Camera, PlateEvent, DetailedHealth } from '../types';
 import {
   ShieldAlert,
   Crosshair,
@@ -41,6 +41,8 @@ interface IntelligencePanelProps {
   dataOrigin: 'LIVE' | 'DEMO' | 'IMPORTED';
   filters: EventFilters;
   setFilters: React.Dispatch<React.SetStateAction<EventFilters>>;
+  detailedHealth: DetailedHealth | null;
+  anprPlates: PlateEvent[];
   onAcknowledge: (id: string) => void;
   onDismiss: (id: string) => void;
   onEscalate: (id: string) => void;
@@ -54,11 +56,15 @@ export const IntelligencePanel: React.FC<IntelligencePanelProps> = ({
   dataOrigin,
   filters,
   setFilters,
+  detailedHealth,
+  anprPlates,
   onAcknowledge,
   onDismiss,
   onEscalate,
 }) => {
   const [activeTab, setActiveTab] = useState<'alerts' | 'tracks' | 'anpr' | 'health'>('alerts');
+  const [maxAlerts, setMaxAlerts] = useState(50);
+  const [expandedReasons, setExpandedReasons] = useState<Set<string>>(new Set());
 
   const criticalCount = alerts.filter(a => a.severity === 'CRITICAL' && a.status === 'NEW').length;
   const highCount = alerts.filter(a => a.severity === 'HIGH' && a.status === 'NEW').length;
@@ -112,7 +118,7 @@ export const IntelligencePanel: React.FC<IntelligencePanelProps> = ({
 
       <div className="panel-content">
         {/* ── ALERTS TAB ─────────────────────────────────── */}
-        {activeTab === 'alerts' && (
+        <div className={activeTab === 'alerts' ? '' : 'tab-hidden'}>
           <>
             {/* Severity Summary */}
             <div className="severity-summary">
@@ -211,8 +217,9 @@ export const IntelligencePanel: React.FC<IntelligencePanelProps> = ({
                   <span className="empty-state-sub">All monitored zones are currently clear.</span>
                 </div>
               ) : (
-                alerts.map(alert => {
+                alerts.slice(0, maxAlerts).map(alert => {
                   const sev = alert.severity.toLowerCase();
+                  const showReasons = expandedReasons.has(alert.id);
                   return (
                     <div key={alert.id} className={`alert-item ${sev}`}>
                       <div className="alert-item-header">
@@ -260,7 +267,20 @@ export const IntelligencePanel: React.FC<IntelligencePanelProps> = ({
                       {/* Risk Reasons */}
                       {alert.risk_reasons && alert.risk_reasons.length > 0 && (
                         <div className="risk-reasons">
-                          {alert.risk_reasons.map((reason, i) => (
+                          <button
+                            className="risk-reasons-toggle"
+                            onClick={() => {
+                              setExpandedReasons(prev => {
+                                const next = new Set(prev);
+                                if (next.has(alert.id)) next.delete(alert.id);
+                                else next.add(alert.id);
+                                return next;
+                              });
+                            }}
+                          >
+                            {showReasons ? '▾' : '▸'} {alert.risk_reasons.length} risk factor{alert.risk_reasons.length > 1 ? 's' : ''}
+                          </button>
+                          {showReasons && alert.risk_reasons.map((reason, i) => (
                             <span key={i} className="risk-reason">{reason}</span>
                           ))}
                         </div>
@@ -307,45 +327,52 @@ export const IntelligencePanel: React.FC<IntelligencePanelProps> = ({
                   );
                 })
               )}
+              {alerts.length > maxAlerts && (
+                <button
+                  className="btn btn-sm"
+                  style={{ margin: 'var(--sp-2) auto', display: 'block' }}
+                  onClick={() => setMaxAlerts(prev => prev + 50)}
+                >
+                  Show {Math.min(50, alerts.length - maxAlerts)} more of {alerts.length} total
+                </button>
+              )}
             </div>
           </>
-        )}
+        </div>
 
         {/* ── TRACKS TAB ─────────────────────────────────── */}
-        {activeTab === 'tracks' && (
-          <div className="track-list">
-            {!selectedCamera?.detections || selectedCamera.detections.filter(d => d.track_id).length === 0 ? (
-              <div className="empty-state">
-                <Crosshair size={24} className="empty-state-icon" />
-                <span className="empty-state-title">No Active Tracks</span>
-                <span className="empty-state-sub">No objects are currently being tracked on this camera.</span>
-              </div>
-            ) : (
-              selectedCamera.detections.filter(d => d.track_id).map(track => (
-                <div key={track.track_id} className="track-row">
-                  <div>
-                    <span className="track-id">{track.track_id}</span>
-                    <span className="track-class" style={{ marginLeft: 'var(--sp-2)' }}>{track.class}</span>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--sp-3)' }}>
-                    <span className="track-conf">{Math.round(track.confidence * 100)}%</span>
-                    <span className="track-status">ACTIVE</span>
-                  </div>
+        <div className={`track-list ${activeTab === 'tracks' ? '' : 'tab-hidden'}`}>
+          {!selectedCamera?.detections || selectedCamera.detections.filter(d => d.track_id).length === 0 ? (
+            <div className="empty-state">
+              <Crosshair size={24} className="empty-state-icon" />
+              <span className="empty-state-title">No Active Tracks</span>
+              <span className="empty-state-sub">No objects are currently being tracked on this camera.</span>
+            </div>
+          ) : (
+            selectedCamera.detections.filter(d => d.track_id).map(track => (
+              <div key={track.track_id} className="track-row">
+                <div>
+                  <span className="track-id">{track.track_id}</span>
+                  <span className="track-class" style={{ marginLeft: 'var(--sp-2)' }}>{track.class}</span>
                 </div>
-              ))
-            )}
-          </div>
-        )}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--sp-3)' }}>
+                  <span className="track-conf">{Math.round(track.confidence * 100)}%</span>
+                  <span className="track-status">ACTIVE</span>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
 
         {/* ── ANPR TAB ─────────────────────────────────── */}
-        {activeTab === 'anpr' && (
-          <AnprPanel apiBase={apiBase} dataOrigin={dataOrigin} />
-        )}
+        <div className={`anpr-container ${activeTab === 'anpr' ? '' : 'tab-hidden'}`} style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
+          <AnprPanel plates={anprPlates} dataOrigin={dataOrigin} />
+        </div>
 
         {/* ── HEALTH TAB ─────────────────────────────────── */}
-        {activeTab === 'health' && (
-          <SystemHealthPanel apiBase={apiBase} />
-        )}
+        <div className={`health-container ${activeTab === 'health' ? '' : 'tab-hidden'}`} style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
+          <SystemHealthPanel health={detailedHealth} />
+        </div>
       </div>
     </section>
   );
